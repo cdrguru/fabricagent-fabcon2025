@@ -58,48 +58,38 @@ Steps
 
 1) Clone
 
-```
-
-git clone [https://github.com/cdrguru/FabricAgent.git](https://github.com/cdrguru/FabricAgent.git)
-cd FabricAgent
-
+```bash
+git clone https://github.com/cdrguru/fabricagent-fabcon2025.git
+cd fabricagent-fabcon2025/FabricAgent
 ```
 
 2) Install
 
-```
-
+```bash
 cd src
 npm ci
-
 ```
 
 3) Run dev server
 
-```
-
+```bash
 npm run dev
-
 ```
 
 Open <http://localhost:5173> in your browser.
 
 4) Run tests
 
-```
-
+```bash
 npm test         # Vitest
 npm run test:e2e # Playwright, if configured
-
 ```
 
 5) Production build
 
-```
-
+```bash
 npm run build
 npm run preview
-
 ```
 
 ---
@@ -144,17 +134,17 @@ Use these to explicitly hit FabCon categories in the demo:
 
 ## Verify (judges and reviewers)
 
-macOS Terminal
+**macOS Terminal**
 
-1) cd FabricAgent/src && npm ci && npm run dev
-2) Open <http://localhost:5173>, use the filter bar, open a prompt card, test search.
-3) Run npm test to confirm unit tests pass. Optional: npm run test:e2e for Playwright.
+1. `cd FabricAgent/src && npm ci && npm run dev`
+2. Open <http://localhost:5173>, use the filter bar, open a prompt card, test search.
+3. Run `npm test` to confirm unit tests pass. Optional: `npm run test:e2e` for Playwright.
 
-VS Code or Windsurf
+**VS Code or Windsurf**
 
-1) Open folder FabricAgent/src
-2) Terminal: npm ci && npm run dev
-3) Use Testing panel to run Vitest; Playwright from its panel if configured. Tests live under src/tests and src/tests-e2e.
+1. Open folder `FabricAgent/src`
+2. Terminal: `npm ci && npm run dev`
+3. Use Testing panel to run Vitest; Playwright from its panel if configured. Tests live under `src/tests` and `src/tests-e2e`.
 
 ---
 
@@ -182,11 +172,11 @@ Use this section to complete the official checklist:
 
 ## Demo video script (3-5 minutes)
 
-1) Hook (10-15s): the problem in one sentence and who it helps.
-2) What FabricAgent does (30-45s): catalog, agents, conversational help.
-3) Live demo (120-150s): search a task, open a prompt, launch an agent flow; show RTI dashboard spikes; ask a Data Agent a question grounded on your data.
-4) Why Fabric features matter (30-45s): call out Data Agents, RTI, Open Mirroring explicitly.
-5) Close (10-15s): impact, link to live demo, and where to find the code.
+1. **Hook (10-15s):** the problem in one sentence and who it helps.
+2. **What FabricAgent does (30-45s):** catalog, agents, conversational help.
+3. **Live demo (120-150s):** search a task, open a prompt, launch an agent flow; show RTI dashboard spikes; ask a Data Agent a question grounded on your data.
+4. **Why Fabric features matter (30-45s):** call out Data Agents, RTI, Open Mirroring explicitly.
+5. **Close (10-15s):** impact, link to live demo, and where to find the code.
 
 ---
 

@@ -1,1 +1,12 @@
 .DS_Store
+node_modules/
+dist/
+*.log
+.env*
+.azure/
+.vscode/
+coverage/
+.temp/
+*.swp
+*.swo
+*~
