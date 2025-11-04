@@ -7,7 +7,7 @@
 **Try it now:** [fabricprompts.com](https://fabricprompts.com) (or local setup below)
 
 ## 📦 GitHub Repository
-**Source code:** [github.com/YOUR_USERNAME/fabricagent-fabcon2025](https://github.com/YOUR_USERNAME/fabricagent-fabcon2025)
+**Source code:** [github.com/cdrguru/fabricagent-fabcon2025](https://github.com/cdrguru/fabricagent-fabcon2025)
 
 If you’re running locally via `npm run dev`, the video is served from Vite’s public directory and available at the Local dev URL above.
 
