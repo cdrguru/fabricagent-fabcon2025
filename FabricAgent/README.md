@@ -1,7 +1,7 @@
 # FabricAgent - FabCon Global Hack 2025
 
 ## 🎥 Demo Video
-**Watch the 3-5 minute demo:** [YouTube Link](https://youtu.be/YOUR_VIDEO_ID)
+**Watch the 3-5 minute demo:** [YouTube Link](https://www.youtube.com/watch?v=4G6YTW1zy8g)
 
 ## 🌐 Live Demo
 **Try it now:** [fabricprompts.com](https://fabricprompts.com) (or local setup below)
