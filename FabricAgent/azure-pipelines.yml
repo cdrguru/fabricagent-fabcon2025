@@ -1,0 +1,55 @@
+# Azure Pipelines (sample) — Build Vite app and deploy Node server with /api/rewrite
+# Requires a Service Connection named 'AzureSPN' and variables:
+#   - webAppName: your App Service name
+#   - resourceGroup: your resource group (optional for slot deploy)
+
+trigger:
+  branches:
+    include: [ main ]
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '20.x'
+
+  - script: |
+      npm -C src ci
+      npm -C src run build
+    displayName: Build frontend
+
+  - script: |
+      rm -f $(Build.ArtifactStagingDirectory)/release.zip
+      mkdir -p release
+      cp -r src/dist/* release/
+      cp scripts/server.mjs release/server.mjs
+      cat > release/package.json <<'JSON'
+      {
+        "name": "fabricagent-spa",
+        "private": true,
+        "version": "0.1.0",
+        "type": "module",
+        "scripts": { "start": "node server.mjs" },
+        "engines": { "node": ">=20" }
+      }
+      JSON
+      printf '{"buildId":"%s","builtAt":"%s"}\n' "$(Build.BuildId)" "$(date -u +%FT%TZ)" > release/version.json
+      (cd release && zip -r ../release.zip .)
+      mv release.zip $(Build.ArtifactStagingDirectory)/release.zip
+    displayName: Assemble release
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: '$(Build.ArtifactStagingDirectory)/release.zip'
+      artifactName: drop
+
+  # Deploy to Azure Web App
+  - task: AzureWebApp@1
+    inputs:
+      azureSubscription: 'AzureSPN'
+      appName: '$(webAppName)'
+      package: '$(Build.ArtifactStagingDirectory)/release.zip'
+    displayName: Deploy to Azure Web App
+

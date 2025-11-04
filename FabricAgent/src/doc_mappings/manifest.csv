@@ -1,0 +1,58 @@
+category,prompt_id,prompt_name,doc_path,match_reason,confidence
+dax-modeling,analyze-calculations-visual-calcs-vs-dax-measures,Analyze Calculations (Visual Calcs vs. DAX Measures),dax_library.json,existing-link,1.0
+dax-modeling,analyze-calculations-visual-calcs-vs-dax-measures,Analyze Calculations (Visual Calcs vs. DAX Measures),BestPracticesForWritingEfficientDAXFormulas_LISTOFRESOURCES.json,existing-link,1.0
+dax-modeling,configure-rls-using-fabric-web-modeling,Configure RLS using Fabric Web Modeling,dax_library.json,existing-link,1.0
+dax-modeling,configure-rls-using-fabric-web-modeling,Configure RLS using Fabric Web Modeling,BestPracticesForWritingEfficientDAXFormulas_LISTOFRESOURCES.json,existing-link,1.0
+dax-modeling,generate-calculated-summary-table-using-groupby,Generate Calculated Summary Table using GROUPBY,dax_library.json,existing-link,1.0
+dax-modeling,generate-calculated-summary-table-using-groupby,Generate Calculated Summary Table using GROUPBY,BestPracticesForWritingEfficientDAXFormulas_LISTOFRESOURCES.json,existing-link,1.0
+dax-modeling,generate-dax-for-dynamic-visual-titles,Generate DAX for Dynamic Visual Titles,dax_library.json,existing-link,1.0
+dax-modeling,generate-dax-for-dynamic-visual-titles,Generate DAX for Dynamic Visual Titles,BestPracticesForWritingEfficientDAXFormulas_LISTOFRESOURCES.json,existing-link,1.0
+dax-modeling,implement-dynamic-axeslegends-with-field-parameters,Implement Dynamic Axes/Legends with Field Parameters,dax_library.json,existing-link,1.0
+dax-modeling,implement-dynamic-axeslegends-with-field-parameters,Implement Dynamic Axes/Legends with Field Parameters,BestPracticesForWritingEfficientDAXFormulas_LISTOFRESOURCES.json,existing-link,1.0
+dax-modeling,implement-virtual-relationships-with-treatas,Implement Virtual Relationships with TREATAS,dax_library.json,existing-link,1.0
+dax-modeling,implement-virtual-relationships-with-treatas,Implement Virtual Relationships with TREATAS,BestPracticesForWritingEfficientDAXFormulas_LISTOFRESOURCES.json,existing-link,1.0
+dax-modeling,optimize-dax-iterators-eg-sumx-to-calculatesum,"Optimize DAX Iterators (e.g., SUMX to CALCULATE/SUM)",dax_library.json,existing-link,1.0
+dax-modeling,optimize-dax-iterators-eg-sumx-to-calculatesum,"Optimize DAX Iterators (e.g., SUMX to CALCULATE/SUM)",BestPracticesForWritingEfficientDAXFormulas_LISTOFRESOURCES.json,existing-link,1.0
+fabric-architecture,automate-semantic-model-management-xmlaapi,Automate Semantic Model Management (XMLA/API),microsoft_power_query_custom_connectors_list_dictionary_referencedoc.json,existing-link,1.0
+fabric-architecture,design-end-to-end-fabric-analytics-architecture,Design End-to-End Fabric Analytics Architecture,microsoft_power_query_custom_connectors_list_dictionary_referencedoc.json,existing-link,1.0
+fabric-architecture,design-fabric-adoption-strategy-based-on-live-stream-insights,Design Fabric Adoption Strategy (Based on Live Stream Insights),microsoft_power_query_custom_connectors_list_dictionary_referencedoc.json,existing-link,1.0
+fabric-architecture,design-fabric-governance-strategy-domains-and-workspaces,Design Fabric Governance Strategy (Domains and Workspaces),microsoft_power_query_custom_connectors_list_dictionary_referencedoc.json,existing-link,1.0
+fabric-architecture,design-migration-strategy-power-bi-premium-to-fabric,Design Migration Strategy (Power BI Premium to Fabric),microsoft_power_query_custom_connectors_list_dictionary_referencedoc.json,existing-link,1.0
+fabric-architecture,design-power-bi-write-back-solution-using-power-automate,Design Power BI Write-Back Solution using Power Automate,microsoft_power_query_custom_connectors_list_dictionary_referencedoc.json,existing-link,1.0
+fabric-architecture,implement-delta-table-disaster-recovery-time-travel,Implement Delta Table Disaster Recovery (Time Travel),microsoft_power_query_custom_connectors_list_dictionary_referencedoc.json,existing-link,1.0
+fabric-architecture,visualize-power-bifabric-deployment-pipeline,Visualize Power BI/Fabric Deployment Pipeline,microsoft_power_query_custom_connectors_list_dictionary_referencedoc.json,existing-link,1.0
+governance,configure-power-bi-desktop-for-source-control-pbip,Configure Power BI Desktop for Source Control (PBIP),row_level_security_vs_powerbi_audiences_dictionary_list_lib.json,existing-link,1.0
+governance,design-power-bi-workspace-strategy-and-permissions,Design Power BI Workspace Strategy and Permissions,row_level_security_vs_powerbi_audiences_dictionary_list_lib.json,existing-link,1.0
+performance,analyze-data-model-for-star-schema-best-practices,Analyze Data Model for Star Schema Best Practices,BestPracticesForWritingEfficientDAXFormulas_LISTOFRESOURCES.json,existing-link,1.0
+performance,configure-dynamic-m-query-parameters-directquery-optimization,Configure Dynamic M Query Parameters (DirectQuery Optimization),BestPracticesForWritingEfficientDAXFormulas_LISTOFRESOURCES.json,existing-link,1.0
+power-query-folding,analyze-and-optimize-power-query-for-query-folding,Analyze and Optimize Power Query for Query Folding,guide_to_power_query_folding.md,existing-link,1.0
+power-query-folding,analyze-and-optimize-power-query-for-query-folding,Analyze and Optimize Power Query for Query Folding,powerquery_library_output.json,existing-link,1.0
+power-query-folding,analyze-and-optimize-power-query-for-query-folding,Analyze and Optimize Power Query for Query Folding,CheetSheet_MicrosoftFabricNotebooks_PowerQuery_vs_PythonPandas_Operations.md,existing-link,1.0
+power-query-folding,design-onelake-strategy-shortcuts-vs-data-movement,Design OneLake Strategy (Shortcuts vs. Data Movement),guide_to_power_query_folding.md,existing-link,1.0
+power-query-folding,design-onelake-strategy-shortcuts-vs-data-movement,Design OneLake Strategy (Shortcuts vs. Data Movement),powerquery_library_output.json,existing-link,1.0
+power-query-folding,design-onelake-strategy-shortcuts-vs-data-movement,Design OneLake Strategy (Shortcuts vs. Data Movement),CheetSheet_MicrosoftFabricNotebooks_PowerQuery_vs_PythonPandas_Operations.md,existing-link,1.0
+power-query-folding,determine-optimal-use-case-for-dataflows,Determine Optimal Use Case for Dataflows,guide_to_power_query_folding.md,existing-link,1.0
+power-query-folding,determine-optimal-use-case-for-dataflows,Determine Optimal Use Case for Dataflows,powerquery_library_output.json,existing-link,1.0
+power-query-folding,determine-optimal-use-case-for-dataflows,Determine Optimal Use Case for Dataflows,CheetSheet_MicrosoftFabricNotebooks_PowerQuery_vs_PythonPandas_Operations.md,existing-link,1.0
+power-query-folding,execute-stored-procedure-in-dataflow-gen2-optimized,Execute Stored Procedure in Dataflow Gen2 (Optimized),guide_to_power_query_folding.md,existing-link,1.0
+power-query-folding,execute-stored-procedure-in-dataflow-gen2-optimized,Execute Stored Procedure in Dataflow Gen2 (Optimized),powerquery_library_output.json,existing-link,1.0
+power-query-folding,execute-stored-procedure-in-dataflow-gen2-optimized,Execute Stored Procedure in Dataflow Gen2 (Optimized),CheetSheet_MicrosoftFabricNotebooks_PowerQuery_vs_PythonPandas_Operations.md,existing-link,1.0
+power-query-folding,generate-power-query-logic-for-combining-multiple-files,Generate Power Query Logic for Combining Multiple Files,guide_to_power_query_folding.md,existing-link,1.0
+power-query-folding,generate-power-query-logic-for-combining-multiple-files,Generate Power Query Logic for Combining Multiple Files,powerquery_library_output.json,existing-link,1.0
+power-query-folding,generate-power-query-logic-for-combining-multiple-files,Generate Power Query Logic for Combining Multiple Files,CheetSheet_MicrosoftFabricNotebooks_PowerQuery_vs_PythonPandas_Operations.md,existing-link,1.0
+power-query-folding,parameterize-power-query-dynamic-filteringconnections,Parameterize Power Query (Dynamic Filtering/Connections),guide_to_power_query_folding.md,existing-link,1.0
+power-query-folding,parameterize-power-query-dynamic-filteringconnections,Parameterize Power Query (Dynamic Filtering/Connections),powerquery_library_output.json,existing-link,1.0
+power-query-folding,parameterize-power-query-dynamic-filteringconnections,Parameterize Power Query (Dynamic Filtering/Connections),CheetSheet_MicrosoftFabricNotebooks_PowerQuery_vs_PythonPandas_Operations.md,existing-link,1.0
+power-query-folding,select-optimal-fabric-data-transformation-technology,Select Optimal Fabric Data Transformation Technology,guide_to_power_query_folding.md,existing-link,1.0
+power-query-folding,select-optimal-fabric-data-transformation-technology,Select Optimal Fabric Data Transformation Technology,powerquery_library_output.json,existing-link,1.0
+power-query-folding,select-optimal-fabric-data-transformation-technology,Select Optimal Fabric Data Transformation Technology,CheetSheet_MicrosoftFabricNotebooks_PowerQuery_vs_PythonPandas_Operations.md,existing-link,1.0
+powerbi-visualization,design-interactive-button-slicer-panel,Design Interactive Button Slicer Panel,bestpractices_powerbithemes.md,existing-link,1.0
+powerbi-visualization,design-interactive-button-slicer-panel,Design Interactive Button Slicer Panel,powerbi_report_design_best_practices.md,existing-link,1.0
+powerbi-visualization,design-report-navigation-bookmarks-and-selection-pane,Design Report Navigation (Bookmarks and Selection Pane),bestpractices_powerbithemes.md,existing-link,1.0
+powerbi-visualization,design-report-navigation-bookmarks-and-selection-pane,Design Report Navigation (Bookmarks and Selection Pane),powerbi_report_design_best_practices.md,existing-link,1.0
+powerbi-visualization,determine-optimal-relationship-cardinality-and-direction,Determine Optimal Relationship Cardinality and Direction,bestpractices_powerbithemes.md,existing-link,1.0
+powerbi-visualization,determine-optimal-relationship-cardinality-and-direction,Determine Optimal Relationship Cardinality and Direction,powerbi_report_design_best_practices.md,existing-link,1.0
+powerbi-visualization,generate-power-bi-theme-json,Generate Power BI Theme JSON,bestpractices_powerbithemes.md,existing-link,1.0
+powerbi-visualization,generate-power-bi-theme-json,Generate Power BI Theme JSON,powerbi_report_design_best_practices.md,existing-link,1.0
+powerbi-visualization,optimize-new-card-visual-for-kpis,Optimize New Card Visual for KPIs,bestpractices_powerbithemes.md,existing-link,1.0
+powerbi-visualization,optimize-new-card-visual-for-kpis,Optimize New Card Visual for KPIs,powerbi_report_design_best_practices.md,existing-link,1.0

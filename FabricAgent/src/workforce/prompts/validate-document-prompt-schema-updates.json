@@ -1,0 +1,52 @@
+{
+  "id": "validate-document-prompt-schema-updates",
+  "version": "1.0",
+  "name": "Validate and Document Prompt Schema Updates",
+  "category": "documentation",
+  "pillars": [
+    "governance",
+    "schema",
+    "json-schema",
+    "automation",
+    "documentation",
+    "fabricagent"
+  ],
+  "summary": "Validate proposed updates to the FabricAgent prompt catalog JSON schema and generate documentation (Ratification Report) for the changes.",
+  "description": "Validate proposed updates to the FabricAgent prompt catalog JSON schema and generate documentation (Ratification Report) for the changes.",
+  "tags": [
+    "governance",
+    "schema",
+    "json-schema",
+    "automation",
+    "documentation",
+    "fabricagent",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Generate output and artifacts",
+    "Validate results and outputs"
+  ],
+  "prompt": "You are a detail-oriented technical governance lead. Validate the following proposed JSON schema for the prompt catalog: {proposed_schema}. Ensure it is a valid JSON Schema definition. If valid, generate a ratification report for version {version_number}. The report should include the full schema, the provided change log ({change_log}), and implications for existing prompts and CI/CD validation tools (e.g., `validate_catalog.py`). Highlight any breaking changes and required migration steps.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

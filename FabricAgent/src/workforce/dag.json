@@ -1,0 +1,2006 @@
+{
+  "version": "1.0",
+  "stages": [
+    {
+      "pillar": "power-query",
+      "description": "Ingest and shape data (Power Query)"
+    },
+    {
+      "pillar": "modeling-tmdl",
+      "description": "Model design (TMDL/semantic)"
+    },
+    {
+      "pillar": "dax",
+      "description": "Measure authoring and calc logic"
+    },
+    {
+      "pillar": "performance-bpa",
+      "description": "Performance tuning and refresh"
+    },
+    {
+      "pillar": "deployment-governance",
+      "description": "Security, CI/CD, governance"
+    },
+    {
+      "pillar": "documentation",
+      "description": "Docs, accessibility, release notes"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "accessibility-and-ux-reviewer",
+      "role": "accessibility-and-ux-reviewer",
+      "pillars": [
+        "deployment-governance",
+        "documentation",
+        "powerbi",
+        "visual"
+      ],
+      "purpose": "Audit Power BI reports for accessibility (WCAG) compliance and UX consistency, proposing specific remediation steps.",
+      "category": "deployment-governance",
+      "tags": [
+        "deployment-governance",
+        "documentation",
+        "powerbi",
+        "visual",
+        "workforce"
+      ],
+      "summary": "Audit Power BI reports for accessibility (WCAG) compliance and UX consistency, proposing specific remediation steps."
+    },
+    {
+      "id": "accessibility-auditor",
+      "role": "Accessibility Auditor",
+      "pillars": [
+        "accessibility",
+        "compliance",
+        "pbi-inspector",
+        "powerbi"
+      ],
+      "purpose": "Assesses Power BI reports for accessibility compliance and recommends improvements.",
+      "category": "performance-bpa",
+      "tags": [
+        "accessibility",
+        "compliance",
+        "pbi-inspector",
+        "powerbi",
+        "workforce"
+      ],
+      "summary": "Assesses Power BI reports for accessibility compliance and recommends improvements."
+    },
+    {
+      "id": "aggregations-and-hybrid-table-architect",
+      "role": "Aggregations and Hybrid Table Architect",
+      "pillars": [
+        "aggregation",
+        "directquery",
+        "import-mode",
+        "modeling-tmdl",
+        "powerbi",
+        "tmdl"
+      ],
+      "purpose": "Design aggregation and hybrid tables with appropriate storage modes and relationships to match query patterns.",
+      "category": "modeling-tmdl",
+      "tags": [
+        "aggregation",
+        "directquery",
+        "import-mode",
+        "modeling-tmdl",
+        "powerbi",
+        "tmdl",
+        "workforce"
+      ],
+      "summary": "Design aggregation and hybrid tables with appropriate storage modes and relationships to match query patterns."
+    },
+    {
+      "id": "ai-adversarial-test-generator",
+      "role": "AI Adversarial Test Generator",
+      "pillars": [
+        "adversarial-testing",
+        "ai-safety",
+        "governance",
+        "prompt-engineering",
+        "validation"
+      ],
+      "purpose": "Generates adversarial test cases (prompt injection, safety bypass attempts) for a specific AI prompt based on its defined safety clauses and intended functionality, ensuring robustness and governance compliance.",
+      "category": "deployment-governance",
+      "tags": [
+        "adversarial-testing",
+        "ai-safety",
+        "governance",
+        "prompt-engineering",
+        "validation",
+        "workforce"
+      ],
+      "summary": "Generates adversarial test cases (prompt injection, safety bypass attempts) for a specific AI prompt based on its defined safety clauses and intended functionality, ensuring robustness and governance compliance."
+    },
+    {
+      "id": "ai-media-creation-guide",
+      "role": "ai-media-creation-guide",
+      "pillars": [
+        "powerbi",
+        "deployment-governance",
+        "visual",
+        "ols"
+      ],
+      "purpose": "AI assistant for ai-media-creation-guide tasks in Power BI and Microsoft Fabric.",
+      "category": "deployment-governance",
+      "tags": [
+        "powerbi",
+        "deployment-governance",
+        "visual",
+        "ols",
+        "workforce"
+      ],
+      "summary": "AI assistant for ai-media-creation-guide tasks in Power BI and Microsoft Fabric."
+    },
+    {
+      "id": "analyze-bpa-violations-propose-fixes",
+      "role": "Analyze BPA Violations and Propose Fixes",
+      "pillars": [
+        "powerbi",
+        "bpa",
+        "semantic-model",
+        "troubleshooting",
+        "governance",
+        "dax"
+      ],
+      "purpose": "Analyze the results of a Best Practice Analyzer (BPA) run on a Power BI semantic model and propose specific, actionable remediation steps.",
+      "category": "performance-bpa",
+      "tags": [
+        "powerbi",
+        "bpa",
+        "semantic-model",
+        "troubleshooting",
+        "governance",
+        "dax",
+        "workforce"
+      ],
+      "summary": "Analyze the results of a Best Practice Analyzer (BPA) run on a Power BI semantic model and propose specific, actionable remediation steps."
+    },
+    {
+      "id": "analyze-dax-measures-recommend-optimizations",
+      "role": "Analyze DAX Measures and Recommend Optimizations",
+      "pillars": [
+        "powerbi",
+        "dax",
+        "optimization",
+        "performance",
+        "semantic-model"
+      ],
+      "purpose": "Analyze a set of DAX measures for performance and adherence to best practices, and recommend specific optimizations.",
+      "category": "dax",
+      "tags": [
+        "powerbi",
+        "dax",
+        "optimization",
+        "performance",
+        "semantic-model",
+        "workforce"
+      ],
+      "summary": "Analyze a set of DAX measures for performance and adherence to best practices, and recommend specific optimizations."
+    },
+    {
+      "id": "analyze-fabric-capacity-utilization-costs",
+      "role": "Analyze Fabric Capacity Utilization and Costs",
+      "pillars": [
+        "fabric",
+        "capacity",
+        "cost-management",
+        "optimization",
+        "utilization",
+        "finops"
+      ],
+      "purpose": "Analyze Microsoft Fabric capacity utilization metrics (F-SKUs) and associated costs to identify optimization opportunities.",
+      "category": "performance-bpa",
+      "tags": [
+        "fabric",
+        "capacity",
+        "cost-management",
+        "optimization",
+        "utilization",
+        "finops",
+        "workforce"
+      ],
+      "summary": "Analyze Microsoft Fabric capacity utilization metrics (F-SKUs) and associated costs to identify optimization opportunities."
+    },
+    {
+      "id": "architecture-overview",
+      "role": "Architecture Overview",
+      "pillars": [
+        "powerbi"
+      ],
+      "purpose": "High-level system architecture showing data flow from prompts to reports",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "workforce"
+      ],
+      "summary": "High-level system architecture showing data flow from prompts to reports"
+    },
+    {
+      "id": "badge-dax",
+      "role": "Badge Dax",
+      "pillars": [
+        "powerbi"
+      ],
+      "purpose": "Technology badge for DAX-related content and capabilities",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "workforce"
+      ],
+      "summary": "Technology badge for DAX-related content and capabilities"
+    },
+    {
+      "id": "badge-governance",
+      "role": "Badge Governance",
+      "pillars": [
+        "powerbi"
+      ],
+      "purpose": "Governance and compliance indicator badge",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "workforce"
+      ],
+      "summary": "Governance and compliance indicator badge"
+    },
+    {
+      "id": "badge-power-query",
+      "role": "Badge Power Query",
+      "pillars": [
+        "powerbi"
+      ],
+      "purpose": "Technology badge for Power Query M language content",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "workforce"
+      ],
+      "summary": "Technology badge for Power Query M language content"
+    },
+    {
+      "id": "bpa-findings-summary-communication",
+      "role": "BPA Findings Summary Communication",
+      "pillars": [
+        "powerbi",
+        "bpa",
+        "analysis",
+        "summary",
+        "communication",
+        "governance"
+      ],
+      "purpose": "Summarize the findings from a Best Practice Analyzer (BPA) analysis and propose actionable next steps for remediation.",
+      "category": "performance-bpa",
+      "tags": [
+        "powerbi",
+        "bpa",
+        "analysis",
+        "summary",
+        "communication",
+        "governance",
+        "workforce"
+      ],
+      "summary": "Summarize the findings from a Best Practice Analyzer (BPA) analysis and propose actionable next steps for remediation."
+    },
+    {
+      "id": "composite-models-and-direct-lake-design",
+      "role": "composite-models-and-direct-lake-design",
+      "pillars": [
+        "powerbi",
+        "modeling-tmdl",
+        "composite-model",
+        "direct-lake"
+      ],
+      "purpose": "AI assistant for composite-models-and-direct-lake-design tasks in Power BI and Microsoft Fabric.",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "modeling-tmdl",
+        "composite-model",
+        "direct-lake",
+        "workforce"
+      ],
+      "summary": "AI assistant for composite-models-and-direct-lake-design tasks in Power BI and Microsoft Fabric."
+    },
+    {
+      "id": "contact-center-analytics-integration",
+      "role": "contact-center-analytics-integration",
+      "pillars": [
+        "powerbi",
+        "power-query",
+        "deployment-governance",
+        "documentation"
+      ],
+      "purpose": "AI assistant for contact-center-analytics-integration tasks in Power BI and Microsoft Fabric.",
+      "category": "power-query",
+      "tags": [
+        "powerbi",
+        "power-query",
+        "deployment-governance",
+        "documentation",
+        "workforce"
+      ],
+      "summary": "AI assistant for contact-center-analytics-integration tasks in Power BI and Microsoft Fabric."
+    },
+    {
+      "id": "contact-center-dax-analysis-framework",
+      "role": "Contact Center DAX Analysis Framework",
+      "pillars": [
+        "analysis",
+        "contact-center",
+        "dax",
+        "measure",
+        "powerbi",
+        "prompt-engineering",
+        "report"
+      ],
+      "purpose": "Generates optimized DAX measures for contact-center analytics based on provided context and artifacts.",
+      "category": "dax",
+      "tags": [
+        "analysis",
+        "contact-center",
+        "dax",
+        "measure",
+        "powerbi",
+        "prompt-engineering",
+        "report",
+        "workforce"
+      ],
+      "summary": "Generates optimized DAX measures for contact-center analytics based on provided context and artifacts."
+    },
+    {
+      "id": "dag-workforce",
+      "role": "Dag Workforce",
+      "pillars": [
+        "powerbi"
+      ],
+      "purpose": "Visual representation of workforce dependencies and execution order",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "workforce"
+      ],
+      "summary": "Visual representation of workforce dependencies and execution order"
+    },
+    {
+      "id": "data-dictionary-maintainer",
+      "role": "Data Dictionary Maintainer",
+      "pillars": [
+        "data-dictionary",
+        "documentation",
+        "governance",
+        "powerbi",
+        "tmdl"
+      ],
+      "purpose": "Generates and maintains data dictionaries and technical documentation from TMDL, ensuring clarity and alignment with governance standards.",
+      "category": "modeling-tmdl",
+      "tags": [
+        "data-dictionary",
+        "documentation",
+        "governance",
+        "powerbi",
+        "tmdl",
+        "workforce"
+      ],
+      "summary": "Generates and maintains data dictionaries and technical documentation from TMDL, ensuring clarity and alignment with governance standards."
+    },
+    {
+      "id": "dataset-refresh-and-gateway-troubleshooter",
+      "role": "Dataset Refresh and Gateway Troubleshooter",
+      "pillars": [
+        "dataset",
+        "gateway",
+        "power-query",
+        "powerbi",
+        "refresh"
+      ],
+      "purpose": "Diagnoses dataset refresh failures and gateway connectivity issues and proposes credential/data-source fixes.",
+      "category": "power-query",
+      "tags": [
+        "dataset",
+        "gateway",
+        "power-query",
+        "powerbi",
+        "refresh",
+        "workforce"
+      ],
+      "summary": "Diagnoses dataset refresh failures and gateway connectivity issues and proposes credential/data-source fixes."
+    },
+    {
+      "id": "dax-performance-profiler",
+      "role": "dax-performance-profiler",
+      "pillars": [
+        "dax",
+        "measure",
+        "performance-bpa",
+        "powerbi"
+      ],
+      "purpose": "Diagnose slow DAX using VertiPaq anti-patterns and recommend optimized alternatives with a structured test plan.",
+      "category": "dax",
+      "tags": [
+        "dax",
+        "measure",
+        "performance-bpa",
+        "powerbi",
+        "workforce"
+      ],
+      "summary": "Diagnose slow DAX using VertiPaq anti-patterns and recommend optimized alternatives with a structured test plan."
+    },
+    {
+      "id": "dax-vertipaq-analyzer",
+      "role": "DAX VertiPaq Analyzer",
+      "pillars": [
+        "dax",
+        "optimization",
+        "performance",
+        "powerbi",
+        "vertipaq"
+      ],
+      "purpose": "Analyzes DAX query plans and VertiPaq metrics (SE/FE time, cache hits) to identify specific bottlenecks and recommend targeted optimizations.",
+      "category": "dax",
+      "tags": [
+        "dax",
+        "optimization",
+        "performance",
+        "powerbi",
+        "vertipaq",
+        "workforce"
+      ],
+      "summary": "Analyzes DAX query plans and VertiPaq metrics (SE/FE time, cache hits) to identify specific bottlenecks and recommend targeted optimizations."
+    },
+    {
+      "id": "define-requirements-governance-monitoring-dashboard",
+      "role": "Define Requirements for Governance Monitoring Dashboard",
+      "pillars": [
+        "powerbi",
+        "governance",
+        "monitoring",
+        "dashboard",
+        "kpi",
+        "fabric"
+      ],
+      "purpose": "Define the requirements and KPIs for a Power BI dashboard to monitor governance and compliance across the Microsoft Fabric tenant.",
+      "category": "deployment-governance",
+      "tags": [
+        "powerbi",
+        "governance",
+        "monitoring",
+        "dashboard",
+        "kpi",
+        "fabric",
+        "workforce"
+      ],
+      "summary": "Define the requirements and KPIs for a Power BI dashboard to monitor governance and compliance across the Microsoft Fabric tenant."
+    },
+    {
+      "id": "design-adversarial-test-plan-ai-prompts",
+      "role": "Design Adversarial Test Plan for AI Prompts",
+      "pillars": [
+        "ai",
+        "testing",
+        "adversarial",
+        "governance",
+        "safety",
+        "prompt-engineering"
+      ],
+      "purpose": "Design a test plan to validate the safety, reliability, and governance compliance of AI prompts used within the FabricAgent repository.",
+      "category": "deployment-governance",
+      "tags": [
+        "ai",
+        "testing",
+        "adversarial",
+        "governance",
+        "safety",
+        "prompt-engineering",
+        "workforce"
+      ],
+      "summary": "Design a test plan to validate the safety, reliability, and governance compliance of AI prompts used within the FabricAgent repository."
+    },
+    {
+      "id": "develop-training-ai-safety-guardrails",
+      "role": "Develop Training on AI Safety Guardrails (for Fabric)",
+      "pillars": [
+        "ai-safety",
+        "governance",
+        "training",
+        "azure-openai",
+        "fabric",
+        "adversarial-testing"
+      ],
+      "purpose": "Develop a training module on implementing and adhering to AI safety guardrails when using AI tools (like FabricAgent or Copilot) within Microsoft Fabric.",
+      "category": "deployment-governance",
+      "tags": [
+        "ai-safety",
+        "governance",
+        "training",
+        "azure-openai",
+        "fabric",
+        "adversarial-testing",
+        "workforce"
+      ],
+      "summary": "Develop a training module on implementing and adhering to AI safety guardrails when using AI tools (like FabricAgent or Copilot) within Microsoft Fabric."
+    },
+    {
+      "id": "documentation-and-changelog-generator",
+      "role": "Documentation and Changelog Generator",
+      "pillars": [
+        "dax",
+        "documentation",
+        "powerbi",
+        "tmdl"
+      ],
+      "purpose": "Generates dataset/measure documentation from TMDL and release notes from change sets.",
+      "category": "dax",
+      "tags": [
+        "dax",
+        "documentation",
+        "powerbi",
+        "tmdl",
+        "workforce"
+      ],
+      "summary": "Generates dataset/measure documentation from TMDL and release notes from change sets."
+    },
+    {
+      "id": "draft-governance-best-practices-article",
+      "role": "Draft Governance Best Practices Article",
+      "pillars": [
+        "governance",
+        "documentation",
+        "best-practices",
+        "fabric",
+        "powerbi"
+      ],
+      "purpose": "Draft an article outlining best practices for governing Microsoft Fabric and Power BI implementations, focusing on automation and compliance.",
+      "category": "deployment-governance",
+      "tags": [
+        "governance",
+        "documentation",
+        "best-practices",
+        "fabric",
+        "powerbi",
+        "workforce"
+      ],
+      "summary": "Draft an article outlining best practices for governing Microsoft Fabric and Power BI implementations, focusing on automation and compliance."
+    },
+    {
+      "id": "fabric-architecture-recommendation-brief",
+      "role": "Fabric Architecture Recommendation Brief",
+      "pillars": [
+        "fabric",
+        "architecture",
+        "lakehouse",
+        "warehouse",
+        "powerbi",
+        "automation"
+      ],
+      "purpose": "Propose an optimal Microsoft Fabric architecture (Lakehouse, Warehouse, Power BI) based on client data platforms, requirements, and constraints.",
+      "category": "modeling-tmdl",
+      "tags": [
+        "fabric",
+        "architecture",
+        "lakehouse",
+        "warehouse",
+        "powerbi",
+        "automation",
+        "workforce"
+      ],
+      "summary": "Propose an optimal Microsoft Fabric architecture (Lakehouse, Warehouse, Power BI) based on client data platforms, requirements, and constraints."
+    },
+    {
+      "id": "fabric-capacity-monitor-and-cost-optimizer",
+      "role": "fabric-capacity-monitor-and-cost-optimizer",
+      "pillars": [
+        "deployment-governance",
+        "fabric",
+        "powerbi",
+        "refresh"
+      ],
+      "purpose": "Analyze Fabric Capacity Metrics (CU utilization, throttling) to recommend right-sizing (SKU adjustments) and workload optimization for cost efficiency.",
+      "category": "deployment-governance",
+      "tags": [
+        "deployment-governance",
+        "fabric",
+        "powerbi",
+        "refresh",
+        "workforce"
+      ],
+      "summary": "Analyze Fabric Capacity Metrics (CU utilization, throttling) to recommend right-sizing (SKU adjustments) and workload optimization for cost efficiency."
+    },
+    {
+      "id": "fabric-integration-plan-checklist",
+      "role": "Fabric Integration Plan Checklist",
+      "pillars": [
+        "fabric",
+        "integration",
+        "data-factory",
+        "spark",
+        "powerbi",
+        "checklist"
+      ],
+      "purpose": "Outline the steps required to integrate and set up Microsoft Fabric components (Data Factory, Spark, Power BI) in the client’s environment.",
+      "category": "modeling-tmdl",
+      "tags": [
+        "fabric",
+        "integration",
+        "data-factory",
+        "spark",
+        "powerbi",
+        "checklist",
+        "workforce"
+      ],
+      "summary": "Outline the steps required to integrate and set up Microsoft Fabric components (Data Factory, Spark, Power BI) in the client’s environment."
+    },
+    {
+      "id": "fabric-web-application-development",
+      "role": "fabric-web-application-development",
+      "pillars": [
+        "powerbi",
+        "performance-bpa",
+        "deployment-governance",
+        "prompt-engineering",
+        "fabric"
+      ],
+      "purpose": "AI assistant for fabric-web-application-development tasks in Power BI and Microsoft Fabric.",
+      "category": "performance-bpa",
+      "tags": [
+        "powerbi",
+        "performance-bpa",
+        "deployment-governance",
+        "prompt-engineering",
+        "fabric",
+        "workforce"
+      ],
+      "summary": "AI assistant for fabric-web-application-development tasks in Power BI and Microsoft Fabric."
+    },
+    {
+      "id": "fabric-workload-smoothing-planner",
+      "role": "Fabric Workload Smoothing Planner",
+      "pillars": [
+        "capacity-planning",
+        "fabric",
+        "finops",
+        "optimization",
+        "performance"
+      ],
+      "purpose": "Analyzes Fabric Capacity Metrics to identify concentrated peaks in CU consumption (spikes) and proposes a plan to smooth the workload (e.g., staggering refreshes, optimizing items) to reduce throttling and enable cost savings.",
+      "category": "performance-bpa",
+      "tags": [
+        "capacity-planning",
+        "fabric",
+        "finops",
+        "optimization",
+        "performance",
+        "workforce"
+      ],
+      "summary": "Analyzes Fabric Capacity Metrics to identify concentrated peaks in CU consumption (spikes) and proposes a plan to smooth the workload (e.g., staggering refreshes, optimizing items) to reduce throttling and enable cost savings."
+    },
+    {
+      "id": "fabricagent-feature-prioritization-agent",
+      "role": "FabricAgent Feature Prioritization Agent",
+      "pillars": [
+        "feature-prioritization",
+        "user-testing",
+        "strategic-planning",
+        "agent-execution",
+        "ui-analysis"
+      ],
+      "purpose": "Comprehensive analysis prompt for an AI agent with execution capabilities to run the FabricAgent application, test current functionality, and prioritize the next 5 features for implementation based on user impact, technical feasibility, and strategic alignment.",
+      "category": "modeling-tmdl",
+      "tags": [
+        "feature-prioritization",
+        "user-testing",
+        "strategic-planning",
+        "agent-execution",
+        "ui-analysis",
+        "workforce"
+      ],
+      "summary": "Comprehensive analysis prompt for an AI agent with execution capabilities to run the FabricAgent application, test current functionality, and prioritize the next 5 features for implementation based on user impact, technical feasibility, and strategic alignment."
+    },
+    {
+      "id": "fabricagent-ui-enhancement-analysis",
+      "role": "FabricAgent UI Enhancement Analysis",
+      "pillars": [
+        "ui-analysis",
+        "enhancement",
+        "modernization",
+        "user-experience",
+        "ai-governance"
+      ],
+      "purpose": "Comprehensive analysis prompt for AI with remote computer access and vision to evaluate the FabricAgent web interface and suggest modern, user-friendly improvements aligned with the repository's governance-first AI capabilities.",
+      "category": "deployment-governance",
+      "tags": [
+        "ui-analysis",
+        "enhancement",
+        "modernization",
+        "user-experience",
+        "ai-governance",
+        "workforce"
+      ],
+      "summary": "Comprehensive analysis prompt for AI with remote computer access and vision to evaluate the FabricAgent web interface and suggest modern, user-friendly improvements aligned with the repository's governance-first AI capabilities."
+    },
+    {
+      "id": "favicon",
+      "role": "Favicon",
+      "pillars": [
+        "powerbi"
+      ],
+      "purpose": "Square favicon derived from main logo for browser tabs and bookmarks",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "workforce"
+      ],
+      "summary": "Square favicon derived from main logo for browser tabs and bookmarks"
+    },
+    {
+      "id": "field-parameters-and-calculation-groups",
+      "role": "Field Parameters and Calculation Groups",
+      "pillars": [
+        "calculation-groups",
+        "field-parameters",
+        "modeling-tmdl",
+        "powerbi"
+      ],
+      "purpose": "Designs field parameters and calculation groups for reusable measures and slicer-driven perspectives.",
+      "category": "dax",
+      "tags": [
+        "calculation-groups",
+        "field-parameters",
+        "modeling-tmdl",
+        "powerbi",
+        "workforce"
+      ],
+      "summary": "Designs field parameters and calculation groups for reusable measures and slicer-driven perspectives."
+    },
+    {
+      "id": "generate-semantic-model-performance-report",
+      "role": "Generate Semantic Model Performance Report",
+      "pillars": [
+        "powerbi",
+        "semantic-model",
+        "performance",
+        "optimization",
+        "reporting"
+      ],
+      "purpose": "Analyze performance metrics of a Power BI semantic model (e.g., refresh duration, query latency, memory usage) and generate a performance report.",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "semantic-model",
+        "performance",
+        "optimization",
+        "reporting",
+        "workforce"
+      ],
+      "summary": "Analyze performance metrics of a Power BI semantic model (e.g., refresh duration, query latency, memory usage) and generate a performance report."
+    },
+    {
+      "id": "governance-implementation-proposal",
+      "role": "Governance Implementation Proposal",
+      "pillars": [
+        "governance",
+        "proposal",
+        "automation",
+        "fabric",
+        "powerbi",
+        "cicd"
+      ],
+      "purpose": "Deliver a formal proposal for implementing automated governance tools (e.g., FabricAgent, CI/CD pipelines) within a specific Fabric workspace or domain.",
+      "category": "deployment-governance",
+      "tags": [
+        "governance",
+        "proposal",
+        "automation",
+        "fabric",
+        "powerbi",
+        "cicd",
+        "workforce"
+      ],
+      "summary": "Deliver a formal proposal for implementing automated governance tools (e.g., FabricAgent, CI/CD pipelines) within a specific Fabric workspace or domain."
+    },
+    {
+      "id": "governance-loop-bpa-pbi",
+      "role": "Governance Loop Bpa Pbi",
+      "pillars": [
+        "powerbi"
+      ],
+      "purpose": "Feedback loop showing how governance tools inform documentation and issue resolution",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "workforce"
+      ],
+      "summary": "Feedback loop showing how governance tools inform documentation and issue resolution"
+    },
+    {
+      "id": "incremental-refresh-policy-planner",
+      "role": "incremental-refresh-policy-planner",
+      "pillars": [
+        "dataset",
+        "incremental-refresh",
+        "modeling-tmdl",
+        "powerbi"
+      ],
+      "purpose": "Recommend optimized Incremental Refresh and Real-Time (Hybrid Table) policies, defining RangeStart/RangeEnd parameters and partition schemes.",
+      "category": "power-query",
+      "tags": [
+        "dataset",
+        "incremental-refresh",
+        "modeling-tmdl",
+        "powerbi",
+        "workforce"
+      ],
+      "summary": "Recommend optimized Incremental Refresh and Real-Time (Hybrid Table) policies, defining RangeStart/RangeEnd parameters and partition schemes."
+    },
+    {
+      "id": "initial-governance-assessment-request",
+      "role": "Initial Governance Assessment Request",
+      "pillars": [
+        "powerbi",
+        "governance",
+        "bpa",
+        "communication",
+        "fabric"
+      ],
+      "purpose": "Draft an outreach communication to a data steward or workspace admin requesting permission to perform an initial Power BI governance assessment using BPA tools.",
+      "category": "deployment-governance",
+      "tags": [
+        "powerbi",
+        "governance",
+        "bpa",
+        "communication",
+        "fabric",
+        "workforce"
+      ],
+      "summary": "Draft an outreach communication to a data steward or workspace admin requesting permission to perform an initial Power BI governance assessment using BPA tools."
+    },
+    {
+      "id": "integration-pipeline-development",
+      "role": "Integration Pipeline Development",
+      "pillars": [
+        "deployment-governance",
+        "integration",
+        "powerbi",
+        "power-query"
+      ],
+      "purpose": "Guides development of a production-ready integration pipeline connecting Contact Center API Contact Center with Microsoft Power BI.",
+      "category": "deployment-governance",
+      "tags": [
+        "deployment-governance",
+        "integration",
+        "powerbi",
+        "power-query",
+        "workforce"
+      ],
+      "summary": "Guides development of a production-ready integration pipeline connecting Contact Center API Contact Center with Microsoft Power BI."
+    },
+    {
+      "id": "integration-vendor-analytics-power-bi",
+      "role": "<INTEGRATION_VENDOR>-analytics-power-bi",
+      "pillars": [
+        "powerbi",
+        "documentation",
+        "report",
+        "workforce"
+      ],
+      "purpose": "# <INTEGRATION_VENDOR> Analytics Power BI\n\nDefines an AI assistant for <INTEGRATION_VENDOR> analytics within Power BI. System Instruction focusing on [Company] [Product] <INTEGRATION_VENDOR> Analytics, with emphasis on data ingestion, transformation, and advanced repor…",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "documentation",
+        "report",
+        "workforce"
+      ],
+      "summary": "# <INTEGRATION_VENDOR> Analytics Power BI\n\nDefines an AI assistant for <INTEGRATION_VENDOR> analytics within Power BI. System Instruction focusing on [Company] [Product] <INTEGRATION_VENDOR> Analytics, with emphasis on data ingestion, transformation, and advanced repor…"
+    },
+    {
+      "id": "integration-vendor-uc-forum-integration",
+      "role": "<INTEGRATION_VENDOR>-uc-forum-integration",
+      "pillars": [
+        "powerbi",
+        "deployment-governance",
+        "prompt-engineering",
+        "ols"
+      ],
+      "purpose": "AI assistant for <INTEGRATION_VENDOR>-uc-forum-integration tasks in Power BI and Microsoft Fabric.",
+      "category": "deployment-governance",
+      "tags": [
+        "powerbi",
+        "deployment-governance",
+        "prompt-engineering",
+        "ols",
+        "workforce"
+      ],
+      "summary": "AI assistant for <INTEGRATION_VENDOR>-uc-forum-integration tasks in Power BI and Microsoft Fabric."
+    },
+    {
+      "id": "logo",
+      "role": "Logo",
+      "pillars": [
+        "powerbi"
+      ],
+      "purpose": "Primary brand identity mark for use in README header and documentation",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "workforce"
+      ],
+      "summary": "Primary brand identity mark for use in README header and documentation"
+    },
+    {
+      "id": "m-query-parameterization-wizard",
+      "role": "M Query Parameterization Wizard",
+      "pillars": [
+        "ci-cd",
+        "governance",
+        "m-language",
+        "parameterization",
+        "power-query"
+      ],
+      "purpose": "Refactors existing M queries to utilize Power Query parameters for dynamic data sources, filtering, and environment switching, enhancing reusability and CI/CD integration.",
+      "category": "deployment-governance",
+      "tags": [
+        "ci-cd",
+        "governance",
+        "m-language",
+        "parameterization",
+        "power-query",
+        "workforce"
+      ],
+      "summary": "Refactors existing M queries to utilize Power Query parameters for dynamic data sources, filtering, and environment switching, enhancing reusability and CI/CD integration."
+    },
+    {
+      "id": "optimized-prompt-for-assistant",
+      "role": "optimized-prompt-for-assistant",
+      "pillars": [
+        "powerbi",
+        "dax",
+        "power-query",
+        "prompt-engineering",
+        "fabric"
+      ],
+      "purpose": "AI assistant for optimized-prompt-for-assistant tasks in Power BI and Microsoft Fabric.",
+      "category": "dax",
+      "tags": [
+        "powerbi",
+        "dax",
+        "power-query",
+        "prompt-engineering",
+        "fabric",
+        "workforce"
+      ],
+      "summary": "AI assistant for optimized-prompt-for-assistant tasks in Power BI and Microsoft Fabric."
+    },
+    {
+      "id": "outline-semantic-modeling-governance-training",
+      "role": "Outline Semantic Modeling Governance Training",
+      "pillars": [
+        "powerbi",
+        "semantic-model",
+        "training",
+        "documentation",
+        "dax",
+        "governance",
+        "bpa"
+      ],
+      "purpose": "Create a detailed outline for a training module on Power BI semantic modeling best practices, governance policies (BPA rules), and optimization techniques.",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "semantic-model",
+        "training",
+        "documentation",
+        "dax",
+        "governance",
+        "bpa",
+        "workforce"
+      ],
+      "summary": "Create a detailed outline for a training module on Power BI semantic modeling best practices, governance policies (BPA rules), and optimization techniques."
+    },
+    {
+      "id": "power-bi-optimization-guide",
+      "role": "power-bi-optimization-guide",
+      "pillars": [
+        "dax",
+        "modeling-tmdl",
+        "performance-bpa",
+        "powerbi",
+        "prompt-engineering",
+        "tabular"
+      ],
+      "purpose": "Analyze Best Practice Analyzer (BPA) results to provide a prioritized optimization plan for a Power BI semantic model.",
+      "category": "dax",
+      "tags": [
+        "dax",
+        "modeling-tmdl",
+        "performance-bpa",
+        "powerbi",
+        "prompt-engineering",
+        "tabular",
+        "workforce"
+      ],
+      "summary": "Analyze Best Practice Analyzer (BPA) results to provide a prioritized optimization plan for a Power BI semantic model."
+    },
+    {
+      "id": "power-query-assistant-configuration",
+      "role": "power-query-assistant-configuration",
+      "pillars": [
+        "powerbi",
+        "dax",
+        "power-query",
+        "prompt-engineering",
+        "fabric"
+      ],
+      "purpose": "AI assistant for power-query-assistant-configuration tasks in Power BI and Microsoft Fabric.",
+      "category": "dax",
+      "tags": [
+        "powerbi",
+        "dax",
+        "power-query",
+        "prompt-engineering",
+        "fabric",
+        "workforce"
+      ],
+      "summary": "AI assistant for power-query-assistant-configuration tasks in Power BI and Microsoft Fabric."
+    },
+    {
+      "id": "power-query-folding-diagnostics",
+      "role": "power-query-folding-diagnostics",
+      "pillars": [
+        "m-query",
+        "power-query",
+        "powerbi",
+        "query-folding"
+      ],
+      "purpose": "Detect non-folding M steps, analyze the root cause, and reorder/replace steps to restore query folding, outputting optimized M code.",
+      "category": "power-query",
+      "tags": [
+        "m-query",
+        "power-query",
+        "powerbi",
+        "query-folding",
+        "workforce"
+      ],
+      "summary": "Detect non-folding M steps, analyze the root cause, and reorder/replace steps to restore query folding, outputting optimized M code."
+    },
+    {
+      "id": "power-query-modernizer",
+      "role": "Power Query Modernizer",
+      "pillars": [
+        "m-language",
+        "parameterization",
+        "power-query",
+        "powerbi",
+        "refactoring"
+      ],
+      "purpose": "Refactors Power Query (M) scripts to adopt modern patterns, improve readability and performance; focuses on parameterization and query folding.",
+      "category": "power-query",
+      "tags": [
+        "m-language",
+        "parameterization",
+        "power-query",
+        "powerbi",
+        "refactoring",
+        "workforce"
+      ],
+      "summary": "Refactors Power Query (M) scripts to adopt modern patterns, improve readability and performance; focuses on parameterization and query folding."
+    },
+    {
+      "id": "powerbi-cicd-pipeline-config-generator",
+      "role": "Power BI CI/CD Pipeline Config Generator",
+      "pillars": [
+        "powerbi",
+        "cicd",
+        "devops",
+        "automation",
+        "bpa",
+        "tmdl",
+        "governance"
+      ],
+      "purpose": "Generate a CI/CD workflow configuration (e.g., GitHub Actions, Azure DevOps) to validate Power BI artifacts (TMDL, DAX, BPA rules) and enforce governance policies.",
+      "category": "deployment-governance",
+      "tags": [
+        "powerbi",
+        "cicd",
+        "devops",
+        "automation",
+        "bpa",
+        "tmdl",
+        "governance",
+        "workforce"
+      ],
+      "summary": "Generate a CI/CD workflow configuration (e.g., GitHub Actions, Azure DevOps) to validate Power BI artifacts (TMDL, DAX, BPA rules) and enforce governance policies."
+    },
+    {
+      "id": "powerbi-deployment-readiness-checklist",
+      "role": "Power BI Deployment Readiness Checklist",
+      "pillars": [
+        "powerbi",
+        "deployment",
+        "governance",
+        "bpa",
+        "checklist",
+        "troubleshooting"
+      ],
+      "purpose": "Generate a comprehensive checklist to ensure Power BI reports and semantic models are ready for production deployment, including governance and BPA checks.",
+      "category": "deployment-governance",
+      "tags": [
+        "powerbi",
+        "deployment",
+        "governance",
+        "bpa",
+        "checklist",
+        "troubleshooting",
+        "workforce"
+      ],
+      "summary": "Generate a comprehensive checklist to ensure Power BI reports and semantic models are ready for production deployment, including governance and BPA checks."
+    },
+    {
+      "id": "powerbi-issue-troubleshooting-guide",
+      "role": "Power BI Issue Troubleshooting Guide",
+      "pillars": [
+        "powerbi",
+        "troubleshooting",
+        "dax",
+        "refresh",
+        "bpa",
+        "support"
+      ],
+      "purpose": "Provide step-by-step guidance to diagnose and resolve common Power BI issues (e.g., slow DAX performance, refresh failures, specific BPA violations).",
+      "category": "dax",
+      "tags": [
+        "powerbi",
+        "troubleshooting",
+        "dax",
+        "refresh",
+        "bpa",
+        "support",
+        "workforce"
+      ],
+      "summary": "Provide step-by-step guidance to diagnose and resolve common Power BI issues (e.g., slow DAX performance, refresh failures, specific BPA violations)."
+    },
+    {
+      "id": "powerbi-semantic-model-mode-decision",
+      "role": "Power BI Semantic Model Mode Decision Brief",
+      "pillars": [
+        "powerbi",
+        "semantic-model",
+        "direct-lake",
+        "directquery",
+        "performance",
+        "architecture"
+      ],
+      "purpose": "Recommend the optimal Power BI semantic model mode (Import, DirectQuery, or Direct Lake) based on data characteristics, performance needs, and cost constraints.",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "semantic-model",
+        "direct-lake",
+        "directquery",
+        "performance",
+        "architecture",
+        "workforce"
+      ],
+      "summary": "Recommend the optimal Power BI semantic model mode (Import, DirectQuery, or Direct Lake) based on data characteristics, performance needs, and cost constraints."
+    },
+    {
+      "id": "powerbigitopscopilot",
+      "role": "Power BI GitOps Copilot",
+      "pillars": [
+        "powerbi",
+        "gitops",
+        "ci"
+      ],
+      "purpose": "Assistant for PR reviews, TMDL validation, and deployment guidance in Power BI GitOps workflows.",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "gitops",
+        "ci",
+        "workforce"
+      ],
+      "summary": "Assistant for PR reviews, TMDL validation, and deployment guidance in Power BI GitOps workflows."
+    },
+    {
+      "id": "prompt-engineering-concept",
+      "role": "Prompt Engineering Concept",
+      "pillars": [
+        "powerbi"
+      ],
+      "purpose": "Visual metaphor for the prompt engineering and validation process",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "workforce"
+      ],
+      "summary": "Visual metaphor for the prompt engineering and validation process"
+    },
+    {
+      "id": "propose-ai-powered-governance-automation",
+      "role": "Propose AI-Powered Governance Automation",
+      "pillars": [
+        "ai",
+        "governance",
+        "automation",
+        "proposal",
+        "azureopenai",
+        "fabric",
+        "documentation"
+      ],
+      "purpose": "Draft a proposal for leveraging AI (e.g., Azure OpenAI) to automate specific governance tasks within Microsoft Fabric, such as generating documentation or analyzing BPA results.",
+      "category": "deployment-governance",
+      "tags": [
+        "ai",
+        "governance",
+        "automation",
+        "proposal",
+        "azureopenai",
+        "fabric",
+        "documentation",
+        "workforce"
+      ],
+      "summary": "Draft a proposal for leveraging AI (e.g., Azure OpenAI) to automate specific governance tasks within Microsoft Fabric, such as generating documentation or analyzing BPA results."
+    },
+    {
+      "id": "refactorcsdr",
+      "role": "CSDR Refactor",
+      "pillars": [
+        "refactor",
+        "csdr",
+        "engineering"
+      ],
+      "purpose": "Code Summarize, Decompose, and Rebuild (CSDR) refactoring workflow prompt.",
+      "category": "modeling-tmdl",
+      "tags": [
+        "refactor",
+        "csdr",
+        "engineering",
+        "workforce"
+      ],
+      "summary": "Code Summarize, Decompose, and Rebuild (CSDR) refactoring workflow prompt."
+    },
+    {
+      "id": "researchdeepresearch",
+      "role": "Deep Research Agent",
+      "pillars": [
+        "research",
+        "analysis",
+        "citations",
+        "deep-research"
+      ],
+      "purpose": "Autonomous multi-source research and synthesis agent with evidence-based reporting and citations.",
+      "category": "modeling-tmdl",
+      "tags": [
+        "research",
+        "analysis",
+        "citations",
+        "deep-research",
+        "workforce"
+      ],
+      "summary": "Autonomous multi-source research and synthesis agent with evidence-based reporting and citations."
+    },
+    {
+      "id": "rls-ols-security-designer",
+      "role": "rls-ols-security-designer",
+      "pillars": [
+        "deployment-governance",
+        "ols",
+        "powerbi",
+        "rls",
+        "tmdl"
+      ],
+      "purpose": "Design, implement, and validate RLS/OLS rules, providing TMDL definitions, DAX filters, and a comprehensive test matrix.",
+      "category": "deployment-governance",
+      "tags": [
+        "deployment-governance",
+        "ols",
+        "powerbi",
+        "rls",
+        "tmdl",
+        "workforce"
+      ],
+      "summary": "Design, implement, and validate RLS/OLS rules, providing TMDL definitions, DAX filters, and a comprehensive test matrix."
+    },
+    {
+      "id": "semantic-guide-writer",
+      "role": "Semantic Guide Writer Agent",
+      "pillars": [
+        "semantic-guide",
+        "documentation",
+        "kpi",
+        "personas",
+        "user-guide"
+      ],
+      "purpose": "Generate comprehensive semantic model guide linking personas, pages, and KPIs to data dictionary and page metadata",
+      "category": "modeling-tmdl",
+      "tags": [
+        "semantic-guide",
+        "documentation",
+        "kpi",
+        "personas",
+        "user-guide",
+        "workforce"
+      ],
+      "summary": "Generate comprehensive semantic model guide linking personas, pages, and KPIs to data dictionary and page metadata"
+    },
+    {
+      "id": "semantic-model-dictionary",
+      "role": "Semantic Model Dictionary Agent",
+      "pillars": [
+        "semantic-model",
+        "data-dictionary",
+        "tmdl",
+        "export",
+        "documentation"
+      ],
+      "purpose": "Export comprehensive data dictionary from TMDL files with measures, tables, and columns including localized captions and DAX expressions",
+      "category": "modeling-tmdl",
+      "tags": [
+        "semantic-model",
+        "data-dictionary",
+        "tmdl",
+        "export",
+        "documentation",
+        "workforce"
+      ],
+      "summary": "Export comprehensive data dictionary from TMDL files with measures, tables, and columns including localized captions and DAX expressions"
+    },
+    {
+      "id": "semantic-model-flow",
+      "role": "Semantic Model Flow",
+      "pillars": [
+        "powerbi"
+      ],
+      "purpose": "Conceptual illustration of Power BI semantic model components and data flow",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "workforce"
+      ],
+      "summary": "Conceptual illustration of Power BI semantic model components and data flow"
+    },
+    {
+      "id": "tmdl-bpa-remediation-planner",
+      "role": "TMDL BPA Remediation Planner",
+      "pillars": [
+        "automation",
+        "bpa",
+        "governance",
+        "powerbi",
+        "semantic-model",
+        "tmdl"
+      ],
+      "purpose": "Analyzes Best Practice Analyzer (BPA) results and generates a prioritized remediation plan, including specific TMDL modifications to resolve violations.",
+      "category": "performance-bpa",
+      "tags": [
+        "automation",
+        "bpa",
+        "governance",
+        "powerbi",
+        "semantic-model",
+        "tmdl",
+        "workforce"
+      ],
+      "summary": "Analyzes Best Practice Analyzer (BPA) results and generates a prioritized remediation plan, including specific TMDL modifications to resolve violations."
+    },
+    {
+      "id": "tmdl-ci-cd-gitops-orchestrator",
+      "role": "tmdl-ci-cd-gitops-orchestrator",
+      "pillars": [
+        "deployment-governance",
+        "pbip",
+        "powerbi",
+        "tmdl"
+      ],
+      "purpose": "Plan GitOps workflows for Power BI using TMDL/PBIP, generating pipeline YAML and environment-specific deployment rules.",
+      "category": "deployment-governance",
+      "tags": [
+        "deployment-governance",
+        "pbip",
+        "powerbi",
+        "tmdl",
+        "workforce"
+      ],
+      "summary": "Plan GitOps workflows for Power BI using TMDL/PBIP, generating pipeline YAML and environment-specific deployment rules."
+    },
+    {
+      "id": "uc-analytics-fact-tables",
+      "role": "uc-analytics-fact-tables",
+      "pillars": [
+        "powerbi",
+        "documentation"
+      ],
+      "purpose": "AI assistant for uc-analytics-fact-tables tasks in Power BI and Microsoft Fabric.",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "documentation",
+        "workforce"
+      ],
+      "summary": "AI assistant for uc-analytics-fact-tables tasks in Power BI and Microsoft Fabric."
+    },
+    {
+      "id": "uc-assistant-configuration",
+      "role": "uc-assistant-configuration",
+      "pillars": [
+        "powerbi",
+        "dax",
+        "power-query",
+        "report"
+      ],
+      "purpose": "AI assistant for uc-assistant-configuration tasks in Power BI and Microsoft Fabric.",
+      "category": "dax",
+      "tags": [
+        "powerbi",
+        "dax",
+        "power-query",
+        "report",
+        "workforce"
+      ],
+      "summary": "AI assistant for uc-assistant-configuration tasks in Power BI and Microsoft Fabric."
+    },
+    {
+      "id": "uc-forum-integration",
+      "role": "uc-forum-integration",
+      "pillars": [
+        "powerbi",
+        "deployment-governance",
+        "prompt-engineering",
+        "ols",
+        "workforce"
+      ],
+      "purpose": "# UC Forum Integration\n\nDefines the role of a UC Forum Integration Specialist. Prompt instructing an expert in Unified Communications and [Company] solutions to integrate these solutions into UC fo…",
+      "category": "deployment-governance",
+      "tags": [
+        "powerbi",
+        "deployment-governance",
+        "prompt-engineering",
+        "ols",
+        "workforce"
+      ],
+      "summary": "# UC Forum Integration\n\nDefines the role of a UC Forum Integration Specialist. Prompt instructing an expert in Unified Communications and [Company] solutions to integrate these solutions into UC fo…"
+    },
+    {
+      "id": "user-guide-sequencegeneric",
+      "role": "User Guide Sequence — Vendor Neutral",
+      "pillars": [
+        "docs",
+        "powerbi",
+        "fabric",
+        "sequence",
+        "user-guides",
+        "vendor-neutral"
+      ],
+      "purpose": "Agnostic multi-step prompt sequence that discovers report and semantic model assets in a Fabric/Power BI repository and generates precise user guides without any vendor-specific assumptions.",
+      "category": "modeling-tmdl",
+      "tags": [
+        "docs",
+        "powerbi",
+        "fabric",
+        "sequence",
+        "user-guides",
+        "vendor-neutral",
+        "workforce"
+      ],
+      "summary": "Agnostic multi-step prompt sequence that discovers report and semantic model assets in a Fabric/Power BI repository and generates precise user guides without any vendor-specific assumptions."
+    },
+    {
+      "id": "validate-document-prompt-schema-updates",
+      "role": "Validate and Document Prompt Schema Updates",
+      "pillars": [
+        "governance",
+        "schema",
+        "json-schema",
+        "automation",
+        "documentation",
+        "fabricagent"
+      ],
+      "purpose": "Validate proposed updates to the FabricAgent prompt catalog JSON schema and generate documentation (Ratification Report) for the changes.",
+      "category": "deployment-governance",
+      "tags": [
+        "governance",
+        "schema",
+        "json-schema",
+        "automation",
+        "documentation",
+        "fabricagent",
+        "workforce"
+      ],
+      "summary": "Validate proposed updates to the FabricAgent prompt catalog JSON schema and generate documentation (Ratification Report) for the changes."
+    },
+    {
+      "id": "workflow-pipeline",
+      "role": "Workflow Pipeline",
+      "pillars": [
+        "powerbi"
+      ],
+      "purpose": "Developer workflow from authoring prompts to consumption by AI agents",
+      "category": "modeling-tmdl",
+      "tags": [
+        "powerbi",
+        "workforce"
+      ],
+      "summary": "Developer workflow from authoring prompts to consumption by AI agents"
+    }
+  ],
+  "edges": [
+    {
+      "from": "contact-center-analytics-integration",
+      "to": "uc-analytics-fact-tables",
+      "reason": "workflow: power-query → modeling-tmdl"
+    },
+    {
+      "from": "contact-center-analytics-integration",
+      "to": "composite-models-and-direct-lake-design",
+      "reason": "workflow: power-query → modeling-tmdl"
+    },
+    {
+      "from": "dataset-refresh-and-gateway-troubleshooter",
+      "to": "generate-semantic-model-performance-report",
+      "reason": "workflow: power-query → modeling-tmdl"
+    },
+    {
+      "from": "dataset-refresh-and-gateway-troubleshooter",
+      "to": "badge-governance",
+      "reason": "workflow: power-query → modeling-tmdl"
+    },
+    {
+      "from": "incremental-refresh-policy-planner",
+      "to": "composite-models-and-direct-lake-design",
+      "reason": "workflow: power-query → modeling-tmdl"
+    },
+    {
+      "from": "incremental-refresh-policy-planner",
+      "to": "generate-semantic-model-performance-report",
+      "reason": "workflow: power-query → modeling-tmdl"
+    },
+    {
+      "from": "power-query-folding-diagnostics",
+      "to": "generate-semantic-model-performance-report",
+      "reason": "workflow: power-query → modeling-tmdl"
+    },
+    {
+      "from": "power-query-folding-diagnostics",
+      "to": "badge-power-query",
+      "reason": "workflow: power-query → modeling-tmdl"
+    },
+    {
+      "from": "power-query-modernizer",
+      "to": "badge-power-query",
+      "reason": "workflow: power-query → modeling-tmdl"
+    },
+    {
+      "from": "power-query-modernizer",
+      "to": "generate-semantic-model-performance-report",
+      "reason": "workflow: power-query → modeling-tmdl"
+    },
+    {
+      "from": "aggregations-and-hybrid-table-architect",
+      "to": "documentation-and-changelog-generator",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "architecture-overview",
+      "to": "documentation-and-changelog-generator",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "badge-dax",
+      "to": "uc-assistant-configuration",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "badge-governance",
+      "to": "uc-assistant-configuration",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "badge-power-query",
+      "to": "uc-assistant-configuration",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "composite-models-and-direct-lake-design",
+      "to": "uc-assistant-configuration",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "dag-workforce",
+      "to": "uc-assistant-configuration",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "data-dictionary-maintainer",
+      "to": "documentation-and-changelog-generator",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "fabric-architecture-recommendation-brief",
+      "to": "optimized-prompt-for-assistant",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "fabric-integration-plan-checklist",
+      "to": "optimized-prompt-for-assistant",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "fabricagent-feature-prioritization-agent",
+      "to": "dax-performance-profiler",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "favicon",
+      "to": "documentation-and-changelog-generator",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "generate-semantic-model-performance-report",
+      "to": "analyze-dax-measures-recommend-optimizations",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "governance-loop-bpa-pbi",
+      "to": "documentation-and-changelog-generator",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "integration-vendor-analytics-power-bi",
+      "to": "uc-assistant-configuration",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "logo",
+      "to": "documentation-and-changelog-generator",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "outline-semantic-modeling-governance-training",
+      "to": "analyze-dax-measures-recommend-optimizations",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "powerbi-semantic-model-mode-decision",
+      "to": "analyze-dax-measures-recommend-optimizations",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "powerbigitopscopilot",
+      "to": "uc-assistant-configuration",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "prompt-engineering-concept",
+      "to": "uc-assistant-configuration",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "refactorcsdr",
+      "to": "uc-assistant-configuration",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "researchdeepresearch",
+      "to": "dax-performance-profiler",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "semantic-guide-writer",
+      "to": "documentation-and-changelog-generator",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "semantic-model-dictionary",
+      "to": "documentation-and-changelog-generator",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "semantic-model-flow",
+      "to": "uc-assistant-configuration",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "uc-analytics-fact-tables",
+      "to": "uc-assistant-configuration",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "user-guide-sequencegeneric",
+      "to": "uc-assistant-configuration",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "workflow-pipeline",
+      "to": "documentation-and-changelog-generator",
+      "reason": "workflow: modeling-tmdl → dax"
+    },
+    {
+      "from": "analyze-dax-measures-recommend-optimizations",
+      "to": "analyze-bpa-violations-propose-fixes",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "analyze-dax-measures-recommend-optimizations",
+      "to": "tmdl-bpa-remediation-planner",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "contact-center-dax-analysis-framework",
+      "to": "fabric-web-application-development",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "contact-center-dax-analysis-framework",
+      "to": "bpa-findings-summary-communication",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "dax-performance-profiler",
+      "to": "fabric-web-application-development",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "dax-performance-profiler",
+      "to": "analyze-bpa-violations-propose-fixes",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "dax-vertipaq-analyzer",
+      "to": "fabric-workload-smoothing-planner",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "dax-vertipaq-analyzer",
+      "to": "analyze-fabric-capacity-utilization-costs",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "documentation-and-changelog-generator",
+      "to": "tmdl-bpa-remediation-planner",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "documentation-and-changelog-generator",
+      "to": "bpa-findings-summary-communication",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "field-parameters-and-calculation-groups",
+      "to": "accessibility-auditor",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "field-parameters-and-calculation-groups",
+      "to": "fabric-web-application-development",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "optimized-prompt-for-assistant",
+      "to": "fabric-web-application-development",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "optimized-prompt-for-assistant",
+      "to": "analyze-bpa-violations-propose-fixes",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "power-bi-optimization-guide",
+      "to": "analyze-bpa-violations-propose-fixes",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "power-bi-optimization-guide",
+      "to": "tmdl-bpa-remediation-planner",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "power-query-assistant-configuration",
+      "to": "fabric-web-application-development",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "power-query-assistant-configuration",
+      "to": "analyze-bpa-violations-propose-fixes",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "powerbi-issue-troubleshooting-guide",
+      "to": "analyze-bpa-violations-propose-fixes",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "powerbi-issue-troubleshooting-guide",
+      "to": "accessibility-auditor",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "uc-assistant-configuration",
+      "to": "fabric-web-application-development",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "uc-assistant-configuration",
+      "to": "accessibility-auditor",
+      "reason": "workflow: dax → performance-bpa"
+    },
+    {
+      "from": "accessibility-auditor",
+      "to": "accessibility-and-ux-reviewer",
+      "reason": "workflow: performance-bpa → deployment-governance"
+    },
+    {
+      "from": "accessibility-auditor",
+      "to": "define-requirements-governance-monitoring-dashboard",
+      "reason": "workflow: performance-bpa → deployment-governance"
+    },
+    {
+      "from": "analyze-bpa-violations-propose-fixes",
+      "to": "powerbi-deployment-readiness-checklist",
+      "reason": "workflow: performance-bpa → deployment-governance"
+    },
+    {
+      "from": "analyze-bpa-violations-propose-fixes",
+      "to": "draft-governance-best-practices-article",
+      "reason": "workflow: performance-bpa → deployment-governance"
+    },
+    {
+      "from": "analyze-fabric-capacity-utilization-costs",
+      "to": "fabric-capacity-monitor-and-cost-optimizer",
+      "reason": "workflow: performance-bpa → deployment-governance"
+    },
+    {
+      "from": "analyze-fabric-capacity-utilization-costs",
+      "to": "define-requirements-governance-monitoring-dashboard",
+      "reason": "workflow: performance-bpa → deployment-governance"
+    },
+    {
+      "from": "bpa-findings-summary-communication",
+      "to": "initial-governance-assessment-request",
+      "reason": "workflow: performance-bpa → deployment-governance"
+    },
+    {
+      "from": "bpa-findings-summary-communication",
+      "to": "draft-governance-best-practices-article",
+      "reason": "workflow: performance-bpa → deployment-governance"
+    },
+    {
+      "from": "fabric-web-application-development",
+      "to": "integration-vendor-uc-forum-integration",
+      "reason": "workflow: performance-bpa → deployment-governance"
+    },
+    {
+      "from": "fabric-web-application-development",
+      "to": "ai-media-creation-guide",
+      "reason": "workflow: performance-bpa → deployment-governance"
+    },
+    {
+      "from": "fabric-workload-smoothing-planner",
+      "to": "fabric-capacity-monitor-and-cost-optimizer",
+      "reason": "workflow: performance-bpa → deployment-governance"
+    },
+    {
+      "from": "fabric-workload-smoothing-planner",
+      "to": "define-requirements-governance-monitoring-dashboard",
+      "reason": "workflow: performance-bpa → deployment-governance"
+    },
+    {
+      "from": "tmdl-bpa-remediation-planner",
+      "to": "powerbi-cicd-pipeline-config-generator",
+      "reason": "workflow: performance-bpa → deployment-governance"
+    },
+    {
+      "from": "tmdl-bpa-remediation-planner",
+      "to": "draft-governance-best-practices-article",
+      "reason": "workflow: performance-bpa → deployment-governance"
+    },
+    {
+      "from": "contact-center-analytics-integration",
+      "to": "fabric-web-application-development",
+      "reason": "query performance optimization"
+    },
+    {
+      "from": "dataset-refresh-and-gateway-troubleshooter",
+      "to": "accessibility-auditor",
+      "reason": "query performance optimization"
+    },
+    {
+      "from": "incremental-refresh-policy-planner",
+      "to": "accessibility-auditor",
+      "reason": "query performance optimization"
+    },
+    {
+      "from": "analyze-dax-measures-recommend-optimizations",
+      "to": "analyze-bpa-violations-propose-fixes",
+      "reason": "measure performance tuning"
+    },
+    {
+      "from": "contact-center-dax-analysis-framework",
+      "to": "fabric-web-application-development",
+      "reason": "measure performance tuning"
+    },
+    {
+      "from": "dax-performance-profiler",
+      "to": "fabric-web-application-development",
+      "reason": "measure performance tuning"
+    },
+    {
+      "from": "aggregations-and-hybrid-table-architect",
+      "to": "documentation-and-changelog-generator",
+      "reason": "semantic model to calculations"
+    },
+    {
+      "from": "architecture-overview",
+      "to": "documentation-and-changelog-generator",
+      "reason": "semantic model to calculations"
+    },
+    {
+      "from": "badge-dax",
+      "to": "uc-assistant-configuration",
+      "reason": "semantic model to calculations"
+    },
+    {
+      "from": "accessibility-auditor",
+      "to": "accessibility-and-ux-reviewer",
+      "reason": "optimize before deploy"
+    },
+    {
+      "from": "analyze-bpa-violations-propose-fixes",
+      "to": "powerbi-deployment-readiness-checklist",
+      "reason": "optimize before deploy"
+    },
+    {
+      "from": "analyze-fabric-capacity-utilization-costs",
+      "to": "fabric-capacity-monitor-and-cost-optimizer",
+      "reason": "optimize before deploy"
+    },
+    {
+      "from": "aggregations-and-hybrid-table-architect",
+      "to": "rls-ols-security-designer",
+      "reason": "model security and governance"
+    },
+    {
+      "from": "architecture-overview",
+      "to": "accessibility-and-ux-reviewer",
+      "reason": "model security and governance"
+    },
+    {
+      "from": "badge-dax",
+      "to": "ai-media-creation-guide",
+      "reason": "model security and governance"
+    },
+    {
+      "from": "power-query-folding-diagnostics",
+      "to": "aggregations-and-hybrid-table-architect",
+      "reason": "ensure folding before agg design"
+    },
+    {
+      "from": "contact-center-analytics-integration",
+      "to": "integration-pipeline-development",
+      "reason": "pipeline hardening"
+    },
+    {
+      "from": "dax-performance-profiler",
+      "to": "power-bi-optimization-guide",
+      "reason": "apply DAX fixes in model"
+    },
+    {
+      "from": "rls-ols-security-designer",
+      "to": "tmdl-ci-cd-gitops-orchestrator",
+      "reason": "include roles in CI/CD"
+    },
+    {
+      "from": "documentation-and-changelog-generator",
+      "to": "tmdl-ci-cd-gitops-orchestrator",
+      "reason": "publish notes in pipeline"
+    }
+  ],
+  "entrypoints": [
+    "contact-center-analytics-integration",
+    "dataset-refresh-and-gateway-troubleshooter",
+    "incremental-refresh-policy-planner",
+    "power-query-folding-diagnostics",
+    "power-query-modernizer"
+  ]
+}

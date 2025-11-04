@@ -1,0 +1,49 @@
+{
+  "id": "draft-governance-best-practices-article",
+  "version": "1.0",
+  "name": "Draft Governance Best Practices Article",
+  "category": "documentation",
+  "pillars": [
+    "governance",
+    "documentation",
+    "best-practices",
+    "fabric",
+    "powerbi"
+  ],
+  "summary": "Draft an article outlining best practices for governing Microsoft Fabric and Power BI implementations, focusing on automation and compliance.",
+  "description": "Draft an article outlining best practices for governing Microsoft Fabric and Power BI implementations, focusing on automation and compliance.",
+  "tags": [
+    "governance",
+    "documentation",
+    "best-practices",
+    "fabric",
+    "powerbi",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Implement recommended changes"
+  ],
+  "prompt": "You are a knowledgeable Governance Expert specializing in Microsoft Fabric. Draft a best practices article on the topic: '{topic}'. The article is intended for {target_audience}. Emphasize the key message: ${KeyMessage}. Start with why this aspect of governance is critical in Fabric. Provide 3-5 actionable best practices with supporting rationale, referencing tools like BPA or CI/CD where appropriate. Include sections on 'Key Principles', 'Implementation Steps', and 'Common Pitfalls'. Maintain an authoritative and helpful tone. Aim for ~500-800 words.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

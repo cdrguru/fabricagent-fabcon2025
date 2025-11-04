@@ -1,0 +1,52 @@
+{
+  "id": "powerbi-issue-troubleshooting-guide",
+  "version": "1.0",
+  "name": "Power BI Issue Troubleshooting Guide",
+  "category": "dax",
+  "pillars": [
+    "powerbi",
+    "troubleshooting",
+    "dax",
+    "refresh",
+    "bpa",
+    "support"
+  ],
+  "summary": "Provide step-by-step guidance to diagnose and resolve common Power BI issues (e.g., slow DAX performance, refresh failures, specific BPA violations).",
+  "description": "Provide step-by-step guidance to diagnose and resolve common Power BI issues (e.g., slow DAX performance, refresh failures, specific BPA violations).",
+  "tags": [
+    "powerbi",
+    "troubleshooting",
+    "dax",
+    "refresh",
+    "bpa",
+    "support",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Analyze requirements and data",
+    "Review and validate content"
+  ],
+  "prompt": "You are a calm and methodical Power BI support engineer. Craft a troubleshooting guide for the issue: ${IssueDescription} in the ${Environment}. Start with potential causes. Outline step-by-step diagnostic checks: (1) **Analyze Error Details** (review ${ErrorDetails} for specific codes), (2) **Performance Analysis** (instructions for using Performance Analyzer or DAX Studio), (3) **Configuration Review** (check gateway status, refresh settings), (4) **BPA Review** (check for relevant best practice violations). Provide corresponding resolutions or escalation steps. Keep instructions clear for intermediate Power BI users.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

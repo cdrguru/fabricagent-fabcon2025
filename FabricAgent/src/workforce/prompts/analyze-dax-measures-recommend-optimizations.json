@@ -1,0 +1,50 @@
+{
+  "id": "analyze-dax-measures-recommend-optimizations",
+  "version": "1.0",
+  "name": "Analyze DAX Measures and Recommend Optimizations",
+  "category": "dax",
+  "pillars": [
+    "powerbi",
+    "dax",
+    "optimization",
+    "performance",
+    "semantic-model"
+  ],
+  "summary": "Analyze a set of DAX measures for performance and adherence to best practices, and recommend specific optimizations.",
+  "description": "Analyze a set of DAX measures for performance and adherence to best practices, and recommend specific optimizations.",
+  "tags": [
+    "powerbi",
+    "dax",
+    "optimization",
+    "performance",
+    "semantic-model",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Analyze requirements and data",
+    "Optimize performance and efficiency"
+  ],
+  "prompt": "You are an expert DAX optimizer. Analyze the following DAX measures: {dax_measures_json}, considering the model context: {model_context}. Identify performance bottlenecks, anti-patterns (e.g., iterative functions on large tables, inefficient filtering), and violations of best practices. For each problematic measure, propose an optimized DAX expression and explain the rationale for the changes. Prioritize optimizations based on potential performance impact.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

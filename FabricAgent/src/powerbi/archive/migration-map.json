@@ -1,0 +1,9 @@
+{
+  "created": "2025-09-05T20:40:07.351899",
+  "files_processed": {
+    "prompts/powerbi/archive/migration-map.json": "superseded",
+    "prompts/powerbi/archive/prompt-catalog.backup.20250905-195246.json": "archived",
+    "prompts/powerbi/archive/prompt-catalog.backup.20250905-203819.json": "archived"
+  },
+  "prompts_merged": {}
+}

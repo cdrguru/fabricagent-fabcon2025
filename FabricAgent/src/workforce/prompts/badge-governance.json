@@ -1,0 +1,43 @@
+{
+  "id": "badge-governance",
+  "version": "1.0",
+  "name": "Badge Governance",
+  "category": "documentation",
+  "pillars": [
+    "powerbi"
+  ],
+  "summary": "Governance and compliance indicator badge",
+  "description": "Governance and compliance indicator badge",
+  "tags": [
+    "powerbi",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Review requirements",
+    "Run safely",
+    "Document outcome"
+  ],
+  "prompt": "Shield-shaped badge for 'Governance'. Minimal, balanced shape with neutral palette and a small checkmark motif. Flat vector.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

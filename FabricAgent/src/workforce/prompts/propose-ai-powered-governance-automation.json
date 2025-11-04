@@ -1,0 +1,55 @@
+{
+  "id": "propose-ai-powered-governance-automation",
+  "version": "1.0",
+  "name": "Propose AI-Powered Governance Automation",
+  "category": "documentation",
+  "pillars": [
+    "ai",
+    "governance",
+    "automation",
+    "proposal",
+    "azureopenai",
+    "fabric",
+    "documentation"
+  ],
+  "summary": "Draft a proposal for leveraging AI (e.g., Azure OpenAI) to automate specific governance tasks within Microsoft Fabric, such as generating documentation or analyzing BPA results.",
+  "description": "Draft a proposal for leveraging AI (e.g., Azure OpenAI) to automate specific governance tasks within Microsoft Fabric, such as generating documentation or analyzing BPA results.",
+  "tags": [
+    "ai",
+    "governance",
+    "automation",
+    "proposal",
+    "azureopenai",
+    "fabric",
+    "documentation",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Validate results and outputs",
+    "Implement recommended changes",
+    "Test functionality and performance"
+  ],
+  "prompt": "Draft a proposal to implement AI-powered automation for Fabric governance. Focus on the following use cases: ${UseCases} (e.g., automated data dictionary generation, AI-assisted BPA remediation planning). Propose the technology stack (${ProposedTechnology}). Outline the expected benefits (${ExpectedBenefits}), such as increased efficiency and improved compliance. Detail a phased implementation plan, including pilot testing and rollout. Crucially, address potential risks and mitigation strategies, focusing on safety guardrails, prompt validation (using `validate_catalog.py`), and mandatory human oversight.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

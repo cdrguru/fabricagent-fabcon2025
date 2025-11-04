@@ -1,0 +1,43 @@
+{
+  "id": "governance-loop-bpa-pbi",
+  "version": "1.0",
+  "name": "Governance Loop Bpa Pbi",
+  "category": "documentation",
+  "pillars": [
+    "powerbi"
+  ],
+  "summary": "Feedback loop showing how governance tools inform documentation and issue resolution",
+  "description": "Feedback loop showing how governance tools inform documentation and issue resolution",
+  "tags": [
+    "powerbi",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Review requirements",
+    "Run safely",
+    "Document outcome"
+  ],
+  "prompt": "Depict a governance feedback loop: PBI Inspector (accessibility) and Fabric BPA (best practices) produce JSON artifacts → docs summarize findings → issues/triage → fixes → re-run tools. Use circular flow arrows and small badges for 'a11y' and 'BPA'.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

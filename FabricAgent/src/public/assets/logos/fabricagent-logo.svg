@@ -1,0 +1,87 @@
+<svg viewBox="0 0 500 420" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>FabricAgent Logo</title>
+  <desc>An abstract letter A is formed by parallel blue and gray lines with circular nodes at their ends, representing data pathways. Below is the wordmark 'FabricAgent'.</desc>
+
+  <style>
+    /* Global styles and animation setup */
+    .line {
+      stroke-linecap: round;
+      vector-effect: non-scaling-stroke;
+      animation: draw 1.5s ease-out forwards;
+    }
+    .node {
+      transform-origin: 50% 50%;
+      animation: pulse 3s ease-in-out infinite alternate;
+    }
+
+    /* Keyframe Animations */
+    @keyframes draw {
+      from { stroke-dashoffset: 1; }
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.3); opacity: 0.7; }
+    }
+
+    /* Animation Staggering */
+    .line-1 { animation-delay: 0s; }
+    .line-2 { animation-delay: 0.1s; }
+    .line-3 { animation-delay: 0.2s; }
+    .line-4 { animation-delay: 0.3s; }
+    .line-5 { animation-delay: 0.4s; }
+    .line-6 { animation-delay: 0.5s; }
+    .line-7 { animation-delay: 0.6s; }
+
+    .node:nth-of-type(2n) { animation-delay: 0.2s; }
+    .node:nth-of-type(3n) { animation-delay: 0.4s; }
+    .node:nth-of-type(5n) { animation-delay: 0.6s; }
+
+    /* Accessibility: Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      .line, .node {
+        animation: none !important;
+      }
+      /* Ensure lines are visible when animation is disabled */
+      .line {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+
+  <g id="mark" stroke-width="8" fill="none">
+    <g id="blue-lines" stroke="#3B82F6">
+      <path class="line line-1" pathLength="1" d="M250 30 L100 280" />
+      <path class="line line-3" pathLength="1" d="M250 30 L400 280" />
+      <path class="line line-5" pathLength="1" d="M160 180 H 340" />
+      <path class="line line-7" pathLength="1" d="M125 240 L220 50" />
+    </g>
+    <g id="gray-lines" stroke="#B0B0B0">
+      <path class="line line-2" pathLength="1" d="M280 50 L155 280" />
+      <path class="line line-4" pathLength="1" d="M220 50 L375 280" />
+      <path class="line line-6" pathLength="1" d="M140 210 H 360" />
+    </g>
+    <g id="nodes" fill="#3B82F6">
+      <circle class="node" cx="250" cy="30" r="8"/>
+      <circle class="node" cx="100" cy="280" r="8"/>
+      <circle class="node" cx="400" cy="280" r="8"/>
+      <circle class="node" cx="160" cy="180" r="8"/>
+      <circle class="node" cx="340" cy="180" r="8"/>
+      <circle class="node" cx="125" cy="240" r="8"/>
+      <circle class="node" cx="220" cy="50" r="8"/>
+    </g>
+    <g id="gray-nodes" fill="#B0B0B0">
+       <circle class="node" cx="280" cy="50" r="8"/>
+       <circle class="node" cx="155" cy="280" r="8"/>
+       <circle class="node" cx="375" cy="280" r="8"/>
+       <circle class="node" cx="140" cy="210" r="8"/>
+       <circle class="node" cx="360" cy="210" r="8"/>
+    </g>
+  </g>
+
+  <g id="wordmark" transform="translate(0, 330)">
+    <text x="250" y="50" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="64" font-weight="700" text-anchor="middle">
+      <tspan fill="#1E3A8A">Fabric</tspan><tspan fill="#B0B0B0" font-weight="500">Agent</tspan>
+    </text>
+  </g>
+</svg>

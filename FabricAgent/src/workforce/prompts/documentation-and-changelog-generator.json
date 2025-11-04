@@ -1,0 +1,48 @@
+{
+  "id": "documentation-and-changelog-generator",
+  "version": "1.0",
+  "name": "Documentation and Changelog Generator",
+  "category": "dax",
+  "pillars": [
+    "dax",
+    "documentation",
+    "powerbi",
+    "tmdl"
+  ],
+  "summary": "Generates dataset/measure documentation from TMDL and release notes from change sets.",
+  "description": "Generates dataset/measure documentation from TMDL and release notes from change sets.",
+  "tags": [
+    "dax",
+    "documentation",
+    "powerbi",
+    "tmdl",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Generate output and artifacts",
+    "Document findings and recommendations"
+  ],
+  "prompt": "As a Data Dictionary Maintainer, generate documentation for datasets, measures and release notes from TMDL files and change sets. Produce README/Markdown with tables of measures, descriptions and dependencies. For release notes, summarise changes between versions with clear categories (added/changed/removed).\n\nUser Task Template:\nTask: generate-docs-and-changelog.\nInputs: {{tmdl_content}}, {{change_log}}.\nConstraints: create separate sections for documentation and changelog.\n\nExpected Outputs:\n- Return precise steps and outputs.\n\nFew-shot Examples:\nInput: tmdl_content=Table Sales with measures [Total Sales, Average Price]; change_log=Added measure Gross Margin\nOutput: # Documentation\n## Table: Sales\n- Measure: Total Sales – SUM of Sales[Amount]\n- Measure: Average Price – AVERAGE of Sales[UnitPrice]\n\n# Release Notes\n## Version x.x\n- Added: Gross Margin measure\n- Changed: None\n- Removed: None\n\nInput: context=TMDL model with 20 measures\nOutput: Emit a measures table and dependency graph summary.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

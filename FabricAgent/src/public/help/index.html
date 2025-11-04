@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FabricAgent Helper</title>
+    <style>
+      :root { --ink:#0f172a; --muted:#475569; --brand:#4f46e5; --bg:#f8fafc; }
+      html,body { margin:0; padding:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji"; color:var(--ink); background:#fff; }
+      .wrap { max-width: 980px; margin: 24px auto; padding: 0 16px; }
+      .bar { height:4px; background: linear-gradient(90deg,#4f46e5,#06b6d4,#22c55e); border-radius:4px; }
+      h1 { margin: 16px 0 6px; font-size: 26px; }
+      p.lead { color:var(--muted); margin: 0 0 18px; }
+      .grid { display:grid; grid-template-columns: 1fr; gap:16px; }
+      @media (min-width: 860px){ .grid { grid-template-columns: 1.1fr 0.9fr; } }
+      .card { border:1px solid #e5e7eb; border-radius:12px; padding:16px; background:#fff; }
+      .card h2 { font-size: 18px; margin: 0 0 8px; }
+      .btn { display:inline-flex; align-items:center; gap:8px; font-weight:600; padding:8px 12px; border-radius:8px; text-decoration:none; color:#fff; background:var(--brand); }
+      .btn.alt { background:#0ea5e9; }
+      code, pre { background:#0f172a0d; border:1px solid #e2e8f0; border-radius:8px; }
+      code { padding:2px 6px; border-radius:6px; }
+      pre { padding:12px; overflow:auto; }
+      ul { margin: 8px 0 8px 18px; }
+      small { color: var(--muted); }
+      .row { display:flex; flex-wrap:wrap; gap:10px; }
+      .pill { display:inline-block; padding:2px 8px; border-radius:999px; background:#eef2ff; color:#3730a3; font-size:12px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="bar" aria-hidden="true"></div>
+      <header>
+        <h1>FabricAgent Helper</h1>
+        <p class="lead">Goal‑oriented guide to get started quickly using only this repository content and Power BI–aligned patterns.</p>
+        <div class="row" style="margin:6px 0 18px;">
+          <a class="btn" href="/catalogue" target="_parent">Explore Catalogue</a>
+          <a class="btn alt" href="/workforce" target="_parent">View Workforce</a>
+          <a class="btn" style="background:#10b981" href="/workflow" target="_parent">Open Workflow</a>
+          <a class="btn" style="background:#4338ca" href="/Executive_Briefing.mp4" target="_parent">Watch Briefing</a>
+        </div>
+      </header>
+
+      <div class="grid">
+        <section class="card">
+          <h2>Quick start (local)</h2>
+          <p class="lead">Run the frontend locally with Vite.</p>
+          <pre><code># 1) From repo root
+cd src
+
+# 2) Install and run
+npm install
+npm run dev
+
+# 3) Open
+# http://localhost:5173/
+</code></pre>
+          <p>Tip: The Help page you’re viewing loads from <code>src/public/help/index.html</code>. To point Help to external docs, set <code>VITE_HELP_CENTER_URL</code> in your environment.</p>
+
+          <h2 style="margin-top:18px;">Validate build</h2>
+          <pre><code># Optional sanity checks (from repo root)
+./verify_fabricagent.sh
+./validate_publication_readiness.sh
+</code></pre>
+        </section>
+
+        <aside class="card">
+          <h2>Common actions</h2>
+          <ul>
+            <li>Download datasets: <a href="/prompt-catalog.json" target="_blank">Catalogue JSON</a>, <a href="/workforce_prompts.json" target="_blank">Workforce JSON</a>, <a href="/dag.json" target="_blank">DAG JSON</a></li>
+            <li>Open schema: <a href="/schemas/prompt.schema.json" target="_blank">prompt.schema.json</a></li>
+            <li>Docs pointers: <a href="https://github.com/cdrguru/FabricAgent/blob/main/docs/FABRIC_INTEGRATIONS.md" target="_blank" rel="noopener">Fabric Integrations Overview</a>, <a href="https://github.com/cdrguru/FabricAgent/blob/main/docs/FABRIC_RTI_INTEGRATION.md" target="_blank" rel="noopener">RTI Playbook</a>, <a href="https://github.com/cdrguru/FabricAgent/blob/main/docs/DEPLOYMENT_AZURE.md" target="_blank" rel="noopener">Azure Deployment</a>, <a href="https://github.com/cdrguru/FabricAgent/blob/main/docs/VALIDATION.md" target="_blank" rel="noopener">Validation</a></li>
+          </ul>
+
+          <h2 style="margin-top:12px;">Author a prompt (minimal)</h2>
+          <small>Create a JSON file that matches the schema; example:</small>
+          <pre><code>{
+  "id": "example-id",
+  "name": "My Prompt",
+  "category": "documentation",
+  "pillars": ["documentation"],
+  "summary": "Short purpose statement.",
+  "actions": ["analyze"],
+  "tags": ["powerbi"],
+  "inputs": [{"name":"context","type":"string","required":true}],
+  "user_template": "Task: ...\nInputs: {{context}}"
+}
+</code></pre>
+          <p class="lead">Then validate and open the app to see it reflected.</p>
+        </aside>
+      </div>
+
+      <section class="card" style="margin-top:16px;">
+        <h2>Plan</h2>
+        <ol>
+          <li>Decide whether you’re just exploring locally or authoring prompts.</li>
+          <li>Follow the quick‑start steps with exact commands above.</li>
+          <li>Validate against the schema and run the verify scripts before publishing.</li>
+        </ol>
+        <div class="row" style="margin-top:8px;">
+          <span class="pill">Local files</span>
+          <span class="pill">Schema‑first</span>
+          <span class="pill">Safe defaults</span>
+        </div>
+      </section>
+
+    </div>
+  </body>
+  </html>

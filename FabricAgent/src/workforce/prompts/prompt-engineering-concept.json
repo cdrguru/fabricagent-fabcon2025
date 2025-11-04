@@ -1,0 +1,42 @@
+{
+  "id": "prompt-engineering-concept",
+  "version": "1.0",
+  "name": "Prompt Engineering Concept",
+  "category": "documentation",
+  "pillars": [
+    "powerbi"
+  ],
+  "summary": "Visual metaphor for the prompt engineering and validation process",
+  "description": "Visual metaphor for the prompt engineering and validation process",
+  "tags": [
+    "powerbi",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Validate results and outputs",
+    "Test functionality and performance"
+  ],
+  "prompt": "Concept illustration: messy text blocks transforming into validated, structured prompts with checkmarks for schema, safety, adversarial tests. Flat vector, subtle motion lines, crisp labels.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

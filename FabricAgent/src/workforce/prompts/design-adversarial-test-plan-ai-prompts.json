@@ -1,0 +1,53 @@
+{
+  "id": "design-adversarial-test-plan-ai-prompts",
+  "version": "1.0",
+  "name": "Design Adversarial Test Plan for AI Prompts",
+  "category": "documentation",
+  "pillars": [
+    "ai",
+    "testing",
+    "adversarial",
+    "governance",
+    "safety",
+    "prompt-engineering"
+  ],
+  "summary": "Design a test plan to validate the safety, reliability, and governance compliance of AI prompts used within the FabricAgent repository.",
+  "description": "Design a test plan to validate the safety, reliability, and governance compliance of AI prompts used within the FabricAgent repository.",
+  "tags": [
+    "ai",
+    "testing",
+    "adversarial",
+    "governance",
+    "safety",
+    "prompt-engineering",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Design solution architecture",
+    "Validate results and outputs",
+    "Test functionality and performance"
+  ],
+  "prompt": "You are an independent quality assurance engineer designing adversarial scenarios. Design an adversarial test plan for the AI prompts located at '{prompt_catalog_path}'. The plan must validate adherence to the safety clauses defined in the catalog and address these risk scenarios: {risk_scenarios}. For key prompts in the catalog, identify specific test cases, including: 1. Boundary testing of inputs. 2. Attempts to bypass safety clauses. 3. Prompt injection attempts. Define the expected outcomes and success metrics. Outline how this plan can be integrated into the existing CI/CD pipeline using tools like `validate_catalog.py`.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

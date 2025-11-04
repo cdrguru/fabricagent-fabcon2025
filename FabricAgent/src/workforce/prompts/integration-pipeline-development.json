@@ -1,0 +1,48 @@
+{
+  "id": "integration-pipeline-development",
+  "version": "1.0",
+  "name": "Integration Pipeline Development",
+  "category": "deployment-governance",
+  "pillars": [
+    "deployment-governance",
+    "integration",
+    "powerbi",
+    "power-query"
+  ],
+  "summary": "Guides development of a production-ready integration pipeline connecting Contact Center API Contact Center with Microsoft Power BI.",
+  "description": "Guides development of a production-ready integration pipeline connecting Contact Center API Contact Center with Microsoft Power BI.",
+  "tags": [
+    "deployment-governance",
+    "integration",
+    "powerbi",
+    "power-query",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Design solution architecture",
+    "Deploy to target environment"
+  ],
+  "prompt": "As a Deployment Governance Specialist, design an integration pipeline between Contact Center API Contact Center and Power BI. Provide step-by-step guidance on securely extracting, transforming and loading CDR data using Power Query and DAX. Emphasise OAuth authentication, parameterization and CI/CD deployment patterns.\n\nUser Task Template:\nTask: develop-integration-pipeline.\nInputs: {{source_system}}, {{target_dataset}}, {{security_requirements}}.\nConstraints: outline pipeline stages, specify M and DAX transformations, and call out security considerations.\n\nExpected Outputs:\n- Return precise steps and outputs.\n\nFew-shot Examples:\nInput: source_system=Contact Center API CDR API; target_dataset=SalesAnalytics\nOutput: - Step 1: Use OAuth to connect to the Contact Center API CDR API.\n- Step 2: Extract CDR records into a staging table using M with parameterized endpoints.\n- Step 3: Transform fields (CallDuration, AgentID) and model relationships in Power Query.\n- Step 4: Load into the SalesAnalytics dataset and write DAX measures for call metrics.\n\nInput: m_query=let Source=Excel.Workbook(File.Contents(\"/tmp/file.xlsx\"),true) in Source\nOutput: M: Add a step to promote headers and change data types.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

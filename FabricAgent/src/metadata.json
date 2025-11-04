@@ -1,0 +1,5 @@
+{
+  "name": "FabricAgent Prompt Explorer",
+  "description": "An interactive web application to explore, visualize, and manage AI prompts and workflows. Features a prompt catalogue, a workforce library, and an interactive DAG visualization, enhanced with a Gemini-powered AI assistant.",
+  "requestFramePermissions": []
+}

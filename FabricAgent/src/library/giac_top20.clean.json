@@ -1,0 +1,429 @@
+{
+  "summary": {
+    "total_considered": 30,
+    "duplicates_removed": 10,
+    "categories_covered": {
+      "dax-modeling": 6,
+      "fabric-architecture": 8,
+      "performance": 1,
+      "power-query-folding": 3,
+      "general": 2
+    }
+  },
+  "top20": [
+    {
+      "id": "giac-tu9--depmic",
+      "title": "Microsoft Power BI / Fabric Q&A",
+      "category": "dax-modeling",
+      "tags": [
+        "dax",
+        "power query",
+        "fabric",
+        "reports",
+        "performance",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "tu9--dEPMic",
+        "title": "REPLAY Microsoft Power BI / Fabric Q&A - LIVE (Aug 2, 2025)"
+      },
+      "distilled_prompt": "Objective: Microsoft Power BI / Fabric Q&A. Inputs: semantic model schema, sample data, current measures. Constraints: star schema preferred, minimize row context, avoid calculated columns for dynamic logic.\n1) Clarify the business question and required grain.\n2) Map fields to a star schema and verify key relationships (single-direction by default).\n3) Draft measures using variables, CALCULATE-style context transition only when needed.\n4) Handle filters explicitly (REMOVEFILTERS/KEEPFILTERS) and choose safe aggregations.\n5) Validate results across edge cases and different filter contexts.\n6) Optimize cardinality (encodings), reduce columns, and precompute where appropriate.\nOutput: final measures and relationship notes ready for reporting.\nVerify: test 3 scenarios (no filter, single filter, cross-filter) to confirm expected values.",
+      "score": 0.85,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-vom47ccpa9s",
+      "title": "Turn Power BI Reports into Apps with Translytical Task Flows",
+      "category": "fabric-architecture",
+      "tags": [
+        "fabric",
+        "reports",
+        "directquery",
+        "pro",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "voM47CcPa9s",
+        "title": "Turn Power BI Reports into Apps with Translytical Task Flows"
+      },
+      "distilled_prompt": "Objective: Turn Power BI Reports into Apps with Translytical Task Flows. Inputs: data sources, refresh needs, security model, target audiences. Constraints: simple, reusable, least-coupled design.\n1) Define use cases and SLAs (freshness, latency, scale).\n2) Choose storage/compute (import, DQ, lakehouse, delta) per table by need.\n3) Lay out pipelines/tasks, dependencies, and retry strategy.\n4) Specify semantic model boundaries, shared datasets, and governance (RLS/OLS, tags).\n5) Plan environments (dev/test/prod) and deployment rules.\nOutput: a concise architecture plan with artifacts, dependencies, and responsibilities.\nVerify: walk a single business scenario end-to-end and confirm latencies meet SLAs.",
+      "score": 0.69,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-r1pxtl4uatk",
+      "title": "Stop Guessing Colors: Legends That Guide in Power BI",
+      "category": "performance",
+      "tags": [
+        "calculated columns",
+        "performance",
+        "pro",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "R1pXtl4uAtk",
+        "title": "Stop Guessing Colors: Legends That Guide in Power BI"
+      },
+      "distilled_prompt": "Objective: Stop Guessing Colors: Legends That Guide in Power BI. Inputs: model size, relationships, measures, visuals. Constraints: reduce cardinality and expensive scans.\n1) Profile performance (Perf Analyzer/diagnostics) and rank the slowest queries.\n2) Replace calculated columns with measures or ETL precompute when viable.\n3) Simplify visuals (limit high-cardinality axes, reduce slicers).\n4) Optimize relationships and filter directions; avoid bidirectional unless required.\n5) Review measure patterns (iterators, context transitions) and add variables.\nOutput: prioritized fixes with estimated impact.\nVerify: re-profile the same interactions; confirm target reduction in query time.",
+      "score": 0.69,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-7l4btbj6fm8",
+      "title": "The PERFECT Power BI dataflows use case",
+      "category": "power-query-folding",
+      "tags": [
+        "power query",
+        "data model",
+        "dataflows",
+        "pro",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "7L4bTbj6fM8",
+        "title": "The PERFECT Power BI dataflows use case"
+      },
+      "distilled_prompt": "Objective: The PERFECT Power BI dataflows use case. Inputs: source query, connector, applied steps. Constraints: preserve query folding; push transforms to the source when possible.\n1) Identify the data source and confirm foldability of each step.\n2) Reorder/replace blocking steps (e.g., custom functions, row-by-row ops) with source-native ops.\n3) Filter early with foldable predicates; remove unused columns.\n4) Consolidate joins/aggregations to execute at the source.\n5) Parameterize paths/filters for reuse and environments.\nOutput: a revised M pipeline that maximizes folding with notes on trade-offs.\nVerify: confirm \"View Native Query\" or diagnostics indicates folding for key steps.",
+      "score": 0.68,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-69aotssrvme",
+      "title": "Power BI Visuals That Behave - Edit Interactions Done Right",
+      "category": "general",
+      "tags": [
+        "pro",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "69AOTSSRVmE",
+        "title": "Power BI Visuals That Behave - Edit Interactions Done Right"
+      },
+      "distilled_prompt": "Objective: Power BI Visuals That Behave - Edit Interactions Done Right. Inputs: existing report, target audience, interaction patterns. Constraints: clarity first, minimal cognitive load.\n1) Define the story and key decisions the page supports.\n2) Choose visuals that match data grain and question; limit to essential filters.\n3) Configure interactions (edit interactions/field parameters) to guide focus.\n4) Standardize styles, legends, and color semantics; document choices.\n5) Add light annotations/tooltips for context.\nOutput: a refined report spec with interaction rules.\nVerify: run a quick user walkthrough; confirm they reach the intended insight in <30s.",
+      "score": 0.62,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-mikekdopyhe",
+      "title": "Power BI Beginner's Tutorial (2025)",
+      "category": "dax-modeling",
+      "tags": [
+        "dax",
+        "power query",
+        "data model",
+        "relationships",
+        "measures",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "MikekdopYhE",
+        "title": "Power BI Beginner's Tutorial (2025)"
+      },
+      "distilled_prompt": "Objective: Power BI Beginner's Tutorial (2025). Inputs: semantic model schema, sample data, current measures. Constraints: star schema preferred, minimize row context, avoid calculated columns for dynamic logic.\n1) Clarify the business question and required grain.\n2) Map fields to a star schema and verify key relationships (single-direction by default).\n3) Draft measures using variables, CALCULATE-style context transition only when needed.\n4) Handle filters explicitly (REMOVEFILTERS/KEEPFILTERS) and choose safe aggregations.\n5) Validate results across edge cases and different filter contexts.\n6) Optimize cardinality (encodings), reduce columns, and precompute where appropriate.\nOutput: final measures and relationship notes ready for reporting.\nVerify: test 3 scenarios (no filter, single filter, cross-filter) to confirm expected values.",
+      "score": 0.84,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-5i8yzn8odao",
+      "title": "STOP Using Measures in Power BI Until You See This!",
+      "category": "dax-modeling",
+      "tags": [
+        "dax",
+        "relationships",
+        "measures",
+        "calculated columns",
+        "power bi desktop",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "5I8yzn8oDAo",
+        "title": "STOP Using Measures in Power BI Until You See This!"
+      },
+      "distilled_prompt": "Objective: STOP Using Measures in Power BI Until You See This!. Inputs: semantic model schema, sample data, current measures. Constraints: star schema preferred, minimize row context, avoid calculated columns for dynamic logic.\n1) Clarify the business question and required grain.\n2) Map fields to a star schema and verify key relationships (single-direction by default).\n3) Draft measures using variables, CALCULATE-style context transition only when needed.\n4) Handle filters explicitly (REMOVEFILTERS/KEEPFILTERS) and choose safe aggregations.\n5) Validate results across edge cases and different filter contexts.\n6) Optimize cardinality (encodings), reduce columns, and precompute where appropriate.\nOutput: final measures and relationship notes ready for reporting.\nVerify: test 3 scenarios (no filter, single filter, cross-filter) to confirm expected values.",
+      "score": 0.71,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-ftsyyzph6s4",
+      "title": "Ditch the Publish Button in Power BI Desktop",
+      "category": "dax-modeling",
+      "tags": [
+        "dax",
+        "data model",
+        "power bi desktop",
+        "reports",
+        "pro",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "FtsYYZpH6S4",
+        "title": "Ditch the Publish Button in Power BI Desktop"
+      },
+      "distilled_prompt": "Objective: Ditch the Publish Button in Power BI Desktop. Inputs: semantic model schema, sample data, current measures. Constraints: star schema preferred, minimize row context, avoid calculated columns for dynamic logic.\n1) Clarify the business question and required grain.\n2) Map fields to a star schema and verify key relationships (single-direction by default).\n3) Draft measures using variables, CALCULATE-style context transition only when needed.\n4) Handle filters explicitly (REMOVEFILTERS/KEEPFILTERS) and choose safe aggregations.\n5) Validate results across edge cases and different filter contexts.\n6) Optimize cardinality (encodings), reduce columns, and precompute where appropriate.\nOutput: final measures and relationship notes ready for reporting.\nVerify: test 3 scenarios (no filter, single filter, cross-filter) to confirm expected values.",
+      "score": 0.7,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-lxq9gdfpv0y",
+      "title": "Power BI dataflows: Where does it fit in? (Matthew Roche schools Patrick)",
+      "category": "power-query-folding",
+      "tags": [
+        "power query",
+        "data model",
+        "power bi desktop",
+        "power bi service",
+        "reports",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "lXq9GDfpv0Y",
+        "title": "Power BI dataflows: Where does it fit in? (Matthew Roche schools Patrick)"
+      },
+      "distilled_prompt": "Objective: Power BI dataflows: Where does it fit in? (Matthew Roche schools Patrick). Inputs: source query, connector, applied steps. Constraints: preserve query folding; push transforms to the source when possible.\n1) Identify the data source and confirm foldability of each step.\n2) Reorder/replace blocking steps (e.g., custom functions, row-by-row ops) with source-native ops.\n3) Filter early with foldable predicates; remove unused columns.\n4) Consolidate joins/aggregations to execute at the source.\n5) Parameterize paths/filters for reuse and environments.\nOutput: a revised M pipeline that maximizes folding with notes on trade-offs.\nVerify: confirm \"View Native Query\" or diagnostics indicates folding for key steps.",
+      "score": 0.68,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-na9pqdrn3f4",
+      "title": "Microsoft Fabric Explained in less than 10 Minutes (Start Here)",
+      "category": "fabric-architecture",
+      "tags": [
+        "data model",
+        "relationships",
+        "measures",
+        "fabric",
+        "dataflows",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "NA9pQdRN3F4",
+        "title": "Microsoft Fabric Explained in less than 10 Minutes (Start Here)"
+      },
+      "distilled_prompt": "Objective: Microsoft Fabric Explained in less than 10 Minutes (Start Here). Inputs: data sources, refresh needs, security model, target audiences. Constraints: simple, reusable, least-coupled design.\n1) Define use cases and SLAs (freshness, latency, scale).\n2) Choose storage/compute (import, DQ, lakehouse, delta) per table by need.\n3) Lay out pipelines/tasks, dependencies, and retry strategy.\n4) Specify semantic model boundaries, shared datasets, and governance (RLS/OLS, tags).\n5) Plan environments (dev/test/prod) and deployment rules.\nOutput: a concise architecture plan with artifacts, dependencies, and responsibilities.\nVerify: walk a single business scenario end-to-end and confirm latencies meet SLAs.",
+      "score": 0.68,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-qh2sqdm-ysw",
+      "title": "PowerPoint + Power BI Annotations: Next-Level Storytelling",
+      "category": "fabric-architecture",
+      "tags": [
+        "measures",
+        "fabric",
+        "reports",
+        "pro",
+        "embedded",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "QH2sQdm-ySw",
+        "title": "PowerPoint + Power BI Annotations: Next-Level Storytelling"
+      },
+      "distilled_prompt": "Objective: PowerPoint + Power BI Annotations: Next-Level Storytelling. Inputs: data sources, refresh needs, security model, target audiences. Constraints: simple, reusable, least-coupled design.\n1) Define use cases and SLAs (freshness, latency, scale).\n2) Choose storage/compute (import, DQ, lakehouse, delta) per table by need.\n3) Lay out pipelines/tasks, dependencies, and retry strategy.\n4) Specify semantic model boundaries, shared datasets, and governance (RLS/OLS, tags).\n5) Plan environments (dev/test/prod) and deployment rules.\nOutput: a concise architecture plan with artifacts, dependencies, and responsibilities.\nVerify: walk a single business scenario end-to-end and confirm latencies meet SLAs.",
+      "score": 0.68,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-llnpkvtbrzi",
+      "title": "Translytical Task Flows Bring Your DAG to Life in Microsoft Fabric",
+      "category": "fabric-architecture",
+      "tags": [
+        "measures",
+        "power bi desktop",
+        "fabric",
+        "pro",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "llnPkVtBrZI",
+        "title": "Translytical Task Flows Bring Your DAG to Life in Microsoft Fabric"
+      },
+      "distilled_prompt": "Objective: Translytical Task Flows Bring Your DAG to Life in Microsoft Fabric. Inputs: data sources, refresh needs, security model, target audiences. Constraints: simple, reusable, least-coupled design.\n1) Define use cases and SLAs (freshness, latency, scale).\n2) Choose storage/compute (import, DQ, lakehouse, delta) per table by need.\n3) Lay out pipelines/tasks, dependencies, and retry strategy.\n4) Specify semantic model boundaries, shared datasets, and governance (RLS/OLS, tags).\n5) Plan environments (dev/test/prod) and deployment rules.\nOutput: a concise architecture plan with artifacts, dependencies, and responsibilities.\nVerify: walk a single business scenario end-to-end and confirm latencies meet SLAs.",
+      "score": 0.67,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-eslowvrjhvc",
+      "title": "Power Query IN = Multi‑Select Win for Power BI Paginated Reports",
+      "category": "power-query-folding",
+      "tags": [
+        "power query",
+        "fabric",
+        "pro",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "EsLowvRjHvc",
+        "title": "Power Query IN = Multi‑Select Win for Power BI Paginated Reports"
+      },
+      "distilled_prompt": "Objective: Power Query IN = Multi‑Select Win for Power BI Paginated Reports. Inputs: source query, connector, applied steps. Constraints: preserve query folding; push transforms to the source when possible.\n1) Identify the data source and confirm foldability of each step.\n2) Reorder/replace blocking steps (e.g., custom functions, row-by-row ops) with source-native ops.\n3) Filter early with foldable predicates; remove unused columns.\n4) Consolidate joins/aggregations to execute at the source.\n5) Parameterize paths/filters for reuse and environments.\nOutput: a revised M pipeline that maximizes folding with notes on trade-offs.\nVerify: confirm \"View Native Query\" or diagnostics indicates folding for key steps.",
+      "score": 0.66,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-w8bphvcjch8",
+      "title": "Power BI Hack: Swap Legend Fields Instantly via Field Parameters",
+      "category": "general",
+      "tags": [
+        "power bi desktop",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "w8BPHvcjCh8",
+        "title": "Power BI Hack: Swap Legend Fields Instantly via Field Parameters"
+      },
+      "distilled_prompt": "Objective: Power BI Hack: Swap Legend Fields Instantly via Field Parameters. Inputs: existing report, target audience, interaction patterns. Constraints: clarity first, minimal cognitive load.\n1) Define the story and key decisions the page supports.\n2) Choose visuals that match data grain and question; limit to essential filters.\n3) Configure interactions (edit interactions/field parameters) to guide focus.\n4) Standardize styles, legends, and color semantics; document choices.\n5) Add light annotations/tooltips for context.\nOutput: a refined report spec with interaction rules.\nVerify: run a quick user walkthrough; confirm they reach the intended insight in <30s.",
+      "score": 0.6,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-gtz8ykw425s",
+      "title": "Master Value Filter Behavior in Power BI Semantic Models",
+      "category": "dax-modeling",
+      "tags": [
+        "dax",
+        "measures",
+        "fabric",
+        "pro",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "gTZ8YKW425s",
+        "title": "Master Value Filter Behavior in Power BI Semantic Models"
+      },
+      "distilled_prompt": "Objective: Master Value Filter Behavior in Power BI Semantic Models. Inputs: semantic model schema, sample data, current measures. Constraints: star schema preferred, minimize row context, avoid calculated columns for dynamic logic.\n1) Clarify the business question and required grain.\n2) Map fields to a star schema and verify key relationships (single-direction by default).\n3) Draft measures using variables, CALCULATE-style context transition only when needed.\n4) Handle filters explicitly (REMOVEFILTERS/KEEPFILTERS) and choose safe aggregations.\n5) Validate results across edge cases and different filter contexts.\n6) Optimize cardinality (encodings), reduce columns, and precompute where appropriate.\nOutput: final measures and relationship notes ready for reporting.\nVerify: test 3 scenarios (no filter, single filter, cross-filter) to confirm expected values.",
+      "score": 0.7,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-mfosvcj6tlw",
+      "title": "From Query to Conversation: Microsoft Fabric’s Data Agents Explained",
+      "category": "dax-modeling",
+      "tags": [
+        "dax",
+        "fabric",
+        "pro",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "mFoSVcj6tLw",
+        "title": "From Query to Conversation: Microsoft Fabric’s Data Agents Explained"
+      },
+      "distilled_prompt": "Objective: From Query to Conversation: Microsoft Fabric’s Data Agents Explained. Inputs: semantic model schema, sample data, current measures. Constraints: star schema preferred, minimize row context, avoid calculated columns for dynamic logic.\n1) Clarify the business question and required grain.\n2) Map fields to a star schema and verify key relationships (single-direction by default).\n3) Draft measures using variables, CALCULATE-style context transition only when needed.\n4) Handle filters explicitly (REMOVEFILTERS/KEEPFILTERS) and choose safe aggregations.\n5) Validate results across edge cases and different filter contexts.\n6) Optimize cardinality (encodings), reduce columns, and precompute where appropriate.\nOutput: final measures and relationship notes ready for reporting.\nVerify: test 3 scenarios (no filter, single filter, cross-filter) to confirm expected values.",
+      "score": 0.67,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-y7tcsbm73yu",
+      "title": "Stop Duplicating! Power BI Report in Two Workspaces",
+      "category": "fabric-architecture",
+      "tags": [
+        "fabric",
+        "reports",
+        "pro",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "y7TCsbM73YU",
+        "title": "Stop Duplicating! Power BI Report in Two Workspaces"
+      },
+      "distilled_prompt": "Objective: Stop Duplicating! Power BI Report in Two Workspaces. Inputs: data sources, refresh needs, security model, target audiences. Constraints: simple, reusable, least-coupled design.\n1) Define use cases and SLAs (freshness, latency, scale).\n2) Choose storage/compute (import, DQ, lakehouse, delta) per table by need.\n3) Lay out pipelines/tasks, dependencies, and retry strategy.\n4) Specify semantic model boundaries, shared datasets, and governance (RLS/OLS, tags).\n5) Plan environments (dev/test/prod) and deployment rules.\nOutput: a concise architecture plan with artifacts, dependencies, and responsibilities.\nVerify: walk a single business scenario end-to-end and confirm latencies meet SLAs.",
+      "score": 0.67,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-auzzvobcjkg",
+      "title": "Patrick Saves Your Delta Table",
+      "category": "fabric-architecture",
+      "tags": [
+        "fabric",
+        "datasets",
+        "reports",
+        "pro",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "AuZzvobcjKg",
+        "title": "Patrick Saves Your Delta Table"
+      },
+      "distilled_prompt": "Objective: Patrick Saves Your Delta Table. Inputs: data sources, refresh needs, security model, target audiences. Constraints: simple, reusable, least-coupled design.\n1) Define use cases and SLAs (freshness, latency, scale).\n2) Choose storage/compute (import, DQ, lakehouse, delta) per table by need.\n3) Lay out pipelines/tasks, dependencies, and retry strategy.\n4) Specify semantic model boundaries, shared datasets, and governance (RLS/OLS, tags).\n5) Plan environments (dev/test/prod) and deployment rules.\nOutput: a concise architecture plan with artifacts, dependencies, and responsibilities.\nVerify: walk a single business scenario end-to-end and confirm latencies meet SLAs.",
+      "score": 0.66,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-xgxg-j1hn-8",
+      "title": "Watch Me Build a DAG That Runs Itself in Microsoft Fabric",
+      "category": "fabric-architecture",
+      "tags": [
+        "fabric",
+        "pro",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "XGXg-j1Hn_8",
+        "title": "Watch Me Build a DAG That Runs Itself in Microsoft Fabric"
+      },
+      "distilled_prompt": "Objective: Watch Me Build a DAG That Runs Itself in Microsoft Fabric. Inputs: data sources, refresh needs, security model, target audiences. Constraints: simple, reusable, least-coupled design.\n1) Define use cases and SLAs (freshness, latency, scale).\n2) Choose storage/compute (import, DQ, lakehouse, delta) per table by need.\n3) Lay out pipelines/tasks, dependencies, and retry strategy.\n4) Specify semantic model boundaries, shared datasets, and governance (RLS/OLS, tags).\n5) Plan environments (dev/test/prod) and deployment rules.\nOutput: a concise architecture plan with artifacts, dependencies, and responsibilities.\nVerify: walk a single business scenario end-to-end and confirm latencies meet SLAs.",
+      "score": 0.66,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    },
+    {
+      "id": "giac-91ru82qwptu",
+      "title": "Microsoft Fabric Tags: The Metadata Superpower You’re Ignoring",
+      "category": "fabric-architecture",
+      "tags": [
+        "fabric",
+        "reports",
+        "pro",
+        "guy-in-a-cube",
+        "power-bi",
+        "tutorial"
+      ],
+      "video": {
+        "id": "91rU82qwPTU",
+        "title": "Microsoft Fabric Tags: The Metadata Superpower You’re Ignoring"
+      },
+      "distilled_prompt": "Objective: Microsoft Fabric Tags: The Metadata Superpower You’re Ignoring. Inputs: data sources, refresh needs, security model, target audiences. Constraints: simple, reusable, least-coupled design.\n1) Define use cases and SLAs (freshness, latency, scale).\n2) Choose storage/compute (import, DQ, lakehouse, delta) per table by need.\n3) Lay out pipelines/tasks, dependencies, and retry strategy.\n4) Specify semantic model boundaries, shared datasets, and governance (RLS/OLS, tags).\n5) Plan environments (dev/test/prod) and deployment rules.\nOutput: a concise architecture plan with artifacts, dependencies, and responsibilities.\nVerify: walk a single business scenario end-to-end and confirm latencies meet SLAs.",
+      "score": 0.65,
+      "rationale": "Clear, high-impact guidance aligned to common BI tasks. Strong provenance from specific GIAC video."
+    }
+  ]
+}

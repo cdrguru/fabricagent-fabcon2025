@@ -1,0 +1,50 @@
+{
+  "id": "initial-governance-assessment-request",
+  "version": "1.0",
+  "name": "Initial Governance Assessment Request",
+  "category": "documentation",
+  "pillars": [
+    "powerbi",
+    "governance",
+    "bpa",
+    "communication",
+    "fabric"
+  ],
+  "summary": "Draft an outreach communication to a data steward or workspace admin requesting permission to perform an initial Power BI governance assessment using BPA tools.",
+  "description": "Draft an outreach communication to a data steward or workspace admin requesting permission to perform an initial Power BI governance assessment using BPA tools.",
+  "tags": [
+    "powerbi",
+    "governance",
+    "bpa",
+    "communication",
+    "fabric",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Analyze requirements and data",
+    "Assess current state and risks"
+  ],
+  "prompt": "You are an efficient solutions engineer specializing in Microsoft Fabric governance. Draft a brief, professional email to ${ContactName}, the administrator for the ${WorkspaceName} Fabric workspace. Explain the purpose of the FabricAgent initiative: to enhance data governance and semantic model quality. Request permission to run a read-only Best Practice Analyzer (BPA) assessment using the ${AssessmentTool}. Highlight that this will identify optimization opportunities and ensure compliance with organizational standards. Include a clear CTA: a request for confirmation or a brief meeting. Keep it under 100 words.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

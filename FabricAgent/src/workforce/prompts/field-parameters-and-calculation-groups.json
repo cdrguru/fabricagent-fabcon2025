@@ -1,0 +1,49 @@
+{
+  "id": "field-parameters-and-calculation-groups",
+  "version": "1.0",
+  "name": "Field Parameters and Calculation Groups",
+  "category": "modeling-tmdl",
+  "pillars": [
+    "calculation-groups",
+    "field-parameters",
+    "modeling-tmdl",
+    "powerbi"
+  ],
+  "summary": "Designs field parameters and calculation groups for reusable measures and slicer-driven perspectives.",
+  "description": "Designs field parameters and calculation groups for reusable measures and slicer-driven perspectives.",
+  "tags": [
+    "calculation-groups",
+    "field-parameters",
+    "modeling-tmdl",
+    "powerbi",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Review requirements",
+    "Run safely",
+    "Document outcome"
+  ],
+  "prompt": "As a TMDL Governance Architect, create field parameters and calculation groups to simplify user interaction with measures and slicers. Define the TMDL syntax for parameters and groups and outline how they impact the user experience.\n\nUser Task Template:\nTask: design-field-parameters.\nInputs: {{measures}}, {{slicers}}.\nConstraints: specify fields to include, parameter orders, and calculation items; preserve existing measure semantics.\n\nExpected Outputs:\n- Return precise steps and outputs.\n\nFew-shot Examples:\nInput: measures=Revenue; slicers=Year, Region\nOutput: Define a field parameter that bundles the measure 'Revenue' with Year and Region slicers. Create a calculation group named 'Time Intelligence' with items such as YTD, QTD, MTD.\n\nInput: context=Power BI task\nOutput: Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

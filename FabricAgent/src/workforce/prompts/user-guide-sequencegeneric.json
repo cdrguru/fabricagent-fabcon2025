@@ -1,0 +1,53 @@
+{
+  "id": "user-guide-sequencegeneric",
+  "version": "1.0",
+  "name": "User Guide Sequence — Vendor Neutral",
+  "category": "documentation",
+  "pillars": [
+    "docs",
+    "powerbi",
+    "fabric",
+    "sequence",
+    "user-guides",
+    "vendor-neutral"
+  ],
+  "summary": "Agnostic multi-step prompt sequence that discovers report and semantic model assets in a Fabric/Power BI repository and generates precise user guides without any vendor-specific assumptions.",
+  "description": "Agnostic multi-step prompt sequence that discovers report and semantic model assets in a Fabric/Power BI repository and generates precise user guides without any vendor-specific assumptions.",
+  "tags": [
+    "docs",
+    "powerbi",
+    "fabric",
+    "sequence",
+    "user-guides",
+    "vendor-neutral",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Review requirements",
+    "Run safely",
+    "Document outcome"
+  ],
+  "prompt": "<<<FILE:prompts/guides/user-guide-sequence_generic.md>>>\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

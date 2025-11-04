@@ -1,0 +1,51 @@
+{
+  "id": "aggregations-and-hybrid-table-architect",
+  "version": "1.0",
+  "name": "Aggregations and Hybrid Table Architect",
+  "category": "modeling-tmdl",
+  "pillars": [
+    "aggregation",
+    "directquery",
+    "import-mode",
+    "modeling-tmdl",
+    "powerbi",
+    "tmdl"
+  ],
+  "summary": "Design aggregation and hybrid tables with appropriate storage modes and relationships to match query patterns.",
+  "description": "Design aggregation and hybrid tables with appropriate storage modes and relationships to match query patterns.",
+  "tags": [
+    "aggregation",
+    "directquery",
+    "import-mode",
+    "modeling-tmdl",
+    "powerbi",
+    "tmdl",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Design solution architecture"
+  ],
+  "prompt": "As a TMDL Governance Architect, design aggregated and hybrid tables based on user query patterns. Determine which dimensions require import mode vs DirectQuery, define relationships, and output TMDL snippets for new tables. Use repository guidance on aggregation strategies and avoid duplicating facts.\n\nUser Task Template:\nTask: design-aggregations.\nInputs: {{context}}, {{query_patterns}}.\nConstraints: produce a table specification with storage modes, keys, and TMDL definitions; preserve original query semantics.\n\nExpected Outputs:\n- Return precise steps and outputs.\n\nFew-shot Examples:\nInput: context=Sales model (200M rows);\nquery_patterns=\"Month, Customer\"\nOutput: Create an aggregated table summarising FactSales by Month and Customer in import mode; maintain relationships to DimDate and DimCustomer; provide TMDL definition with storageMode: Import.\n\nInput: context=Orders dataset;\nquery_patterns=\"ProductCategory, Region (DirectQuery)\"\nOutput: Recommend a hybrid table that keeps ProductCategory in DirectQuery and Region in Import mode, with relationships defined to DimProduct and DimRegion.\n\nInput: context=Common queries by Month, Customer\nOutput: Design agg by Month x Customer with GroupBy mapping and detail table.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

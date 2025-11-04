@@ -1,0 +1,41 @@
+{
+  "id": "favicon",
+  "version": "1.0",
+  "name": "Favicon",
+  "category": "documentation",
+  "pillars": [
+    "powerbi"
+  ],
+  "summary": "Square favicon derived from main logo for browser tabs and bookmarks",
+  "description": "Square favicon derived from main logo for browser tabs and bookmarks",
+  "tags": [
+    "powerbi",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Generate output and artifacts"
+  ],
+  "prompt": "Create a square favicon derived from the FabricAgent logo: simplified woven A mark, bold contrast, legible at 16px. Provide 512x512 PNG from which smaller sizes (16px, 32px, 64px) can be generated.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

@@ -1,0 +1,1336 @@
+{
+  "nodes": [
+    {
+      "id": "accessibility-and-ux-reviewer",
+      "label": "accessibility-and-ux-reviewer",
+      "title": "accessibility-and-ux-reviewer",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "accessibility-auditor",
+      "label": "Accessibility Auditor",
+      "title": "Accessibility Auditor",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "aggregations-and-hybrid-table-architect",
+      "label": "Aggregations and Hybrid Table Architect",
+      "title": "Aggregations and Hybrid Table Architect",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "ai-adversarial-test-generator",
+      "label": "AI Adversarial Test Generator",
+      "title": "AI Adversarial Test Generator",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "ai-media-creation-guide",
+      "label": "ai-media-creation-guide",
+      "title": "ai-media-creation-guide",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "analyze-bpa-violations-propose-fixes",
+      "label": "Analyze BPA Violations and Propose Fixes",
+      "title": "Analyze BPA Violations and Propose Fixes",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "analyze-dax-measures-recommend-optimizations",
+      "label": "Analyze DAX Measures and Recommend Optimizations",
+      "title": "Analyze DAX Measures and Recommend Optimizations",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "analyze-fabric-capacity-utilization-costs",
+      "label": "Analyze Fabric Capacity Utilization and Costs",
+      "title": "Analyze Fabric Capacity Utilization and Costs",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "architecture-overview",
+      "label": "Architecture Overview",
+      "title": "Architecture Overview",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "badge-dax",
+      "label": "Badge Dax",
+      "title": "Badge Dax",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "badge-governance",
+      "label": "Badge Governance",
+      "title": "Badge Governance",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "badge-power-query",
+      "label": "Badge Power Query",
+      "title": "Badge Power Query",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "bpa-findings-summary-communication",
+      "label": "BPA Findings Summary Communication",
+      "title": "BPA Findings Summary Communication",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "composite-models-and-direct-lake-design",
+      "label": "composite-models-and-direct-lake-design",
+      "title": "composite-models-and-direct-lake-design",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "contact-center-analytics-integration",
+      "label": "contact-center-analytics-integration",
+      "title": "contact-center-analytics-integration",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "contact-center-dax-analysis-framework",
+      "label": "Contact Center DAX Analysis Framework",
+      "title": "Contact Center DAX Analysis Framework",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "dag-workforce",
+      "label": "Dag Workforce",
+      "title": "Dag Workforce",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "data-dictionary-maintainer",
+      "label": "Data Dictionary Maintainer",
+      "title": "Data Dictionary Maintainer",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "dataset-refresh-and-gateway-troubleshooter",
+      "label": "Dataset Refresh and Gateway Troubleshooter",
+      "title": "Dataset Refresh and Gateway Troubleshooter",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "dax-performance-profiler",
+      "label": "dax-performance-profiler",
+      "title": "dax-performance-profiler",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "dax-vertipaq-analyzer",
+      "label": "DAX VertiPaq Analyzer",
+      "title": "DAX VertiPaq Analyzer",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "define-requirements-governance-monitoring-dashboard",
+      "label": "Define Requirements for Governance Monitoring Dashboard",
+      "title": "Define Requirements for Governance Monitoring Dashboard",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "design-adversarial-test-plan-ai-prompts",
+      "label": "Design Adversarial Test Plan for AI Prompts",
+      "title": "Design Adversarial Test Plan for AI Prompts",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "develop-training-ai-safety-guardrails",
+      "label": "Develop Training on AI Safety Guardrails (for Fabric)",
+      "title": "Develop Training on AI Safety Guardrails (for Fabric)",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "documentation-and-changelog-generator",
+      "label": "Documentation and Changelog Generator",
+      "title": "Documentation and Changelog Generator",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "draft-governance-best-practices-article",
+      "label": "Draft Governance Best Practices Article",
+      "title": "Draft Governance Best Practices Article",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "fabric-architecture-recommendation-brief",
+      "label": "Fabric Architecture Recommendation Brief",
+      "title": "Fabric Architecture Recommendation Brief",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "fabric-capacity-monitor-and-cost-optimizer",
+      "label": "fabric-capacity-monitor-and-cost-optimizer",
+      "title": "fabric-capacity-monitor-and-cost-optimizer",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "fabric-integration-plan-checklist",
+      "label": "Fabric Integration Plan Checklist",
+      "title": "Fabric Integration Plan Checklist",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "fabric-web-application-development",
+      "label": "fabric-web-application-development",
+      "title": "fabric-web-application-development",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "fabric-workload-smoothing-planner",
+      "label": "Fabric Workload Smoothing Planner",
+      "title": "Fabric Workload Smoothing Planner",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "fabricagent-feature-prioritization-agent",
+      "label": "FabricAgent Feature Prioritization Agent",
+      "title": "FabricAgent Feature Prioritization Agent",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "fabricagent-ui-enhancement-analysis",
+      "label": "FabricAgent UI Enhancement Analysis",
+      "title": "FabricAgent UI Enhancement Analysis",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "favicon",
+      "label": "Favicon",
+      "title": "Favicon",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "field-parameters-and-calculation-groups",
+      "label": "Field Parameters and Calculation Groups",
+      "title": "Field Parameters and Calculation Groups",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "generate-semantic-model-performance-report",
+      "label": "Generate Semantic Model Performance Report",
+      "title": "Generate Semantic Model Performance Report",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "governance-implementation-proposal",
+      "label": "Governance Implementation Proposal",
+      "title": "Governance Implementation Proposal",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "governance-loop-bpa-pbi",
+      "label": "Governance Loop Bpa Pbi",
+      "title": "Governance Loop Bpa Pbi",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "incremental-refresh-policy-planner",
+      "label": "incremental-refresh-policy-planner",
+      "title": "incremental-refresh-policy-planner",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "initial-governance-assessment-request",
+      "label": "Initial Governance Assessment Request",
+      "title": "Initial Governance Assessment Request",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "integration-pipeline-development",
+      "label": "Integration Pipeline Development",
+      "title": "Integration Pipeline Development",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "integration-vendor-analytics-power-bi",
+      "label": "<INTEGRATION_VENDOR>-analytics-power-bi",
+      "title": "<INTEGRATION_VENDOR>-analytics-power-bi",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "integration-vendor-uc-forum-integration",
+      "label": "<INTEGRATION_VENDOR>-uc-forum-integration",
+      "title": "<INTEGRATION_VENDOR>-uc-forum-integration",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "logo",
+      "label": "Logo",
+      "title": "Logo",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "m-query-parameterization-wizard",
+      "label": "M Query Parameterization Wizard",
+      "title": "M Query Parameterization Wizard",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "optimized-prompt-for-assistant",
+      "label": "optimized-prompt-for-assistant",
+      "title": "optimized-prompt-for-assistant",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "outline-semantic-modeling-governance-training",
+      "label": "Outline Semantic Modeling Governance Training",
+      "title": "Outline Semantic Modeling Governance Training",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "power-bi-optimization-guide",
+      "label": "power-bi-optimization-guide",
+      "title": "power-bi-optimization-guide",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "power-query-assistant-configuration",
+      "label": "power-query-assistant-configuration",
+      "title": "power-query-assistant-configuration",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "power-query-folding-diagnostics",
+      "label": "power-query-folding-diagnostics",
+      "title": "power-query-folding-diagnostics",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "power-query-modernizer",
+      "label": "Power Query Modernizer",
+      "title": "Power Query Modernizer",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "powerbi-cicd-pipeline-config-generator",
+      "label": "Power BI CI/CD Pipeline Config Generator",
+      "title": "Power BI CI/CD Pipeline Config Generator",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "powerbi-deployment-readiness-checklist",
+      "label": "Power BI Deployment Readiness Checklist",
+      "title": "Power BI Deployment Readiness Checklist",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "powerbi-issue-troubleshooting-guide",
+      "label": "Power BI Issue Troubleshooting Guide",
+      "title": "Power BI Issue Troubleshooting Guide",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "powerbi-semantic-model-mode-decision",
+      "label": "Power BI Semantic Model Mode Decision Brief",
+      "title": "Power BI Semantic Model Mode Decision Brief",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "powerbigitopscopilot",
+      "label": "Power BI GitOps Copilot",
+      "title": "Power BI GitOps Copilot",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "prompt-engineering-concept",
+      "label": "Prompt Engineering Concept",
+      "title": "Prompt Engineering Concept",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "propose-ai-powered-governance-automation",
+      "label": "Propose AI-Powered Governance Automation",
+      "title": "Propose AI-Powered Governance Automation",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "refactorcsdr",
+      "label": "CSDR Refactor",
+      "title": "CSDR Refactor",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "researchdeepresearch",
+      "label": "Deep Research Agent",
+      "title": "Deep Research Agent",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "rls-ols-security-designer",
+      "label": "rls-ols-security-designer",
+      "title": "rls-ols-security-designer",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "semantic-guide-writer",
+      "label": "Semantic Guide Writer Agent",
+      "title": "Semantic Guide Writer Agent",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "semantic-model-dictionary",
+      "label": "Semantic Model Dictionary Agent",
+      "title": "Semantic Model Dictionary Agent",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "semantic-model-flow",
+      "label": "Semantic Model Flow",
+      "title": "Semantic Model Flow",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "tmdl-bpa-remediation-planner",
+      "label": "TMDL BPA Remediation Planner",
+      "title": "TMDL BPA Remediation Planner",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "tmdl-ci-cd-gitops-orchestrator",
+      "label": "tmdl-ci-cd-gitops-orchestrator",
+      "title": "tmdl-ci-cd-gitops-orchestrator",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "uc-analytics-fact-tables",
+      "label": "uc-analytics-fact-tables",
+      "title": "uc-analytics-fact-tables",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "uc-assistant-configuration",
+      "label": "uc-assistant-configuration",
+      "title": "uc-assistant-configuration",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "uc-forum-integration",
+      "label": "uc-forum-integration",
+      "title": "uc-forum-integration",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "user-guide-sequencegeneric",
+      "label": "User Guide Sequence \u2014 Vendor Neutral",
+      "title": "User Guide Sequence \u2014 Vendor Neutral",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "validate-document-prompt-schema-updates",
+      "label": "Validate and Document Prompt Schema Updates",
+      "title": "Validate and Document Prompt Schema Updates",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "workflow-pipeline",
+      "label": "Workflow Pipeline",
+      "title": "Workflow Pipeline",
+      "category": "general",
+      "group": "catalog",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "analyze-calculations-visual-calcs-vs-dax-measures",
+      "label": "Analyze Calculations (Visual Calcs vs. DAX Measures)",
+      "title": "Analyze Calculations (Visual Calcs vs. DAX Measures)",
+      "category": "dax-modeling",
+      "group": "giac",
+      "pillars": [
+        "dax"
+      ]
+    },
+    {
+      "id": "configure-rls-using-fabric-web-modeling",
+      "label": "Configure RLS using Fabric Web Modeling",
+      "title": "Configure RLS using Fabric Web Modeling",
+      "category": "dax-modeling",
+      "group": "giac",
+      "pillars": [
+        "dax"
+      ]
+    },
+    {
+      "id": "generate-calculated-summary-table-using-groupby",
+      "label": "Generate Calculated Summary Table using GROUPBY",
+      "title": "Generate Calculated Summary Table using GROUPBY",
+      "category": "dax-modeling",
+      "group": "giac",
+      "pillars": [
+        "dax"
+      ]
+    },
+    {
+      "id": "generate-dax-for-dynamic-visual-titles",
+      "label": "Generate DAX for Dynamic Visual Titles",
+      "title": "Generate DAX for Dynamic Visual Titles",
+      "category": "dax-modeling",
+      "group": "giac",
+      "pillars": [
+        "dax"
+      ]
+    },
+    {
+      "id": "implement-dynamic-axeslegends-with-field-parameters",
+      "label": "Implement Dynamic Axes/Legends with Field Parameters",
+      "title": "Implement Dynamic Axes/Legends with Field Parameters",
+      "category": "dax-modeling",
+      "group": "giac",
+      "pillars": [
+        "dax"
+      ]
+    },
+    {
+      "id": "implement-virtual-relationships-with-treatas",
+      "label": "Implement Virtual Relationships with TREATAS",
+      "title": "Implement Virtual Relationships with TREATAS",
+      "category": "dax-modeling",
+      "group": "giac",
+      "pillars": [
+        "dax"
+      ]
+    },
+    {
+      "id": "optimize-dax-iterators-eg-sumx-to-calculatesum",
+      "label": "Optimize DAX Iterators (e.g., SUMX to CALCULATE/SUM)",
+      "title": "Optimize DAX Iterators (e.g., SUMX to CALCULATE/SUM)",
+      "category": "dax-modeling",
+      "group": "giac",
+      "pillars": [
+        "dax"
+      ]
+    },
+    {
+      "id": "automate-semantic-model-management-xmlaapi",
+      "label": "Automate Semantic Model Management (XMLA/API)",
+      "title": "Automate Semantic Model Management (XMLA/API)",
+      "category": "fabric-architecture",
+      "group": "giac",
+      "pillars": [
+        "fabric"
+      ]
+    },
+    {
+      "id": "design-end-to-end-fabric-analytics-architecture",
+      "label": "Design End-to-End Fabric Analytics Architecture",
+      "title": "Design End-to-End Fabric Analytics Architecture",
+      "category": "fabric-architecture",
+      "group": "giac",
+      "pillars": [
+        "fabric"
+      ]
+    },
+    {
+      "id": "design-fabric-adoption-strategy-based-on-live-stream-insights",
+      "label": "Design Fabric Adoption Strategy (Based on Live Stream Insights)",
+      "title": "Design Fabric Adoption Strategy (Based on Live Stream Insights)",
+      "category": "fabric-architecture",
+      "group": "giac",
+      "pillars": [
+        "fabric"
+      ]
+    },
+    {
+      "id": "design-fabric-governance-strategy-domains-and-workspaces",
+      "label": "Design Fabric Governance Strategy (Domains and Workspaces)",
+      "title": "Design Fabric Governance Strategy (Domains and Workspaces)",
+      "category": "fabric-architecture",
+      "group": "giac",
+      "pillars": [
+        "fabric"
+      ]
+    },
+    {
+      "id": "design-migration-strategy-power-bi-premium-to-fabric",
+      "label": "Design Migration Strategy (Power BI Premium to Fabric)",
+      "title": "Design Migration Strategy (Power BI Premium to Fabric)",
+      "category": "fabric-architecture",
+      "group": "giac",
+      "pillars": [
+        "fabric"
+      ]
+    },
+    {
+      "id": "design-power-bi-write-back-solution-using-power-automate",
+      "label": "Design Power BI Write-Back Solution using Power Automate",
+      "title": "Design Power BI Write-Back Solution using Power Automate",
+      "category": "fabric-architecture",
+      "group": "giac",
+      "pillars": [
+        "fabric"
+      ]
+    },
+    {
+      "id": "implement-delta-table-disaster-recovery-time-travel",
+      "label": "Implement Delta Table Disaster Recovery (Time Travel)",
+      "title": "Implement Delta Table Disaster Recovery (Time Travel)",
+      "category": "fabric-architecture",
+      "group": "giac",
+      "pillars": [
+        "fabric"
+      ]
+    },
+    {
+      "id": "visualize-power-bifabric-deployment-pipeline",
+      "label": "Visualize Power BI/Fabric Deployment Pipeline",
+      "title": "Visualize Power BI/Fabric Deployment Pipeline",
+      "category": "fabric-architecture",
+      "group": "giac",
+      "pillars": [
+        "fabric"
+      ]
+    },
+    {
+      "id": "configure-power-bi-desktop-for-source-control-pbip",
+      "label": "Configure Power BI Desktop for Source Control (PBIP)",
+      "title": "Configure Power BI Desktop for Source Control (PBIP)",
+      "category": "governance",
+      "group": "giac",
+      "pillars": [
+        "governance"
+      ]
+    },
+    {
+      "id": "design-power-bi-workspace-strategy-and-permissions",
+      "label": "Design Power BI Workspace Strategy and Permissions",
+      "title": "Design Power BI Workspace Strategy and Permissions",
+      "category": "governance",
+      "group": "giac",
+      "pillars": [
+        "governance"
+      ]
+    },
+    {
+      "id": "analyze-data-model-for-star-schema-best-practices",
+      "label": "Analyze Data Model for Star Schema Best Practices",
+      "title": "Analyze Data Model for Star Schema Best Practices",
+      "category": "performance",
+      "group": "giac",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "configure-dynamic-m-query-parameters-directquery-optimization",
+      "label": "Configure Dynamic M Query Parameters (DirectQuery Optimization)",
+      "title": "Configure Dynamic M Query Parameters (DirectQuery Optimization)",
+      "category": "performance",
+      "group": "giac",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "analyze-and-optimize-power-query-for-query-folding",
+      "label": "Analyze and Optimize Power Query for Query Folding",
+      "title": "Analyze and Optimize Power Query for Query Folding",
+      "category": "power-query-folding",
+      "group": "giac",
+      "pillars": [
+        "power-query"
+      ]
+    },
+    {
+      "id": "design-onelake-strategy-shortcuts-vs-data-movement",
+      "label": "Design OneLake Strategy (Shortcuts vs. Data Movement)",
+      "title": "Design OneLake Strategy (Shortcuts vs. Data Movement)",
+      "category": "power-query-folding",
+      "group": "giac",
+      "pillars": [
+        "power-query"
+      ]
+    },
+    {
+      "id": "determine-optimal-use-case-for-dataflows",
+      "label": "Determine Optimal Use Case for Dataflows",
+      "title": "Determine Optimal Use Case for Dataflows",
+      "category": "power-query-folding",
+      "group": "giac",
+      "pillars": [
+        "power-query"
+      ]
+    },
+    {
+      "id": "execute-stored-procedure-in-dataflow-gen2-optimized",
+      "label": "Execute Stored Procedure in Dataflow Gen2 (Optimized)",
+      "title": "Execute Stored Procedure in Dataflow Gen2 (Optimized)",
+      "category": "power-query-folding",
+      "group": "giac",
+      "pillars": [
+        "power-query"
+      ]
+    },
+    {
+      "id": "generate-power-query-logic-for-combining-multiple-files",
+      "label": "Generate Power Query Logic for Combining Multiple Files",
+      "title": "Generate Power Query Logic for Combining Multiple Files",
+      "category": "power-query-folding",
+      "group": "giac",
+      "pillars": [
+        "power-query"
+      ]
+    },
+    {
+      "id": "parameterize-power-query-dynamic-filteringconnections",
+      "label": "Parameterize Power Query (Dynamic Filtering/Connections)",
+      "title": "Parameterize Power Query (Dynamic Filtering/Connections)",
+      "category": "power-query-folding",
+      "group": "giac",
+      "pillars": [
+        "power-query"
+      ]
+    },
+    {
+      "id": "select-optimal-fabric-data-transformation-technology",
+      "label": "Select Optimal Fabric Data Transformation Technology",
+      "title": "Select Optimal Fabric Data Transformation Technology",
+      "category": "power-query-folding",
+      "group": "giac",
+      "pillars": [
+        "power-query"
+      ]
+    },
+    {
+      "id": "design-interactive-button-slicer-panel",
+      "label": "Design Interactive Button Slicer Panel",
+      "title": "Design Interactive Button Slicer Panel",
+      "category": "powerbi-visualization",
+      "group": "giac",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "design-report-navigation-bookmarks-and-selection-pane",
+      "label": "Design Report Navigation (Bookmarks and Selection Pane)",
+      "title": "Design Report Navigation (Bookmarks and Selection Pane)",
+      "category": "powerbi-visualization",
+      "group": "giac",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "determine-optimal-relationship-cardinality-and-direction",
+      "label": "Determine Optimal Relationship Cardinality and Direction",
+      "title": "Determine Optimal Relationship Cardinality and Direction",
+      "category": "powerbi-visualization",
+      "group": "giac",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "generate-power-bi-theme-json",
+      "label": "Generate Power BI Theme JSON",
+      "title": "Generate Power BI Theme JSON",
+      "category": "powerbi-visualization",
+      "group": "giac",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "optimize-new-card-visual-for-kpis",
+      "label": "Optimize New Card Visual for KPIs",
+      "title": "Optimize New Card Visual for KPIs",
+      "category": "powerbi-visualization",
+      "group": "giac",
+      "pillars": [
+        "powerbi"
+      ]
+    },
+    {
+      "id": "workflow-giac-topxzaekqi0",
+      "label": "Power BI Assistant: REPLAY Microsoft Power BI / Fabric Q&A - LIVE (March 15, 2025)",
+      "title": "Power BI Assistant: REPLAY Microsoft Power BI / Fabric Q&A - LIVE (March 15, 2025)",
+      "category": "dax-modeling",
+      "group": "giac",
+      "pillars": [
+        "dax",
+        "power query",
+        "data model"
+      ]
+    },
+    {
+      "id": "workflow-giac--4gvhhcqjge",
+      "label": "Power BI Assistant: REPLAY Microsoft Power BI / Fabric Q&A - LIVE w/ Matthew Roche (April 26, 2025)",
+      "title": "Power BI Assistant: REPLAY Microsoft Power BI / Fabric Q&A - LIVE w/ Matthew Roche (April 26, 2025)",
+      "category": "dax-modeling",
+      "group": "giac",
+      "pillars": [
+        "dax",
+        "power query",
+        "data model"
+      ]
+    },
+    {
+      "id": "workflow-giac-91ru82qwptu",
+      "label": "Power BI Assistant: Microsoft Fabric Tags: The Metadata Superpower You\u2019re Ignoring",
+      "title": "Power BI Assistant: Microsoft Fabric Tags: The Metadata Superpower You\u2019re Ignoring",
+      "category": "fabric-architecture",
+      "group": "giac",
+      "pillars": [
+        "fabric",
+        "reports",
+        "pro"
+      ]
+    },
+    {
+      "id": "workflow-giac-jdd-xgetaos",
+      "label": "Power BI Assistant: REPLAY: Microsoft Power BI / Fabric Q&A - LIVE (July 26, 2025)",
+      "title": "Power BI Assistant: REPLAY: Microsoft Power BI / Fabric Q&A - LIVE (July 26, 2025)",
+      "category": "dax-modeling",
+      "group": "giac",
+      "pillars": [
+        "dax",
+        "power query",
+        "fabric"
+      ]
+    },
+    {
+      "id": "workflow-giac-mfosvcj6tlw",
+      "label": "Power BI Assistant: From Query to Conversation: Microsoft Fabric\u2019s Data Agents Explained",
+      "title": "Power BI Assistant: From Query to Conversation: Microsoft Fabric\u2019s Data Agents Explained",
+      "category": "dax-modeling",
+      "group": "giac",
+      "pillars": [
+        "dax",
+        "fabric",
+        "pro"
+      ]
+    },
+    {
+      "id": "workflow-giac-h8s1ugdbfrc",
+      "label": "Power BI Assistant: Let Copilot Fly Your Power Query in Microsoft Fabric",
+      "title": "Power BI Assistant: Let Copilot Fly Your Power Query in Microsoft Fabric",
+      "category": "dax-modeling",
+      "group": "giac",
+      "pillars": [
+        "dax",
+        "power query",
+        "data model"
+      ]
+    },
+    {
+      "id": "workflow-giac-na9pqdrn3f4",
+      "label": "Power BI Assistant: Microsoft Fabric Explained in less than 10 Minutes (Start Here)",
+      "title": "Power BI Assistant: Microsoft Fabric Explained in less than 10 Minutes (Start Here)",
+      "category": "fabric-architecture",
+      "group": "giac",
+      "pillars": [
+        "data model",
+        "relationships",
+        "measures"
+      ]
+    },
+    {
+      "id": "workflow-giac-k32mhujdbk8",
+      "label": "Power BI Assistant: REPLAY Microsoft Power BI / Fabric Q&A - LIVE (Aug 9, 2025)",
+      "title": "Power BI Assistant: REPLAY Microsoft Power BI / Fabric Q&A - LIVE (Aug 9, 2025)",
+      "category": "dax-modeling",
+      "group": "giac",
+      "pillars": [
+        "dax",
+        "fabric",
+        "reports"
+      ]
+    },
+    {
+      "id": "workflow-giac-w8bphvcjch8",
+      "label": "Power BI Assistant: Power BI Hack: Swap Legend Fields Instantly via Field Parameters",
+      "title": "Power BI Assistant: Power BI Hack: Swap Legend Fields Instantly via Field Parameters",
+      "category": "general",
+      "group": "giac",
+      "pillars": [
+        "power bi desktop",
+        "guy-in-a-cube",
+        "power-bi"
+      ]
+    },
+    {
+      "id": "workflow-giac-gtz8ykw425s",
+      "label": "Power BI Assistant: Master Value Filter Behavior in Power BI Semantic Models",
+      "title": "Power BI Assistant: Master Value Filter Behavior in Power BI Semantic Models",
+      "category": "dax-modeling",
+      "group": "giac",
+      "pillars": [
+        "dax",
+        "measures",
+        "fabric"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "accessibility-and-ux-reviewer",
+      "to": "powerbi-deployment-readiness-checklist"
+    },
+    {
+      "from": "analyze-dax-measures-recommend-optimizations",
+      "to": "dax-performance-profiler"
+    },
+    {
+      "from": "fabric-architecture-recommendation-brief",
+      "to": "fabric-capacity-monitor-and-cost-optimizer"
+    },
+    {
+      "from": "governance-implementation-proposal",
+      "to": "initial-governance-assessment-request"
+    },
+    {
+      "from": "power-query-folding-diagnostics",
+      "to": "power-query-modernizer"
+    },
+    {
+      "from": "analyze-calculations-visual-calcs-vs-dax-measures",
+      "to": "configure-rls-using-fabric-web-modeling"
+    },
+    {
+      "from": "configure-rls-using-fabric-web-modeling",
+      "to": "generate-calculated-summary-table-using-groupby"
+    },
+    {
+      "from": "generate-calculated-summary-table-using-groupby",
+      "to": "generate-dax-for-dynamic-visual-titles"
+    },
+    {
+      "from": "generate-dax-for-dynamic-visual-titles",
+      "to": "implement-dynamic-axeslegends-with-field-parameters"
+    },
+    {
+      "from": "implement-dynamic-axeslegends-with-field-parameters",
+      "to": "implement-virtual-relationships-with-treatas"
+    },
+    {
+      "from": "implement-virtual-relationships-with-treatas",
+      "to": "optimize-dax-iterators-eg-sumx-to-calculatesum"
+    },
+    {
+      "from": "optimize-dax-iterators-eg-sumx-to-calculatesum",
+      "to": "automate-semantic-model-management-xmlaapi"
+    },
+    {
+      "from": "automate-semantic-model-management-xmlaapi",
+      "to": "design-end-to-end-fabric-analytics-architecture"
+    },
+    {
+      "from": "design-end-to-end-fabric-analytics-architecture",
+      "to": "design-fabric-adoption-strategy-based-on-live-stream-insights"
+    },
+    {
+      "from": "design-fabric-adoption-strategy-based-on-live-stream-insights",
+      "to": "design-fabric-governance-strategy-domains-and-workspaces"
+    },
+    {
+      "from": "design-fabric-governance-strategy-domains-and-workspaces",
+      "to": "design-migration-strategy-power-bi-premium-to-fabric"
+    },
+    {
+      "from": "design-migration-strategy-power-bi-premium-to-fabric",
+      "to": "design-power-bi-write-back-solution-using-power-automate"
+    },
+    {
+      "from": "design-power-bi-write-back-solution-using-power-automate",
+      "to": "implement-delta-table-disaster-recovery-time-travel"
+    },
+    {
+      "from": "implement-delta-table-disaster-recovery-time-travel",
+      "to": "visualize-power-bifabric-deployment-pipeline"
+    },
+    {
+      "from": "visualize-power-bifabric-deployment-pipeline",
+      "to": "configure-power-bi-desktop-for-source-control-pbip"
+    },
+    {
+      "from": "configure-power-bi-desktop-for-source-control-pbip",
+      "to": "design-power-bi-workspace-strategy-and-permissions"
+    },
+    {
+      "from": "design-power-bi-workspace-strategy-and-permissions",
+      "to": "analyze-data-model-for-star-schema-best-practices"
+    },
+    {
+      "from": "analyze-data-model-for-star-schema-best-practices",
+      "to": "configure-dynamic-m-query-parameters-directquery-optimization"
+    },
+    {
+      "from": "configure-dynamic-m-query-parameters-directquery-optimization",
+      "to": "analyze-and-optimize-power-query-for-query-folding"
+    },
+    {
+      "from": "analyze-and-optimize-power-query-for-query-folding",
+      "to": "design-onelake-strategy-shortcuts-vs-data-movement"
+    },
+    {
+      "from": "design-onelake-strategy-shortcuts-vs-data-movement",
+      "to": "determine-optimal-use-case-for-dataflows"
+    },
+    {
+      "from": "determine-optimal-use-case-for-dataflows",
+      "to": "execute-stored-procedure-in-dataflow-gen2-optimized"
+    },
+    {
+      "from": "execute-stored-procedure-in-dataflow-gen2-optimized",
+      "to": "generate-power-query-logic-for-combining-multiple-files"
+    },
+    {
+      "from": "generate-power-query-logic-for-combining-multiple-files",
+      "to": "parameterize-power-query-dynamic-filteringconnections"
+    },
+    {
+      "from": "parameterize-power-query-dynamic-filteringconnections",
+      "to": "select-optimal-fabric-data-transformation-technology"
+    },
+    {
+      "from": "select-optimal-fabric-data-transformation-technology",
+      "to": "design-interactive-button-slicer-panel"
+    },
+    {
+      "from": "design-interactive-button-slicer-panel",
+      "to": "design-report-navigation-bookmarks-and-selection-pane"
+    },
+    {
+      "from": "design-report-navigation-bookmarks-and-selection-pane",
+      "to": "determine-optimal-relationship-cardinality-and-direction"
+    },
+    {
+      "from": "determine-optimal-relationship-cardinality-and-direction",
+      "to": "generate-power-bi-theme-json"
+    },
+    {
+      "from": "generate-power-bi-theme-json",
+      "to": "optimize-new-card-visual-for-kpis"
+    },
+    {
+      "from": "optimize-new-card-visual-for-kpis",
+      "to": "workflow-giac-topxzaekqi0"
+    },
+    {
+      "from": "workflow-giac-topxzaekqi0",
+      "to": "workflow-giac--4gvhhcqjge"
+    },
+    {
+      "from": "workflow-giac--4gvhhcqjge",
+      "to": "workflow-giac-91ru82qwptu"
+    },
+    {
+      "from": "workflow-giac-91ru82qwptu",
+      "to": "workflow-giac-jdd-xgetaos"
+    },
+    {
+      "from": "workflow-giac-jdd-xgetaos",
+      "to": "workflow-giac-mfosvcj6tlw"
+    },
+    {
+      "from": "workflow-giac-mfosvcj6tlw",
+      "to": "workflow-giac-h8s1ugdbfrc"
+    },
+    {
+      "from": "workflow-giac-h8s1ugdbfrc",
+      "to": "workflow-giac-na9pqdrn3f4"
+    },
+    {
+      "from": "workflow-giac-na9pqdrn3f4",
+      "to": "workflow-giac-k32mhujdbk8"
+    },
+    {
+      "from": "workflow-giac-k32mhujdbk8",
+      "to": "workflow-giac-w8bphvcjch8"
+    },
+    {
+      "from": "workflow-giac-w8bphvcjch8",
+      "to": "workflow-giac-gtz8ykw425s"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "$id": "https://example.com/bpa.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fabric BPA Findings",
+  "type": "array",
+  "items": { "$ref": "#/$defs/bpaFinding" },
+  "$defs": {
+    "bpaFinding": {
+      "type": "object",
+      "required": ["ruleId", "severity", "category", "objectType", "objectName", "recommendation"],
+      "properties": {
+        "ruleId": { "type": "string" },
+        "severity": { "type": "string", "enum": ["High", "Medium", "Low", "Info"] },
+        "category": {
+          "type": "string",
+          "enum": ["DAX Expressions", "Error Prevention", "Formatting", "Maintenance", "Performance"]
+        },
+        "objectType": { "type": "string" },
+        "objectName": { "type": "string" },
+        "recommendation": { "type": "string" },
+        "link": { "type": "string", "format": "uri" },
+        "details": { "type": "object" }
+      },
+      "additionalProperties": true
+    }
+  }
+}

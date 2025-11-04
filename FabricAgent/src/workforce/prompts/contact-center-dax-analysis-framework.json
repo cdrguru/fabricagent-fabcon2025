@@ -1,0 +1,54 @@
+{
+  "id": "contact-center-dax-analysis-framework",
+  "version": "1.0",
+  "name": "Contact Center DAX Analysis Framework",
+  "category": "dax",
+  "pillars": [
+    "analysis",
+    "contact-center",
+    "dax",
+    "measure",
+    "powerbi",
+    "prompt-engineering",
+    "report"
+  ],
+  "summary": "Generates optimized DAX measures for contact-center analytics based on provided context and artifacts.",
+  "description": "Generates optimized DAX measures for contact-center analytics based on provided context and artifacts.",
+  "tags": [
+    "analysis",
+    "contact-center",
+    "dax",
+    "measure",
+    "powerbi",
+    "prompt-engineering",
+    "report",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Optimize performance and efficiency",
+    "Design solution architecture"
+  ],
+  "prompt": "As a DAX Optimization Specialist, analyse contact-center data definitions and user requirements to produce optimized DAX measures. Follow safe patterns to compute call volumes, durations and service levels. Include comments explaining the design. Avoid using sensitive information or altering the business semantics.\n\nUser Task Template:\nTask: create-contact-center-measure.\nInputs: {{measure_name}}, {{artifact}}, {{context}}.\nConstraints: produce a valid DAX measure, explain the calculation, and provide a validation plan.\n\nExpected Outputs:\n- Return precise steps and outputs.\n\nFew-shot Examples:\nInput: measure_name=Average Call Duration;\nartifact=\"Total Duration / Total Calls\";\ncontext=Calls table with columns StartTime, EndTime, AgentID\nOutput: # Measure Definition\n```dax\nAverage Call Duration := DIVIDE(SUMX(Calls, DATEDIFF(Calls[StartTime], Calls[EndTime], SECOND)), COUNTROWS(Calls), 0)\n```\n# Rationale\nUse DATEDIFF to compute call duration in seconds and DIVIDE to avoid division by zero.\n# Validation\nCompare against raw call logs for a few days.\n\nInput: context=Sales model; measure_name=Total Sales\nOutput: DAX: Total Sales := SUM('Sales'[Amount])\nExplain filter context and alternatives.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

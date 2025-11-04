@@ -1,0 +1,37 @@
+[
+  {
+    "old_id": "<VENDOR_NAME>-uc-forum-integration",
+    "new_id": "integration-vendor-uc-forum-integration",
+    "reason": "ID migration: removed placeholder tokens, vendor normalization"
+  },
+  {
+    "old_id": "<VENDOR_NAME>-analytics-power-bi",
+    "new_id": "integration-vendor-analytics-power-bi",
+    "reason": "ID migration: removed placeholder tokens, merged duplicate with [VENDOR] variant"
+  },
+  {
+    "old_id": "[VENDOR]-analytics-power-bi",
+    "new_id": "integration-vendor-analytics-power-bi",
+    "reason": "Duplicate removed: merged with <VENDOR_NAME> variant during vendor normalization"
+  },
+  {
+    "old_id": "research.deepresearch",
+    "new_id": "researchdeepresearch",
+    "reason": "ID normalization: removed dots for kebab-case consistency"
+  },
+  {
+    "old_id": "powerbi.gitops.copilot",
+    "new_id": "powerbigitopscopilot",
+    "reason": "ID normalization: removed dots for kebab-case consistency"
+  },
+  {
+    "old_id": "user-guide-sequence.generic",
+    "new_id": "user-guide-sequencegeneric",
+    "reason": "ID normalization: removed dots for kebab-case consistency"
+  },
+  {
+    "old_id": "refactor.csdr",
+    "new_id": "refactorcsdr",
+    "reason": "ID normalization: removed dots for kebab-case consistency"
+  }
+]

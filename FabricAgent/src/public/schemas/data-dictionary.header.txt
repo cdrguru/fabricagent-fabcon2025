@@ -1,0 +1,1 @@
+EntityType|Table|Name|DataTypeOrReturn|Format|Description|Notes

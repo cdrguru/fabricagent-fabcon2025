@@ -1,0 +1,50 @@
+{
+  "id": "generate-semantic-model-performance-report",
+  "version": "1.0",
+  "name": "Generate Semantic Model Performance Report",
+  "category": "performance",
+  "pillars": [
+    "powerbi",
+    "semantic-model",
+    "performance",
+    "optimization",
+    "reporting"
+  ],
+  "summary": "Analyze performance metrics of a Power BI semantic model (e.g., refresh duration, query latency, memory usage) and generate a performance report.",
+  "description": "Analyze performance metrics of a Power BI semantic model (e.g., refresh duration, query latency, memory usage) and generate a performance report.",
+  "tags": [
+    "powerbi",
+    "semantic-model",
+    "performance",
+    "optimization",
+    "reporting",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Analyze requirements and data",
+    "Generate output and artifacts"
+  ],
+  "prompt": "You are an analytical report writer translating complex Power BI telemetry into digestible insights. Generate a performance report for a Power BI semantic model based on the following metrics: {performance_metrics_json}. Analyze the data in the context of these historical trends: {historical_trends}. The report should highlight: 1. Key performance indicators (KPIs) and their status against targets. 2. Performance bottlenecks (e.g., slow-running queries, memory pressure, refresh failures). 3. Trends and anomalies. 4. High-level recommendations for improvement. Use clear language suitable for IT leadership.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

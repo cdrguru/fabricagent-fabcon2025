@@ -1,0 +1,100 @@
+<svg viewBox="0 0 1407 768" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="title desc">
+  <title id="title">Validation Process Illustration</title>
+  <desc id="desc">Messy documents on the left flow through an arrow into three validated cards labeled Schema, Safety, and Adversarial Tests.</desc>
+
+  <defs>
+    <!-- Reusable sheet group (not <symbol>) to avoid clipping on rotate/scale -->
+    <g id="sheet">
+      <rect width="80" height="60" rx="4" fill="#fff" stroke="#111827" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+      <path d="M10 15h60 M10 25h60 M10 35h40 M10 45h50" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    </g>
+
+    <!-- Arrowhead marker -->
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0L8 4L0 8Z" fill="#111827"/>
+    </marker>
+  </defs>
+
+  <style>
+    .card-label{ font:600 24px ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; text-anchor:middle; fill:#111827; }
+
+    .jitter{ animation:jitter 4s ease-in-out infinite alternate; transform-box:fill-box; transform-origin:center; }
+    .flow{ stroke-dasharray:10 15; animation:flow 8s linear infinite; }
+    .draw{ stroke-dasharray:100; stroke-dashoffset:100; animation:draw 1.2s ease-out forwards; }
+
+    @keyframes jitter{ to{ transform: translate(1px,-1px); } }
+    @keyframes flow{ to{ stroke-dashoffset:-25; } }
+    @keyframes draw{ to{ stroke-dashoffset:0; } }
+
+    /* Staggered checkmark timings */
+    #card-schema .draw{ animation-delay:.5s; }
+    #card-safety .draw{ animation-delay:.7s; }
+    #card-adversarial .draw{ animation-delay:.9s; }
+
+    .card-glow{ opacity:0; transition:opacity .3s ease; }
+    .card-group:hover .card-glow, .card-group:focus-within .card-glow{ opacity:1; }
+    .card-group:focus{ outline:none; }
+    .card-group:focus-within .card-outline{ stroke:#3B82F6; stroke-width:3; }
+
+    @media (prefers-reduced-motion: reduce){
+      .jitter,.flow,.draw{ animation:none!important; }
+      .draw{ stroke-dashoffset:0; }
+      .card-glow{ transition:none; }
+    }
+  </style>
+
+  <!-- Left Side: Unstructured Pile -->
+  <g id="pile" class="jitter">
+    <path d="M50 350h50 M60 380h50 M70 410h50" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    <use xlink:href="#sheet" href="#sheet" x="200" y="300" transform="rotate(-15 240 330)"/>
+    <use xlink:href="#sheet" href="#sheet" x="180" y="350" transform="rotate(10 220 380)"/>
+    <use xlink:href="#sheet" href="#sheet" x="250" y="360" transform="rotate(-5 290 390)"/>
+    <use xlink:href="#sheet" href="#sheet" x="210" y="400" transform="rotate(20 250 430)"/>
+    <use xlink:href="#sheet" href="#sheet" x="280" y="310" transform="rotate(5 320 340)"/>
+    <use xlink:href="#sheet" href="#sheet" x="310" y="380" transform="rotate(-12 350 410)"/>
+    <use xlink:href="#sheet" href="#sheet" x="260" y="270" transform="rotate(25 300 300) scale(.9)"/>
+    <use xlink:href="#sheet" href="#sheet" x="330" y="420" transform="rotate(8 370 450) scale(.95)"/>
+  </g>
+
+  <!-- Center Arrow -->
+  <path class="flow" d="M480,384 C580,384 650,384 750,384" fill="none" stroke="#111827" stroke-width="2" vector-effect="non-scaling-stroke" marker-end="url(#arrowhead)"/>
+
+  <!-- Right Side: Validated Stack -->
+  <g id="stack" transform="translate(800,0)">
+    <!-- Card 1: Schema -->
+    <g id="card-schema" class="card-group" tabindex="0">
+      <rect x="0" y="150" width="550" height="120" rx="12" fill="none" stroke="#3B82F6" stroke-width="8" class="card-glow"/>
+      <rect x="0" y="150" width="550" height="120" rx="12" fill="#fff" stroke="#111827" stroke-width="1.5" class="card-outline" vector-effect="non-scaling-stroke"/>
+      <rect x="20" y="170" width="350" height="12" rx="6" fill="#E5E7EB"/><rect x="20" y="170" width="100" height="12" rx="6" fill="#3B82F6"/>
+      <rect x="20" y="200" width="350" height="8" rx="4" fill="#E5E7EB"/>
+      <rect x="20" y="225" width="300" height="8" rx="4" fill="#E5E7EB"/>
+      <circle cx="480" cy="210" r="35" fill="#fff" stroke="#E5E7EB" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+      <path class="draw" pathLength="100" d="M465 210 l10 10 l20 -20" fill="none" stroke="#3B82F6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="480" y="190" class="card-label">Schema</text>
+    </g>
+
+    <!-- Card 2: Safety -->
+    <g id="card-safety" class="card-group" tabindex="0">
+      <rect x="0" y="324" width="550" height="120" rx="12" fill="none" stroke="#22C55E" stroke-width="8" class="card-glow"/>
+      <rect x="0" y="324" width="550" height="120" rx="12" fill="#fff" stroke="#111827" stroke-width="1.5" class="card-outline" vector-effect="non-scaling-stroke"/>
+      <rect x="20" y="344" width="350" height="12" rx="6" fill="#E5E7EB"/><rect x="20" y="344" width="100" height="12" rx="6" fill="#22C55E"/>
+      <rect x="20" y="374" width="350" height="8" rx="4" fill="#E5E7EB"/>
+      <rect x="20" y="399" width="300" height="8" rx="4" fill="#E5E7EB"/>
+      <circle cx="480" cy="384" r="35" fill="#fff" stroke="#E5E7EB" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+      <path class="draw" pathLength="100" d="M465 384 l10 10 l20 -20" fill="none" stroke="#22C55E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="480" y="364" class="card-label">Safety</text>
+    </g>
+
+    <!-- Card 3: Adversarial Tests -->
+    <g id="card-adversarial" class="card-group" tabindex="0">
+      <rect x="0" y="498" width="550" height="120" rx="12" fill="none" stroke="#7C3AED" stroke-width="8" class="card-glow"/>
+      <rect x="0" y="498" width="550" height="120" rx="12" fill="#fff" stroke="#111827" stroke-width="1.5" class="card-outline" vector-effect="non-scaling-stroke"/>
+      <rect x="20" y="518" width="350" height="12" rx="6" fill="#E5E7EB"/><rect x="20" y="518" width="100" height="12" rx="6" fill="#7C3AED"/>
+      <rect x="20" y="548" width="350" height="8" rx="4" fill="#E5E7EB"/>
+      <rect x="20" y="573" width="300" height="8" rx="4" fill="#E5E7EB"/>
+      <circle cx="480" cy="558" r="35" fill="#fff" stroke="#E5E7EB" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+      <path class="draw" pathLength="100" d="M465 558 l10 10 l20 -20" fill="none" stroke="#7C3AED" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="480" y="538" class="card-label">Adversarial Tests</text>
+    </g>
+  </g>
+</svg>

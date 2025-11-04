@@ -1,0 +1,163 @@
+<svg viewBox="0 0 1407 768" xmlns="http://www.w3.org/2000/svg" role="img">
+      <title>Contributor Workflow Diagram</title>
+      <desc>Five tiles from left to right labeled: Contributor Submission → Content Intake → Review &amp; Triage → Editing &amp; Prep → Publish &amp; Notify, connected by arrows to show progression.</desc>
+
+      <defs>
+        <!-- Reusable grid pattern for tiles -->
+        <pattern id="gridPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+          <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#E9EDF2" stroke-width="1" vector-effect="non-scaling-stroke"/>
+        </pattern>
+
+        <!-- Reusable avatar disc symbol -->
+        <symbol id="avatarDisc" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50" fill="#2B5FAB"/>
+        </symbol>
+
+        <!-- Arrowhead marker -->
+        <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+          <path d="M 0 0 L 10 4 L 0 8 Z" fill="#1F2A44" />
+        </marker>
+      </defs>
+
+      <style>
+        .heading {
+          font-family: ui-sans-serif, system-ui, sans-serif;
+          font-size: 48px;
+          font-weight: bold;
+          text-anchor: middle;
+          fill: #222;
+          text-transform: uppercase;
+        }
+        .label {
+          font-family: ui-sans-serif, system-ui, sans-serif;
+          font-size: 24px;
+          font-weight: 500;
+          text-anchor: middle;
+          fill: #3A3A3A;
+        }
+        .tile-group {
+          transition: transform 0.2s ease-out;
+        }
+        .tile-group:hover, .tile-group:focus-within {
+          transform: translateY(-4px);
+        }
+        .tile-group:focus {
+          outline: none;
+        }
+        .pulse-ring {
+          transform-origin: 50% 50%;
+          animation: pulse 3s ease-in-out infinite;
+        }
+        .arrow {
+          stroke: #1F2A44;
+          stroke-width: 6;
+          marker-end: url(#arrowhead);
+        }
+        .arrow-flow {
+          stroke: #2B5FAB;
+          stroke-width: 6;
+          stroke-dasharray: 1 12;
+          animation: flow 1s linear infinite;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.06); }
+        }
+        @keyframes flow {
+          to { stroke-dashoffset: -13; }
+        }
+
+        /* Staggering Animations */
+        .stage-1 .pulse-ring { animation-delay: 0s; }
+        .stage-2 .pulse-ring { animation-delay: 0.3s; }
+        .stage-3 .pulse-ring { animation-delay: 0.6s; }
+        .stage-4 .pulse-ring { animation-delay: 0.9s; }
+        .stage-5 .pulse-ring { animation-delay: 1.2s; }
+
+        /* Accessibility: Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+          .pulse-ring, .arrow-flow {
+            animation: none !important;
+          }
+          .tile-group {
+            transition: none;
+          }
+        }
+      </style>
+
+      <!-- Heading -->
+      <text x="703.5" y="100" class="heading">Contributor Workflow</text>
+
+      <!-- Workflow Stages -->
+      <g id="workflow-stages" transform="translate(0, 180)">
+
+        <!-- Stage 1: Contributor Submission -->
+        <g class="tile-group stage-1" tabindex="0">
+          <rect x="50" y="50" width="200" height="200" rx="15" fill="url(#gridPattern)"/>
+          <circle class="pulse-ring" cx="150" cy="150" r="60" fill="#C9D1D9"/>
+          <use href="#avatarDisc" x="100" y="100" width="100" height="100" />
+          <path d="M150 120 a20 20 0 1 1 0 40 a10 10 0 0 0 0-40" fill="#fff" transform="scale(0.8) translate(37,37)"/>
+          <text x="150" y="300" class="label">Contributor Submission</text>
+        </g>
+
+        <!-- Stage 2: Content Intake -->
+        <g class="tile-group stage-2" tabindex="0">
+          <rect x="325" y="50" width="200" height="200" rx="15" fill="url(#gridPattern)"/>
+          <circle class="pulse-ring" cx="425" cy="150" r="60" fill="#C9D1D9"/>
+          <use href="#avatarDisc" x="375" y="100" width="100" height="100" />
+          <path d="M425 125 v-15 h-20 v15 l10 5 Z M410 110 h10 v-5 h-10 Z" fill="#fff"/>
+          <rect x="400" y="125" width="50" height="40" rx="3" fill="#fff"/>
+          <path d="M405 135h40 M405 145h40 M405 155h25" stroke="#2B5FAB" stroke-width="3" fill="none"/>
+          <text x="425" y="300" class="label">Content Intake</text>
+        </g>
+
+        <!-- Stage 3: Review & Triage -->
+        <g class="tile-group stage-3" tabindex="0">
+          <rect x="600" y="50" width="200" height="200" rx="15" fill="url(#gridPattern)"/>
+          <circle class="pulse-ring" cx="700" cy="150" r="60" fill="#C9D1D9"/>
+          <use href="#avatarDisc" x="650" y="100" width="100" height="100" />
+          <path d="M700 120 a20 20 0 1 1 0 40 a10 10 0 0 0 0-40" fill="#fff" transform="scale(0.8) translate(87,37)"/>
+          <text x="700" y="300" class="label">Review &amp; Triage</text>
+        </g>
+
+        <!-- Stage 4: Editing & Prep -->
+        <g class="tile-group stage-4" tabindex="0">
+          <rect x="875" y="50" width="200" height="200" rx="15" fill="url(#gridPattern)"/>
+          <circle class="pulse-ring" cx="975" cy="150" r="60" fill="#C9D1D9"/>
+          <use href="#avatarDisc" x="925" y="100" width="100" height="100" />
+          <path d="M975 120 a20 20 0 1 1 0 40 a10 10 0 0 0 0-40" fill="#fff" transform="scale(0.8) translate(122,37) rotate(180 50 50)"/>
+          <rect x="985" y="125" width="70" height="50" rx="3" fill="#fff" />
+          <path d="M990 135h60 M990 145h60 M990 155h40" stroke="#2B5FAB" stroke-width="3" fill="none"/>
+          <text x="975" y="300" class="label">Editing &amp; Prep</text>
+        </g>
+
+        <!-- Stage 5: Publish & Notify -->
+        <g class="tile-group stage-5" tabindex="0">
+          <rect x="1150" y="50" width="200" height="200" rx="15" fill="url(#gridPattern)"/>
+          <circle class="pulse-ring" cx="1250" cy="150" r="60" fill="#C9D1D9"/>
+          <use href="#avatarDisc" x="1200" y="100" width="100" height="100" />
+          <path d="M1250 120 a20 20 0 1 1 0 40 a10 10 0 0 0 0-40" fill="#fff" transform="scale(0.8) translate(157,37)"/>
+          <path d="M1260 130 h60 l-15 15 v-15" fill="#fff"/>
+          <path d="M1265 140 h50 v25 h-50 z" fill="#fff" stroke="#2B5FAB" stroke-width="3"/>
+          <text x="1250" y="300" class="label">Publish &amp; Notify</text>
+        </g>
+
+        <!-- Arrows -->
+        <g id="arrows" transform="translate(0, 150)">
+          <line class="arrow" x1="250" y1="0" x2="325" y2="0"/>
+          <line class="arrow-flow" x1="250" y1="0" x2="325" y2="0"/>
+
+          <line class="arrow" x1="525" y1="0" x2="600" y2="0"/>
+          <line class="arrow-flow" x1="525" y1="0" x2="600" y2="0"/>
+
+          <line class="arrow" x1="800" y1="0" x2="875" y2="0"/>
+          <line class="arrow-flow" x1="800" y1="0" x2="875" y2="0"/>
+
+          <line class="arrow" x1="1075" y1="0" x2="1150" y2="0"/>
+          <line class="arrow-flow" x1="1075" y1="0" x2="1150" y2="0"/>
+        </g>
+
+      </g>
+    </svg>

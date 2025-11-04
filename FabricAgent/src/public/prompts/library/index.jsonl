@@ -1,0 +1,2 @@
+{"video_id":"vid1","title":"Test Prompt 1","prompt":"This is the first test prompt with some content.","status":"published","created_at":"2025-09-07T10:00:00Z","updated_at":"2025-09-07T10:00:00Z","category":"test","tags":["test","sample"],"file_path":"prompts/library/vid1/prompt.json"}
+{"video_id":"vid2","title":"Test Prompt 2","prompt":"This is the second test prompt with different content.","status":"published","created_at":"2025-09-07T09:00:00Z","updated_at":"2025-09-07T09:00:00Z","category":"demo","tags":["demo","example"],"file_path":"prompts/library/vid2/prompt.json"}

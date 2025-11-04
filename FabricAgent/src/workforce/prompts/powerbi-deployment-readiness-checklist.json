@@ -1,0 +1,53 @@
+{
+  "id": "powerbi-deployment-readiness-checklist",
+  "version": "1.0",
+  "name": "Power BI Deployment Readiness Checklist",
+  "category": "deployment",
+  "pillars": [
+    "powerbi",
+    "deployment",
+    "governance",
+    "bpa",
+    "checklist",
+    "troubleshooting"
+  ],
+  "summary": "Generate a comprehensive checklist to ensure Power BI reports and semantic models are ready for production deployment, including governance and BPA checks.",
+  "description": "Generate a comprehensive checklist to ensure Power BI reports and semantic models are ready for production deployment, including governance and BPA checks.",
+  "tags": [
+    "powerbi",
+    "deployment",
+    "governance",
+    "bpa",
+    "checklist",
+    "troubleshooting",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Review and validate content",
+    "Document findings and recommendations",
+    "Deploy to target environment"
+  ],
+  "prompt": "You are a reliable Power BI administrator ensuring governance compliance. Create a deployment readiness checklist for the deployment of ${Artifacts} to the ${TargetWorkspace}. Organize the checklist by categories: (1) **Governance & Compliance** (e.g., BPA score validation based on ${BPAResultsSummary}, sensitivity labels applied, documentation updated), (2) **Configuration** (e.g., data source credentials, gateway status, refresh schedules), (3) **Security** (e.g., RLS verification, workspace access reviewed), and (4) **Stakeholder Sign-off** (${Stakeholders}). Include clear pass/fail criteria.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

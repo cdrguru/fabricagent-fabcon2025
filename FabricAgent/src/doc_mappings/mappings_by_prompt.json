@@ -1,0 +1,504 @@
+[
+  {
+    "id": "analyze-calculations-visual-calcs-vs-dax-measures",
+    "name": "Analyze Calculations (Visual Calcs vs. DAX Measures)",
+    "category": "dax-modeling",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/dax-modeling/dax-library.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/performance/bestpracticesforwritingefficientdaxformulas-listofresources.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "configure-rls-using-fabric-web-modeling",
+    "name": "Configure RLS using Fabric Web Modeling",
+    "category": "dax-modeling",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/dax-modeling/dax-library.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/performance/bestpracticesforwritingefficientdaxformulas-listofresources.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "generate-calculated-summary-table-using-groupby",
+    "name": "Generate Calculated Summary Table using GROUPBY",
+    "category": "dax-modeling",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/dax-modeling/dax-library.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/performance/bestpracticesforwritingefficientdaxformulas-listofresources.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "generate-dax-for-dynamic-visual-titles",
+    "name": "Generate DAX for Dynamic Visual Titles",
+    "category": "dax-modeling",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/dax-modeling/dax-library.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/performance/bestpracticesforwritingefficientdaxformulas-listofresources.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "implement-dynamic-axeslegends-with-field-parameters",
+    "name": "Implement Dynamic Axes/Legends with Field Parameters",
+    "category": "dax-modeling",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/dax-modeling/dax-library.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/performance/bestpracticesforwritingefficientdaxformulas-listofresources.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "implement-virtual-relationships-with-treatas",
+    "name": "Implement Virtual Relationships with TREATAS",
+    "category": "dax-modeling",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/dax-modeling/dax-library.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/performance/bestpracticesforwritingefficientdaxformulas-listofresources.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "optimize-dax-iterators-eg-sumx-to-calculatesum",
+    "name": "Optimize DAX Iterators (e.g., SUMX to CALCULATE/SUM)",
+    "category": "dax-modeling",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/dax-modeling/dax-library.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/performance/bestpracticesforwritingefficientdaxformulas-listofresources.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "automate-semantic-model-management-xmlaapi",
+    "name": "Automate Semantic Model Management (XMLA/API)",
+    "category": "fabric-architecture",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/fabric-architecture/microsoft-power-query-custom-connectors-list-dictionary-referencedoc.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "design-end-to-end-fabric-analytics-architecture",
+    "name": "Design End-to-End Fabric Analytics Architecture",
+    "category": "fabric-architecture",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/fabric-architecture/microsoft-power-query-custom-connectors-list-dictionary-referencedoc.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "design-fabric-adoption-strategy-based-on-live-stream-insights",
+    "name": "Design Fabric Adoption Strategy (Based on Live Stream Insights)",
+    "category": "fabric-architecture",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/fabric-architecture/microsoft-power-query-custom-connectors-list-dictionary-referencedoc.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "design-fabric-governance-strategy-domains-and-workspaces",
+    "name": "Design Fabric Governance Strategy (Domains and Workspaces)",
+    "category": "fabric-architecture",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/fabric-architecture/microsoft-power-query-custom-connectors-list-dictionary-referencedoc.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "design-migration-strategy-power-bi-premium-to-fabric",
+    "name": "Design Migration Strategy (Power BI Premium to Fabric)",
+    "category": "fabric-architecture",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/fabric-architecture/microsoft-power-query-custom-connectors-list-dictionary-referencedoc.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "design-power-bi-write-back-solution-using-power-automate",
+    "name": "Design Power BI Write-Back Solution using Power Automate",
+    "category": "fabric-architecture",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/fabric-architecture/microsoft-power-query-custom-connectors-list-dictionary-referencedoc.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "implement-delta-table-disaster-recovery-time-travel",
+    "name": "Implement Delta Table Disaster Recovery (Time Travel)",
+    "category": "fabric-architecture",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/fabric-architecture/microsoft-power-query-custom-connectors-list-dictionary-referencedoc.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "visualize-power-bifabric-deployment-pipeline",
+    "name": "Visualize Power BI/Fabric Deployment Pipeline",
+    "category": "fabric-architecture",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/fabric-architecture/microsoft-power-query-custom-connectors-list-dictionary-referencedoc.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "configure-power-bi-desktop-for-source-control-pbip",
+    "name": "Configure Power BI Desktop for Source Control (PBIP)",
+    "category": "governance",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/governance/row-level-security-vs-powerbi-audiences-dictionary-list-lib.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "design-power-bi-workspace-strategy-and-permissions",
+    "name": "Design Power BI Workspace Strategy and Permissions",
+    "category": "governance",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/governance/row-level-security-vs-powerbi-audiences-dictionary-list-lib.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "analyze-data-model-for-star-schema-best-practices",
+    "name": "Analyze Data Model for Star Schema Best Practices",
+    "category": "performance",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/performance/bestpracticesforwritingefficientdaxformulas-listofresources.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "configure-dynamic-m-query-parameters-directquery-optimization",
+    "name": "Configure Dynamic M Query Parameters (DirectQuery Optimization)",
+    "category": "performance",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/performance/bestpracticesforwritingefficientdaxformulas-listofresources.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "analyze-and-optimize-power-query-for-query-folding",
+    "name": "Analyze and Optimize Power Query for Query Folding",
+    "category": "power-query-folding",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/guide-to-power-query-folding.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/powerquery-library-output.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/cheetsheet-microsoftfabricnotebooks-powerquery-vs-pythonpandas-operations.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "design-onelake-strategy-shortcuts-vs-data-movement",
+    "name": "Design OneLake Strategy (Shortcuts vs. Data Movement)",
+    "category": "power-query-folding",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/guide-to-power-query-folding.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/powerquery-library-output.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/cheetsheet-microsoftfabricnotebooks-powerquery-vs-pythonpandas-operations.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "determine-optimal-use-case-for-dataflows",
+    "name": "Determine Optimal Use Case for Dataflows",
+    "category": "power-query-folding",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/guide-to-power-query-folding.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/powerquery-library-output.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/cheetsheet-microsoftfabricnotebooks-powerquery-vs-pythonpandas-operations.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "execute-stored-procedure-in-dataflow-gen2-optimized",
+    "name": "Execute Stored Procedure in Dataflow Gen2 (Optimized)",
+    "category": "power-query-folding",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/guide-to-power-query-folding.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/powerquery-library-output.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/cheetsheet-microsoftfabricnotebooks-powerquery-vs-pythonpandas-operations.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "generate-power-query-logic-for-combining-multiple-files",
+    "name": "Generate Power Query Logic for Combining Multiple Files",
+    "category": "power-query-folding",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/guide-to-power-query-folding.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/powerquery-library-output.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/cheetsheet-microsoftfabricnotebooks-powerquery-vs-pythonpandas-operations.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "parameterize-power-query-dynamic-filteringconnections",
+    "name": "Parameterize Power Query (Dynamic Filtering/Connections)",
+    "category": "power-query-folding",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/guide-to-power-query-folding.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/powerquery-library-output.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/cheetsheet-microsoftfabricnotebooks-powerquery-vs-pythonpandas-operations.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "select-optimal-fabric-data-transformation-technology",
+    "name": "Select Optimal Fabric Data Transformation Technology",
+    "category": "power-query-folding",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/guide-to-power-query-folding.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/powerquery-library-output.json",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/power-query-folding/cheetsheet-microsoftfabricnotebooks-powerquery-vs-pythonpandas-operations.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "design-interactive-button-slicer-panel",
+    "name": "Design Interactive Button Slicer Panel",
+    "category": "powerbi-visualization",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/powerbi-visualization/bestpractices-powerbithemes.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/powerbi-visualization/powerbi-report-design-best-practices.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "design-report-navigation-bookmarks-and-selection-pane",
+    "name": "Design Report Navigation (Bookmarks and Selection Pane)",
+    "category": "powerbi-visualization",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/powerbi-visualization/bestpractices-powerbithemes.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/powerbi-visualization/powerbi-report-design-best-practices.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "determine-optimal-relationship-cardinality-and-direction",
+    "name": "Determine Optimal Relationship Cardinality and Direction",
+    "category": "powerbi-visualization",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/powerbi-visualization/bestpractices-powerbithemes.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/powerbi-visualization/powerbi-report-design-best-practices.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "generate-power-bi-theme-json",
+    "name": "Generate Power BI Theme JSON",
+    "category": "powerbi-visualization",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/powerbi-visualization/bestpractices-powerbithemes.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/powerbi-visualization/powerbi-report-design-best-practices.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "id": "optimize-new-card-visual-for-kpis",
+    "name": "Optimize New Card Visual for KPIs",
+    "category": "powerbi-visualization",
+    "docs": [
+      {
+        "path": "knowledge/powerbi/categories/powerbi-visualization/bestpractices-powerbithemes.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      },
+      {
+        "path": "knowledge/powerbi/categories/powerbi-visualization/powerbi-report-design-best-practices.md",
+        "match_reason": "internalized-kb",
+        "confidence": 1.0
+      }
+    ]
+  }
+]

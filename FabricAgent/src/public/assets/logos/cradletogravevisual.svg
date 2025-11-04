@@ -1,0 +1,328 @@
+<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="svg-title"
+     style="
+       /* Per-instance theme variables (override per embed) */
+       --clr-path:#4A5568;        /* Gray-600 */
+       --clr-progress:#63B3ED;    /* Blue-300 */
+       --clr-token-stroke:#1A202C;/* Gray-900 */
+       --clr-label-text:#E2E8F0;  /* Gray-200 */
+       --clr-idle:#A0AEC0;        /* Gray-400 */
+       --clr-ringing:#4299E1;     /* Blue-400 */
+       --clr-answered:#48BB78;    /* Green-400 */
+       --clr-abandoned:#F56565;   /* Red-400 */
+     ">
+  <title id="svg-title">Live Call Flow Visualizer</title>
+  <desc>An animation showing a call moving along a path, representing its journey through a queue. The call's state, progress, and speed are updated dynamically from a data source. The token is focusable.</desc>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#grid)" />
+
+  <style>
+    /* Base Path Styles */
+    .call-path {
+      fill: none;
+      stroke: var(--clr-path, #4A5568);
+      stroke-width: 2;
+      vector-effect: non-scaling-stroke;
+      shape-rendering: geometricPrecision;
+    }
+    .call-path.progress {
+      stroke: var(--clr-progress, #63B3ED);
+      opacity: .6;
+      stroke-dasharray: 0 100; /* 0% progress initially (uses pathLength=100) */
+      transition: stroke-dasharray 0.1s linear; /* smooth progress updates */
+    }
+
+    /* Token + Label */
+    .call-token {
+      transition: fill 0.3s ease-in-out;
+      fill: var(--clr-idle, #A0AEC0);
+      stroke: var(--clr-token-stroke, #1A202C);
+      stroke-width: 2;
+      visibility: hidden; /* hidden until a call event occurs */
+      cursor: pointer;
+    }
+    .focus-ring {
+      pointer-events: none;
+      opacity: 0; /* shown on focus */
+    }
+    .call-label {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 14px;
+      fill: var(--clr-label-text, #E2E8F0);
+      text-anchor: middle;
+      dominant-baseline: middle;
+      visibility: hidden; /* shown with token visibility */
+    }
+
+    /* Legend */
+    .legend-title {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+      fill: var(--clr-label-text, #E2E8F0);
+    }
+    .legend-text {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 10px;
+      fill: var(--clr-label-text, #E2E8F0);
+    }
+
+    /* Token Icon */
+    .token-icon {
+      transition: transform 0.2s ease-in-out;
+    }
+    .call-token:hover .token-icon {
+      transform: scale(1.1);
+    }
+
+    /* Accessibility Preferences */
+    @media (prefers-reduced-motion: reduce) {
+      .call-path.progress { transition: none; }
+    }
+    @media (prefers-contrast: more) {
+      .call-path { stroke-width: 3; }
+      .call-label {
+        fill: #000;
+        stroke: #fff;
+        stroke-width: 1px;
+        paint-order: stroke;
+      }
+    }
+    @media (forced-colors: active) {
+      .call-path, .call-path.progress, .focus-ring { stroke: CanvasText; }
+      .call-token { stroke: CanvasText; fill: ButtonFace; }
+      .call-label { fill: CanvasText; stroke: Canvas; }
+    }
+  </style>
+
+  <!-- Normalized motion path with pathLength=100 for easy progress math -->
+  <defs>
+    <!-- Grid pattern for background -->
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="var(--clr-path, #4A5568)" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+
+    <path id="cdrg1-call-flow-path"
+          class="call-path"
+          d="M20,100 L80,100 Q120,100 120,60 L180,60 Q220,60 220,100 L280,100 Q320,100 320,140 L380,140 Q420,140 420,100 L480,100 Q520,100 520,60 L580,60"
+          pathLength="100"/>
+  </defs>
+
+  <!-- Base path + progress overlay -->
+  <use href="#cdrg1-call-flow-path" />
+  <use href="#cdrg1-call-flow-path" class="call-path progress" id="cdrg1-progress"/>
+
+  <!-- Stage labels -->
+  <text x="50" y="120" class="stage-label">Incoming</text>
+  <text x="150" y="40" class="stage-label">Queue</text>
+  <text x="250" y="120" class="stage-label">Routing</text>
+  <text x="350" y="160" class="stage-label">Agent</text>
+  <text x="450" y="80" class="stage-label">Connected</text>
+  <text x="550" y="40" class="stage-label">Complete</text>
+
+  <!-- Token group (focusable) -->
+  <g id="cdrg1-token" class="call-token" tabindex="0" focusable="true" aria-labelledby="svg-title" role="button" aria-describedby="token-desc">
+    <!-- Focus ring for keyboard users -->
+    <circle class="focus-ring" r="14" fill="none" stroke="var(--clr-ringing, #4299E1)" stroke-width="2"/>
+    <!-- Phone icon token -->
+    <g class="token-icon">
+      <rect x="-6" y="-4" width="12" height="8" rx="2" fill="currentColor"/>
+      <circle cx="0" cy="-6" r="3" fill="currentColor"/>
+      <rect x="-8" y="-2" width="16" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    </g>
+    <!-- Dynamic label -->
+    <text id="cdrg1-mos-label" class="call-label" y="-18">MOS: -</text>
+  </g>
+
+  <!-- Hidden description for screen readers -->
+  <desc id="token-desc">Interactive call token showing current call state and MOS score</desc>
+
+  <!-- Legend -->
+  <g class="legend" transform="translate(20, 180)">
+    <text x="0" y="0" class="legend-title">Legend:</text>
+    <circle cx="60" cy="-5" r="4" fill="var(--clr-ringing, #4299E1)"/>
+    <text x="70" y="0" class="legend-text">Ringing</text>
+    <circle cx="120" cy="-5" r="4" fill="var(--clr-answered, #48BB78)"/>
+    <text x="130" y="0" class="legend-text">Answered</text>
+    <circle cx="180" cy="-5" r="4" fill="var(--clr-abandoned, #F56565)"/>
+    <text x="190" y="0" class="legend-text">Abandoned</text>
+    <text x="250" y="0" class="legend-text">Press D: Toggle Demo | Space: Random Event</text>
+  </g>
+
+  <script>
+    <![CDATA[
+    (function(){
+      // Element refs with error handling
+      const token = document.getElementById('cdrg1-token');
+      const label = document.getElementById('cdrg1-mos-label');
+      const path = document.getElementById('cdrg1-call-flow-path');
+      const progressEl = document.getElementById('cdrg1-progress');
+
+      // Exit if required elements are missing
+      if (!token || !label || !path || !progressEl) {
+        console.warn('CDRGuru Call Flow: Required SVG elements not found');
+        return;
+      }
+
+      // Create or attach a polite live region for announcements
+      let sr = document.getElementById('sr-updates');
+      if (!sr) {
+        sr = document.createElement('span');
+        sr.id = 'sr-updates';
+        sr.setAttribute('aria-live','polite');
+        Object.assign(sr.style, {
+          position:'absolute', width:'1px', height:'1px', overflow:'hidden',
+          clip:'rect(1px,1px,1px,1px)', clipPath:'inset(50%)', whiteSpace:'nowrap'
+        });
+        (document.body || document.documentElement).appendChild(sr);
+      }
+
+      // Helpers
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const len = path.getTotalLength(); // REAL length for getPointAtLength
+
+      function setProgress(p){ // p in [0..1]
+        if(!progressEl) return;
+        const pct = Math.max(0, Math.min(1, p)) * 100; // uses pathLength=100
+        progressEl.setAttribute('stroke-dasharray', `${pct} ${100 - pct}`);
+      }
+
+      function jumpToEnd(){
+        const end = path.getPointAtLength(len);
+        token.setAttribute('transform', `translate(${end.x},${end.y})`);
+        setProgress(1);
+      }
+
+      function animateViaJS(totalDurationMs){
+        const start = performance.now();
+
+        // Easing function for smoother animation
+        function easeInOutQuad(t) {
+          return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        }
+
+        function step(now){
+          const elapsed = now - start;
+          const rawProgress = Math.min(1, elapsed / totalDurationMs);
+          const easedProgress = easeInOutQuad(rawProgress);
+
+          const pt = path.getPointAtLength(easedProgress * len);
+          token.setAttribute('transform', `translate(${pt.x},${pt.y})`);
+          setProgress(easedProgress);
+
+          if(rawProgress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      // Main event handler (exposed)
+      function onEvent(e){
+        if(!token) return;
+
+        // Visibility + state
+        token.classList.add('is-visible');
+        label.classList.add('is-visible');
+        token.classList.remove('is-ringing','is-answered','is-abandoned');
+
+        const ev = (e && e.event) || 'Offered';
+        if (ev === 'Offered')   token.classList.add('is-ringing');
+        if (ev === 'Answered')  token.classList.add('is-answered');
+        if (ev === 'Abandoned') token.classList.add('is-abandoned');
+
+        // Label + SR announce
+        const mos = (e && typeof e.mos === 'number') ? e.mos : '-';
+        label.textContent = `MOS: ${mos}`;
+        sr.textContent = `Call ${ev}. MOS ${mos}.`;
+
+        // Motion
+        const durationMs = (e && typeof e.duration === 'number') ? e.duration * 1000 : 3000; // default 3s
+
+        if (prefersReduced) {
+          jumpToEnd();
+        } else {
+          animateViaJS(durationMs);
+        }
+      }
+
+      // Keyboard controls
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'd' || e.key === 'D') {
+          if (demoInterval) {
+            stopDemo();
+            sr.textContent = 'Demo stopped';
+          } else {
+            startDemo();
+            sr.textContent = 'Demo started';
+          }
+        } else if (e.key === ' ') {
+          e.preventDefault();
+          // Trigger a random event
+          const events = ['Offered', 'Answered', 'Abandoned'];
+          const randomEvent = events[Math.floor(Math.random() * events.length)];
+          const randomMos = (Math.random() * 4 + 1).toFixed(1);
+          onEvent({ event: randomEvent, mos: parseFloat(randomMos), duration: Math.random() * 2 + 1 });
+        }
+      });
+
+      // Expose the event handler globally for external use
+      window.cdrguruCallFlow = { onEvent };
+
+      // Demo mode - auto-trigger some events for testing
+      let demoInterval;
+      function startDemo() {
+        if (demoInterval) return; // Already running
+
+        const events = [
+          { event: 'Offered', mos: 4.2, duration: 2 },
+          { event: 'Answered', mos: 4.5, duration: 3 },
+          { event: 'Offered', mos: 3.8, duration: 1.5 },
+          { event: 'Abandoned', mos: 2.1, duration: 0.5 }
+        ];
+        let index = 0;
+
+        demoInterval = setInterval(() => {
+          try {
+            onEvent(events[index % events.length]);
+            index++;
+          } catch (error) {
+            console.error('Demo event error:', error);
+            stopDemo();
+          }
+        }, 5000); // every 5 seconds
+      }
+
+      // Stop demo
+      function stopDemo() {
+        if (demoInterval) {
+          clearInterval(demoInterval);
+          demoInterval = null;
+        }
+      }
+
+      // Expose demo functions
+      window.cdrguruCallFlow.startDemo = startDemo;
+      window.cdrguruCallFlow.stopDemo = stopDemo;
+
+      // Auto-start demo if no external events after 2 seconds
+      let hasExternalEvents = false;
+      window.cdrguruCallFlow.hasExternalEvents = hasExternalEvents;
+
+      const autoStartTimer = setTimeout(() => {
+        if (!hasExternalEvents) {
+          startDemo();
+          sr.textContent = 'Demo mode started. Press D to toggle demo, Space for random event.';
+        }
+      }, 2000);
+
+      // Mark as having external events when onEvent is called externally
+      const originalOnEvent = onEvent;
+      window.cdrguruCallFlow.onEvent = function(e) {
+        hasExternalEvents = true;
+        clearTimeout(autoStartTimer);
+        return originalOnEvent(e);
+      };
+
+    })();
+    ]]>
+  </script>
+</svg>

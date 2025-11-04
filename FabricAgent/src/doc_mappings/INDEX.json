@@ -1,0 +1,8 @@
+{
+  "bundle_root": "prompts/doc_mappings",
+  "mappings_json": "prompts/doc_mappings/mappings_by_prompt.json",
+  "manifest_csv": "prompts/doc_mappings/manifest.csv",
+  "doc_mappings": "prompts/doc_mappings/DOC_MAPPINGS.json",
+  "knowledge_base_root": "knowledge/powerbi",
+  "kb_index": "knowledge/powerbi/index.json"
+}

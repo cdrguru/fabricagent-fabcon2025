@@ -1,0 +1,51 @@
+{
+  "id": "analyze-bpa-violations-propose-fixes",
+  "version": "1.0",
+  "name": "Analyze BPA Violations and Propose Fixes",
+  "category": "dax",
+  "pillars": [
+    "powerbi",
+    "bpa",
+    "semantic-model",
+    "troubleshooting",
+    "governance",
+    "dax"
+  ],
+  "summary": "Analyze the results of a Best Practice Analyzer (BPA) run on a Power BI semantic model and propose specific, actionable remediation steps.",
+  "description": "Analyze the results of a Best Practice Analyzer (BPA) run on a Power BI semantic model and propose specific, actionable remediation steps.",
+  "tags": [
+    "powerbi",
+    "bpa",
+    "semantic-model",
+    "troubleshooting",
+    "governance",
+    "dax",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Analyze requirements and data"
+  ],
+  "prompt": "Analyze the following BPA results JSON: {bpa_results_json}. Focus on violations with a severity of '{severity_threshold}' or higher. For each violation found, provide: 1. A clear explanation of the rule and why it is important. 2. The specific object(s) violating the rule. 3. Detailed, actionable remediation steps (e.g., DAX modifications, model property changes). Prioritize fixes based on impact and effort. Output the analysis as a structured report.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

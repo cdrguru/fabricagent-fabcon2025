@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 128" role="img" aria-labelledby="cdrguru-logo-title"
+     style="--ink:#0F172A; --accent:#10B981; --ring:#2563EB">
+  <title id="cdrguru-logo-title">cdrguru logo</title>
+  <desc>Headset-in-circle mark with three timeline dots and the cdrguru wordmark.</desc>
+
+  <!-- Mark -->
+  <g transform="translate(0,0)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="64" cy="64" r="56" stroke="var(--ink)" stroke-width="6"/>
+    <path d="M36,64 a28,28 0 0 1 56,0" stroke="var(--ink)" stroke-width="6"/>
+    <rect x="30" y="60" width="14" height="22" rx="5" stroke="var(--ink)" stroke-width="6"/>
+    <rect x="84" y="60" width="14" height="22" rx="5" stroke="var(--ink)" stroke-width="6"/>
+    <path d="M94,74 q12,8 0,16" stroke="var(--ink)" stroke-width="6"/>
+    <circle cx="94" cy="92" r="3.5" fill="var(--ink)"/>
+    <circle cx="46" cy="96" r="4" fill="var(--accent)"/>
+    <circle cx="64" cy="96" r="4" fill="var(--accent)" opacity=".75"/>
+    <circle cx="82" cy="96" r="4" fill="var(--accent)" opacity=".5"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="144" y="82"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Noto Sans'"
+        font-size="48" fill="var(--ink)" letter-spacing="0.5">
+    <tspan font-weight="700">cdr</tspan><tspan font-weight="400">guru</tspan>
+  </text>
+
+  <!-- Accessibility niceties -->
+  <style>
+    @media (prefers-contrast: more){ circle, path, rect{ stroke-width:8 } }
+    @media (forced-colors: active){
+      circle, path, rect{ stroke: CanvasText; }
+      text, circle[fill]{ fill: CanvasText; }
+    }
+  </style>
+</svg>

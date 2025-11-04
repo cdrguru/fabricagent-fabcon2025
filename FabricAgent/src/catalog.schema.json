@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Prompt Catalog",
+    "type": "object",
+    "required": ["items"],
+    "properties": {
+        "items": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["id", "name", "distilled_ask", "distilled_edit", "distilled_agent"],
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "distilled_ask": {
+                        "type": "string",
+                        "minLength": 10
+                    },
+                    "distilled_edit": {
+                        "type": "string",
+                        "minLength": 10
+                    },
+                    "distilled_agent": {
+                        "type": "string",
+                        "minLength": 10
+                    },
+                    "inputs": {
+                        "type": "array",
+                        "items": {
+                            "type": "object"
+                        }
+                    },
+                    "safety": {
+                        "type": "object"
+                    },
+                    "evals": {
+                        "type": "object"
+                    },
+                    "source": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": true
+            }
+        }
+    },
+    "additionalProperties": true
+}

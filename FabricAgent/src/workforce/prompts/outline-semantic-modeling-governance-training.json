@@ -1,0 +1,55 @@
+{
+  "id": "outline-semantic-modeling-governance-training",
+  "version": "1.0",
+  "name": "Outline Semantic Modeling Governance Training",
+  "category": "documentation",
+  "pillars": [
+    "powerbi",
+    "semantic-model",
+    "training",
+    "documentation",
+    "dax",
+    "governance",
+    "bpa"
+  ],
+  "summary": "Create a detailed outline for a training module on Power BI semantic modeling best practices, governance policies (BPA rules), and optimization techniques.",
+  "description": "Create a detailed outline for a training module on Power BI semantic modeling best practices, governance policies (BPA rules), and optimization techniques.",
+  "tags": [
+    "powerbi",
+    "semantic-model",
+    "training",
+    "documentation",
+    "dax",
+    "governance",
+    "bpa",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Review requirements",
+    "Run safely",
+    "Document outcome"
+  ],
+  "prompt": "You are an experienced Power BI technical trainer focused on governance. Create a detailed outline for a training module titled '{module_title}'. The module should cover the specified learning objectives: {learning_objectives}, and fit within the estimated duration: {duration}. Break down the content into sections with estimated timings (e.g., Intro to Governance – 10 min, Dimensional Modeling Concepts - 20 min, DAX Optimization - 30 min, BPA Deep Dive – 30 min, Security (RLS/OLS) - 20 min). Specify hands-on exercises or labs for each section to reinforce learning.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

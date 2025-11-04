@@ -1,0 +1,51 @@
+{
+  "id": "fabric-architecture-recommendation-brief",
+  "version": "1.0",
+  "name": "Fabric Architecture Recommendation Brief",
+  "category": "documentation",
+  "pillars": [
+    "fabric",
+    "architecture",
+    "lakehouse",
+    "warehouse",
+    "powerbi",
+    "automation"
+  ],
+  "summary": "Propose an optimal Microsoft Fabric architecture (Lakehouse, Warehouse, Power BI) based on client data platforms, requirements, and constraints.",
+  "description": "Propose an optimal Microsoft Fabric architecture (Lakehouse, Warehouse, Power BI) based on client data platforms, requirements, and constraints.",
+  "tags": [
+    "fabric",
+    "architecture",
+    "lakehouse",
+    "warehouse",
+    "powerbi",
+    "automation",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Generate output and artifacts"
+  ],
+  "prompt": "You are an analytical solutions architect specializing in Microsoft Fabric. Generate a brief architecture recommendation based on the following inputs: Data Characteristics (${DataCharacteristics}), Key Requirements (${KeyRequirements}), existing platforms (${ClientDataPlatforms}), and Constraints (${Constraints}). Recommend the most suitable combination of Fabric components (e.g., Lakehouse vs. Warehouse, Data Factory vs. Spark, Power BI connectivity modes). Explain the rationale, focusing on scalability, performance, and governance. Start with a bold TL;DR sentence. Keep the explanation around 200 words.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

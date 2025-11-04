@@ -1,0 +1,198 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/your-org/giac-prompts/schema/prompt-catalog.schema.json",
+  "title": "GIAC Prompt Catalog Schema",
+  "description": "Schema for Guy in a Cube prompt catalog items with enhanced metadata",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "version", "name", "description", "system", "category", "provenance", "source_ref", "source_checksum"],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$",
+        "description": "Unique kebab-case identifier"
+      },
+      "version": {
+        "type": "string",
+        "pattern": "^\\d+\\.\\d+\\.\\d+$",
+        "description": "Semantic version"
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Human-readable prompt name"
+      },
+      "description": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Detailed prompt description"
+      },
+      "system": {
+        "type": "string",
+        "minLength": 1,
+        "description": "System instruction content (preserved from GIAC)"
+      },
+      "user_template": {
+        "oneOf": [
+          {"type": "string"},
+          {"type": "object"},
+          {"type": "null"}
+        ],
+        "description": "User input template"
+      },
+      "few_shots": {
+        "oneOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["input", "output"],
+              "properties": {
+                "input": {"type": "string"},
+                "output": {"type": "string"}
+              }
+            }
+          },
+          {"type": "null"}
+        ],
+        "description": "Example input/output pairs"
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "uniqueItems": true,
+        "description": "Normalized lowercase-hyphenated tags"
+      },
+      "category": {
+        "type": "string",
+        "enum": ["dax-modeling", "fabric-architecture", "governance", "performance", "power-query-folding", "powerbi-visualization", "general"],
+        "description": "Primary category classification"
+      },
+      "pillars": {
+        "oneOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["dax", "fabric", "governance", "performance", "power-query", "powerbi"]
+            },
+            "uniqueItems": true
+          },
+          {"type": "null"}
+        ],
+        "description": "Technology pillars"
+      },
+      "actions": {
+        "oneOf": [
+          {
+            "type": "array",
+            "items": {"type": "string"},
+            "uniqueItems": true
+          },
+          {"type": "null"}
+        ],
+        "description": "Available actions"
+      },
+      "links": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "youtube": {
+                "type": "string",
+                "format": "uri",
+                "description": "YouTube video URL"
+              },
+              "docs": {
+                "type": "array",
+                "items": {"type": "string"},
+                "uniqueItems": true,
+                "description": "Local documentation file paths"
+              },
+              "blog": {
+                "type": "array",
+                "items": {"type": "string"},
+                "uniqueItems": true,
+                "description": "Blog post file paths"
+              }
+            },
+            "additionalProperties": false
+          },
+          {"type": "null"}
+        ],
+        "description": "Reference links"
+      },
+      "requirements": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "min_powerbi_desktop": {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}$",
+                "description": "Minimum Power BI Desktop version (YYYY-MM)"
+              },
+              "features": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["visual-calculations", "field-parameters", "tmdl", "dq-fabric", "dataflows-gen2"]
+                },
+                "uniqueItems": true,
+                "description": "Required Power BI features"
+              }
+            },
+            "additionalProperties": false
+          },
+          {"type": "null"}
+        ],
+        "description": "Technical requirements"
+      },
+      "risk_level": {
+        "type": "string",
+        "enum": ["low", "medium", "high"],
+        "description": "Risk assessment level"
+      },
+      "prechecks": {
+        "oneOf": [
+          {
+            "type": "array",
+            "items": {"type": "string"},
+            "uniqueItems": true
+          },
+          {"type": "null"}
+        ],
+        "description": "Pre-execution safety checks"
+      },
+      "provenance": {
+        "type": "string",
+        "const": "giac",
+        "description": "Source provenance (Guy in a Cube)"
+      },
+      "source_ref": {
+        "type": "string",
+        "description": "Original source reference"
+      },
+      "source_checksum": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{32}$",
+        "description": "MD5 checksum of original content"
+      },
+      "assumptions": {
+        "oneOf": [
+          {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          {"type": "null"}
+        ],
+        "description": "Transformation assumptions"
+      }
+    },
+    "additionalProperties": false
+  }
+}

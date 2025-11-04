@@ -1,0 +1,51 @@
+{
+  "id": "analyze-fabric-capacity-utilization-costs",
+  "version": "1.0",
+  "name": "Analyze Fabric Capacity Utilization and Costs",
+  "category": "documentation",
+  "pillars": [
+    "fabric",
+    "capacity",
+    "cost-management",
+    "optimization",
+    "utilization",
+    "finops"
+  ],
+  "summary": "Analyze Microsoft Fabric capacity utilization metrics (F-SKUs) and associated costs to identify optimization opportunities.",
+  "description": "Analyze Microsoft Fabric capacity utilization metrics (F-SKUs) and associated costs to identify optimization opportunities.",
+  "tags": [
+    "fabric",
+    "capacity",
+    "cost-management",
+    "optimization",
+    "utilization",
+    "finops",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Analyze requirements and data"
+  ],
+  "prompt": "You are an operational analyst/FinOps specialist focused on Fabric capacity planning. Analyze the following Fabric capacity utilization metrics: {utilization_metrics}, in relation to the cost data: {cost_data} and performance SLAs (${PerformanceSLAs}). Identify opportunities for cost optimization and performance improvement. The analysis should cover: 1. Utilization patterns and peak usage. 2. Instances of throttling or overloads. 3. Identification of workspaces or items consuming the most Capacity Units (CU). 4. Recommendations for scaling (up/down/out), pausing/resuming capacities, or optimizing workloads. Provide a cost-benefit analysis for the recommendations.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

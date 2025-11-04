@@ -1,0 +1,174 @@
+/* FabricAgent Branding Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --fabric-primary: #0078d4;
+  --fabric-secondary: #106ebe;
+  --fabric-accent: #f2c811;
+  --fabric-success: #107c10;
+  --fabric-warning: #ff8c00;
+  --fabric-error: #d13438;
+  --fabric-neutral: #323130;
+
+  /* Brand gradients */
+  --brand-gradient: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+  --accent-gradient: linear-gradient(135deg, #f2c811 0%, #ffb900 100%);
+}
+
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Logo animations */
+.logo-hover:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Brand colors for specific elements */
+.fabric-primary {
+  color: var(--fabric-primary);
+}
+
+.fabric-bg-primary {
+  background-color: var(--fabric-primary);
+}
+
+.fabric-gradient {
+  background: var(--brand-gradient);
+}
+
+.fabric-accent {
+  color: var(--fabric-accent);
+}
+
+/* Custom scrollbar for brand consistency */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--fabric-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fabric-secondary);
+}
+
+/* Loading animations with brand colors */
+@keyframes brand-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.02);
+  }
+}
+
+.brand-pulse {
+  animation: brand-pulse 2s ease-in-out infinite;
+}
+
+/* Microsoft Fabric inspired button styles */
+.fabric-btn {
+  background: var(--brand-gradient);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.fabric-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 120, 212, 0.3);
+}
+
+/* Enhanced focus states for accessibility */
+.focus-fabric:focus {
+  outline: 2px solid var(--fabric-primary);
+  outline-offset: 2px;
+}
+
+/* Micro-interactions */
+.ui-hover {
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+.ui-hover:hover {
+  transform: translateZ(0) scale(1.02);
+  box-shadow: 0 4px 14px rgba(0,0,0,.08);
+}
+.ui-press:active {
+  transform: translateY(1px);
+}
+
+/* Animation timing tokens */
+:root {
+  --anim-fast: 150ms;
+  --anim-normal: 250ms;
+  --anim-slow: 400ms;
+}
+
+/* Brand-specific animations */
+@keyframes fabricSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fabric-slide-in {
+  animation: fabricSlideIn 0.5s ease-out;
+}
+
+/* Power BI specific styling */
+.powerbi-accent {
+  color: #f2c811;
+}
+
+.powerbi-bg {
+  background-color: #f2c811;
+}
+
+/* Responsive branding adjustments */
+@media (max-width: 640px) {
+  .brand-logo-mobile {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+
+/* High contrast mode support for accessibility */
+@media (prefers-contrast: high) {
+  :root {
+    --fabric-primary: #0066cc;
+    --fabric-secondary: #004499;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .brand-pulse,
+  .fabric-slide-in,
+  .logo-hover:hover {
+    animation: none;
+    transform: none;
+  }
+  .ui-hover, .ui-press { transition: none !important; }
+}
+
+/* GPU-accelerated animations */
+.will-transform { will-change: transform, opacity; }

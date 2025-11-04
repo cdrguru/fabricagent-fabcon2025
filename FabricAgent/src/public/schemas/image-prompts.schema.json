@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://fabricagent.local/schemas/image-prompts.schema.json",
+  "title": "FabricAgent Image Prompts Schema",
+  "description": "Schema for validating image generation prompt catalogs",
+  "type": "object",
+  "required": ["metadata", "style_system", "prompts"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["title", "description", "version"],
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+        "created": { "type": "string", "format": "date" },
+        "target_count": { "type": "integer", "minimum": 1 },
+        "accessibility_guidelines": { "type": "string" }
+      }
+    },
+    "style_system": {
+      "type": "object",
+      "required": ["palette", "style", "background"],
+      "properties": {
+        "palette": {
+          "type": "object",
+          "required": ["primary", "secondary", "neutral"],
+          "properties": {
+            "primary": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+            "secondary": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+            "neutral": {
+              "type": "array",
+              "items": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" }
+            },
+            "status": {
+              "type": "object",
+              "properties": {
+                "success": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+                "warning": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+                "error": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" }
+              }
+            }
+          }
+        },
+        "style": { "type": "string" },
+        "background": { "type": "string" },
+        "typography": { "type": "string" },
+        "export": {
+          "type": "object",
+          "properties": {
+            "format": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "margin": { "type": "integer" },
+            "optimization": { "type": "string" }
+          }
+        }
+      }
+    },
+    "prompts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "category", "target", "alt", "description", "prompt"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*[a-z0-9]$"
+          },
+          "category": {
+            "type": "string",
+            "enum": ["identity", "diagrams", "illustrations", "icons"]
+          },
+          "target": {
+            "type": "string",
+            "pattern": "^docs/assets/"
+          },
+          "alt": {
+            "type": "string",
+            "minLength": 10
+          },
+          "description": {
+            "type": "string",
+            "minLength": 20
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 50
+          },
+          "usage": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "dimensions": { "type": "string" }
+        }
+      }
+    },
+    "generation_guidelines": {
+      "type": "object",
+      "properties": {
+        "accessibility": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "consistency": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "technical": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

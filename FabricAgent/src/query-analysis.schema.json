@@ -1,0 +1,74 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Query Analysis Array",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": ["query", "description", "sql_template"],
+        "properties": {
+            "query": {
+                "type": "string",
+                "minLength": 1
+            },
+            "description": {
+                "type": "string",
+                "minLength": 1
+            },
+            "sql_template": {
+                "type": "string",
+                "minLength": 1
+            },
+            "metrics": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "dimensions": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "filters": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "priority": {
+                "type": "string"
+            },
+            "visualization": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "x_axis": {
+                        "type": ["string", "null"]
+                    },
+                    "y_axis": {
+                        "type": ["string", "null"]
+                    },
+                    "recommended_visual": {
+                        "type": "string"
+                    },
+                    "settings": {
+                        "type": "object"
+                    },
+                    "field_inputs": {
+                        "type": "object"
+                    }
+                }
+            },
+            "agents_needed": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            }
+        },
+        "additionalProperties": true
+    }
+}

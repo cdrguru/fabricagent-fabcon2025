@@ -1,0 +1,169 @@
+<svg viewBox="0 0 1407 768" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Analytics Workflow: DAX → Docs</title>
+  <desc>A diagram showing a data analytics workflow across five stages: DAX, Power Query, Modeling, Governance, and Docs. Each stage is a colored pillar containing circular nodes representing specific tasks like 'Querying', 'Star Schema', and 'Security'. Arrows show dependencies between these tasks across the different pillars.</desc>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#222" />
+    </marker>
+  </defs>
+
+  <style>
+    .pillar-label {
+      font: bold 32px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      text-anchor: middle;
+      fill: #222;
+    }
+    .node-label {
+      font: 500 24px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      text-anchor: middle;
+      fill: #fff;
+    }
+    .node {
+      stroke: #fff;
+      stroke-width: 6;
+      animation: pulse 4s ease-in-out infinite;
+      transform-origin: center;
+    }
+    .arrow {
+      stroke: #222;
+      stroke-width: 2;
+      marker-end: url(#arrowhead);
+      fill: none;
+    }
+    .flow-arrow {
+      stroke: #222;
+      stroke-width: 4;
+      stroke-dasharray: 10 15;
+      animation: flow 10s linear infinite;
+      fill: none;
+    }
+
+    /* Animations */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+    }
+    @keyframes flow {
+      to { stroke-dashoffset: -25; }
+    }
+
+    /* Staggering Node Animations */
+    .node:nth-of-type(2n) { animation-delay: -0.5s; }
+    .node:nth-of-type(3n) { animation-delay: -1.0s; }
+    .node:nth-of-type(4n) { animation-delay: -1.5s; }
+    .node:nth-of-type(5n) { animation-delay: -2.0s; }
+
+    /* Accessibility: Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      .node, .flow-arrow {
+        animation: none !important;
+      }
+      .flow-arrow {
+        stroke-dasharray: none; /* Display as solid line */
+      }
+    }
+  </style>
+
+  <g id="pillars">
+    <text x="180" y="80" class="pillar-label">DAX</text>
+    <rect x="120" y="120" width="120" height="550" rx="30" fill="#1E88E5"/>
+
+    <text x="430" y="80" class="pillar-label">Power Query</text>
+    <rect x="370" y="120" width="120" height="550" rx="30" fill="#43A047"/>
+
+    <text x="680" y="80" class="pillar-label">Modeling</text>
+    <rect x="620" y="120" width="120" height="550" rx="30" fill="#FB8C00"/>
+
+    <text x="940" y="80" class="pillar-label">Governance</text>
+    <rect x="880" y="120" width="120" height="550" rx="30" fill="#8E24AA"/>
+
+    <text x="1230" y="80" class="pillar-label">Docs</text>
+    <rect x="1170" y="120" width="120" height="550" rx="30" fill="#FDD835"/>
+  </g>
+
+  <g id="arrows" class="arrow">
+    <path d="M250,225 C300,225 350,200 420,200"/>
+    <path d="M250,225 C300,225 350,420 420,420"/>
+    <path d="M250,400 C300,400 350,320 420,320"/>
+    <path d="M440,200 C500,200 600,220 660,220"/>
+    <path d="M440,320 C500,320 600,450 660,450"/>
+    <path d="M440,520 C500,520 600,450 660,450"/>
+    <path d="M700,220 C780,220 860,250 920,250"/>
+    <path d="M700,350 C780,350 860,500 920,500"/>
+    <path d="M700,450 C780,450 860,250 920,250"/>
+    <path d="M700,450 C780,450 860,500 920,500"/>
+    <path d="M960,250 C1050,250 1150,300 1210,300"/>
+    <path d="M960,380 C1050,380 1150,300 1210,300"/>
+  </g>
+
+  <g id="animated-arrows" class="flow-arrow">
+    <path d="M250,225 C300,225 350,200 420,200"/>
+    <path d="M250,225 C300,225 350,420 420,420"/>
+    <path d="M250,400 C300,400 350,320 420,320"/>
+    <path d="M440,200 C500,200 600,220 660,220"/>
+    <path d="M440,320 C500,320 600,450 660,450"/>
+    <path d="M440,520 C500,520 600,450 660,450"/>
+    <path d="M700,220 C780,220 860,250 920,250"/>
+    <path d="M700,350 C780,350 860,500 920,500"/>
+    <path d="M700,450 C780,450 860,250 920,250"/>
+    <path d="M700,450 C780,450 860,500 920,500"/>
+    <path d="M960,250 C1050,250 1150,300 1210,300"/>
+    <path d="M960,380 C1050,380 1150,300 1210,300"/>
+  </g>
+
+  <g id="nodes">
+    <g>
+      <circle cx="180" cy="225" r="70" fill="#1B76CC" class="node"/>
+      <text x="180" y="230" class="node-label">Power Query</text>
+    </g>
+    <g>
+      <circle cx="180" cy="400" r="70" fill="#1B76CC" class="node"/>
+      <text x="180" y="405" class="node-label">Querying</text>
+    </g>
+
+    <g>
+      <circle cx="430" cy="200" r="70" fill="#3B8F40" class="node"/>
+      <text x="430" y="205" class="node-label">Power Query</text>
+    </g>
+    <g>
+      <circle cx="430" cy="320" r="70" fill="#3B8F40" class="node"/>
+      <text x="430" y="325" class="node-label">Data Prep</text>
+    </g>
+    <g>
+      <circle cx="430" cy="520" r="70" fill="#3B8F40" class="node"/>
+      <text x="430" y="525" class="node-label">Staging</text>
+    </g>
+
+    <g>
+      <circle cx="680" cy="220" r="70" fill="#E27F00" class="node"/>
+      <text x="680" y="225" class="node-label">Facts</text>
+    </g>
+    <g>
+      <circle cx="680" cy="350" r="70" fill="#E27F00" class="node"/>
+      <text x="680" y="355" class="node-label">Star Schema</text>
+    </g>
+    <g>
+      <circle cx="680" cy="450" r="70" fill="#E27F00" class="node"/>
+      <text x="680" y="455" class="node-label">Model Content</text>
+    </g>
+
+    <g>
+      <circle cx="940" cy="250" r="70" fill="#7E2096" class="node"/>
+      <text x="940" y="255" class="node-label">Modeling</text>
+    </g>
+    <g>
+      <circle cx="940" cy="380" r="70" fill="#7E2096" class="node"/>
+      <text x="940" y="385" class="node-label">Profiling</text>
+    </g>
+    <g>
+      <circle cx="940" cy="500" r="70" fill="#7E2096" class="node"/>
+      <text x="940" y="505" class="node-label">Security</text>
+    </g>
+
+    <g>
+      <circle cx="1230" cy="300" r="70" fill="#E4C431" class="node"/>
+      <text x="1230" y="305" class="node-label">Docs</text>
+    </g>
+  </g>
+</svg>

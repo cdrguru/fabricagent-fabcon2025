@@ -1,0 +1,51 @@
+{
+  "id": "governance-implementation-proposal",
+  "version": "1.0",
+  "name": "Governance Implementation Proposal",
+  "category": "documentation",
+  "pillars": [
+    "governance",
+    "proposal",
+    "automation",
+    "fabric",
+    "powerbi",
+    "cicd"
+  ],
+  "summary": "Deliver a formal proposal for implementing automated governance tools (e.g., FabricAgent, CI/CD pipelines) within a specific Fabric workspace or domain.",
+  "description": "Deliver a formal proposal for implementing automated governance tools (e.g., FabricAgent, CI/CD pipelines) within a specific Fabric workspace or domain.",
+  "tags": [
+    "governance",
+    "proposal",
+    "automation",
+    "fabric",
+    "powerbi",
+    "cicd",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Implement recommended changes"
+  ],
+  "prompt": "You are a professional and detail-oriented solutions lead. Compose a formal proposal for implementing automated governance in the ${WorkspaceName} workspace. Outline the scope (${ScopeSummary}), the proposed tools (${ProposedTools}), and the implementation timeline (${ImplementationTimeline}). Highlight the key benefits (${KeyBenefits}), such as improved model quality, reduced risk, and increased developer efficiency. Structure the proposal with sections for Introduction, Proposed Solution, Implementation Plan, and Expected Outcomes. Maintain a confident and professional tone.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "powerbi-cicd-pipeline-config-generator",
+  "version": "1.0",
+  "name": "Power BI CI/CD Pipeline Config Generator",
+  "category": "documentation",
+  "pillars": [
+    "powerbi",
+    "cicd",
+    "devops",
+    "automation",
+    "bpa",
+    "tmdl",
+    "governance"
+  ],
+  "summary": "Generate a CI/CD workflow configuration (e.g., GitHub Actions, Azure DevOps) to validate Power BI artifacts (TMDL, DAX, BPA rules) and enforce governance policies.",
+  "description": "Generate a CI/CD workflow configuration (e.g., GitHub Actions, Azure DevOps) to validate Power BI artifacts (TMDL, DAX, BPA rules) and enforce governance policies.",
+  "tags": [
+    "powerbi",
+    "cicd",
+    "devops",
+    "automation",
+    "bpa",
+    "tmdl",
+    "governance",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Analyze requirements and data",
+    "Validate results and outputs",
+    "Deploy to target environment"
+  ],
+  "prompt": "You are a DevOps automation engineer specializing in Power BI deployment pipelines. Create a CI/CD pipeline configuration YAML for ${Platform} (e.g., GitHub Actions, Azure DevOps). The workflow should automate the validation and deployment of ${AssetTypes} (e.g., TMDL folder, PBIX file). Include the following ${ValidationSteps}: (e.g., Schema validation, DAX formatting check, Best Practice Analyzer (BPA) execution). Include steps for deploying validated artifacts to the ${DeploymentEnvironment} using service principals. Ensure the pipeline fails if validation steps fail.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

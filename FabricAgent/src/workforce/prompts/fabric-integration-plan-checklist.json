@@ -1,0 +1,52 @@
+{
+  "id": "fabric-integration-plan-checklist",
+  "version": "1.0",
+  "name": "Fabric Integration Plan Checklist",
+  "category": "documentation",
+  "pillars": [
+    "fabric",
+    "integration",
+    "data-factory",
+    "spark",
+    "powerbi",
+    "checklist"
+  ],
+  "summary": "Outline the steps required to integrate and set up Microsoft Fabric components (Data Factory, Spark, Power BI) in the client’s environment.",
+  "description": "Outline the steps required to integrate and set up Microsoft Fabric components (Data Factory, Spark, Power BI) in the client’s environment.",
+  "tags": [
+    "fabric",
+    "integration",
+    "data-factory",
+    "spark",
+    "powerbi",
+    "checklist",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Test functionality and performance",
+    "Deploy to target environment"
+  ],
+  "prompt": "You are a detail-oriented technical planner. Provide a checklist of steps to integrate and deploy the selected Fabric components (${SelectedComponents}) in the client’s ${ClientEnvironment}. Include preparation tasks (e.g., provisioning capacity, configuring workspaces, setting up service principals), configuration steps (connecting to ${IntegrationPoints} like Azure SQL DB, Salesforce, etc.), and post-deployment verification (data validation, pipeline execution tests, Power BI connectivity checks). Number the steps in logical order. Focus on *what* to do, ensuring governance steps (like security configuration and initial BPA checks) are included.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

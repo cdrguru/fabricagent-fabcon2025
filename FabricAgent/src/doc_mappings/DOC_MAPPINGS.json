@@ -1,0 +1,38 @@
+{
+  "power-query-folding": [
+    "guide_to_power_query_folding.md",
+    "powerquery_library_output.json",
+    "CheetSheet_MicrosoftFabricNotebooks_PowerQuery_vs_PythonPandas_Operations.md"
+  ],
+  "dax-modeling": [
+    "BestPracticesForWritingEfficientDAXFormulas_LISTOFRESOURCES.json",
+    "dax_library.json"
+  ],
+  "fabric-architecture": [
+    "microsoft_power_query_custom_connectors_list_dictionary_referencedoc.json"
+  ],
+  "powerbi-visualization": [
+    "powerbi_report_design_best_practices.md",
+    "bestpractices_powerbithemes.md"
+  ],
+  "governance": [
+    "row_level_security_vs_powerbi_audiences_dictionary_list_lib.json"
+  ],
+  "performance": [
+    "BestPracticesForWritingEfficientDAXFormulas_LISTOFRESOURCES.json"
+  ],
+  "cicd-pipelines": [
+    "knowledge/powerbi/categories/cicd-pipelines/cicd-powerbi-git.md",
+    "knowledge/powerbi/categories/cicd-pipelines/power-bi-ci-cd-pipeline-validation.md",
+    "knowledge/powerbi/categories/cicd-pipelines/power-bi-template-app-ci-cd.md",
+    "knowledge/powerbi/categories/cicd-pipelines/report-powerbi-cicd.json",
+    "knowledge/powerbi/categories/cicd-pipelines/validation.json"
+  ],
+  "blueprints": [
+    "knowledge/powerbi/categories/blueprints/modernblueprint-metropolis-draft-20250620.txt",
+    "knowledge/powerbi/categories/blueprints/modernblueprint.txt"
+  ],
+  "notes": [
+    "knowledge/powerbi/categories/notes/conversationaboutxeekai-temp.md"
+  ]
+}

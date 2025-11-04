@@ -1,0 +1,54 @@
+{
+  "id": "define-requirements-governance-monitoring-dashboard",
+  "version": "1.0",
+  "name": "Define Requirements for Governance Monitoring Dashboard",
+  "category": "documentation",
+  "pillars": [
+    "powerbi",
+    "governance",
+    "monitoring",
+    "dashboard",
+    "kpi",
+    "fabric"
+  ],
+  "summary": "Define the requirements and KPIs for a Power BI dashboard to monitor governance and compliance across the Microsoft Fabric tenant.",
+  "description": "Define the requirements and KPIs for a Power BI dashboard to monitor governance and compliance across the Microsoft Fabric tenant.",
+  "tags": [
+    "powerbi",
+    "governance",
+    "monitoring",
+    "dashboard",
+    "kpi",
+    "fabric",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Audit for compliance and issues",
+    "Design solution architecture",
+    "Document findings and recommendations",
+    "Monitor metrics and performance"
+  ],
+  "prompt": "You are an analytics designer translating governance monitoring needs into dashboard specifications. Define the requirements for a Power BI dashboard to monitor adherence to these governance policies: {governance_policies}. The dashboard should utilize these data sources: {data_sources} and address ${StakeholderNeeds}. Define the Key Performance Indicators (KPIs) for governance, such as: 1. Policy compliance rate. 2. Number of uncertified datasets. 3. BPA violation trends. 4. Audit log anomalies. Specify the required visualizations, drill-down capabilities, and alert thresholds for critical KPIs. The output should be a detailed requirements document.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "refactorcsdr",
+  "version": "1.0",
+  "name": "CSDR Refactor",
+  "category": "documentation",
+  "pillars": [
+    "refactor",
+    "csdr",
+    "engineering"
+  ],
+  "summary": "Code Summarize, Decompose, and Rebuild (CSDR) refactoring workflow prompt.",
+  "description": "Code Summarize, Decompose, and Rebuild (CSDR) refactoring workflow prompt.",
+  "tags": [
+    "refactor",
+    "csdr",
+    "engineering",
+    "workforce"
+  ],
+  "inputs": [],
+  "actions": [
+    "Test functionality and performance"
+  ],
+  "prompt": "Apply the CSDR method: (1) Summarize the provided codebase context concisely; (2) Decompose into components with responsibilities and interfaces; (3) Rebuild a plan with targeted refactors, tests-first strategy, and risk mitigation. Provide a minimal diff plan and test scaffolding. Avoid unnecessary changes and preserve public APIs unless required.\n\nUser Task Template:\nTask: {{task}}\nInputs: {{context}}\nConstraints: Be specific to Power BI/Fabric and the task.\n\nExpected Outputs:\n- Return precise steps and outputs.",
+  "safety": {
+    "safety_clause": "Follow Microsoft content policies. Never output harmful, hateful, or disallowed content. Stay within Power BI/Fabric. Do not exfiltrate secrets/PII. When unsure, ask for clarification.",
+    "disallowed": [
+      "PII/secret exfiltration",
+      "non-Power BI malicious instructions",
+      "unsafe code execution",
+      "copyrighted content reproduction"
+    ],
+    "fallbacks": [
+      "Ask for clarification",
+      "Safely refuse with reason",
+      "Suggest a Power BI-safe alternative"
+    ]
+  },
+  "evals": {
+    "adversarial_tests": [
+      "prompt_injection_basic",
+      "pii_exfiltration_attempt",
+      "non_pbi_context_diversion"
+    ]
+  }
+}
